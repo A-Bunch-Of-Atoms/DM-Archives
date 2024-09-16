@@ -1,0 +1,1064 @@
+<!DOCTYPE html><html lang=en><head><title>Discord Mafia - ar1-info</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-twitch{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/648663810772697089/a_f9deadc152d185356cb503afb448d0c4.gif?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>Discord Mafia</div><div class=preamble__entry>Temp Archive 13 / ar1-info</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1243346124702617661 class=chatlog__message-container data-message-id=1243346124702617661><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/46d5fc03b098ff77aee4c948cb5d4ad3.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(64,153,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Thursday, May 23, 2024 7:33 p.m."><a href=#chatlog__message-container-1243346124702617661>2024-05-23 7:33 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="lilybottom">@Sugar Crash &#127852; (LilyBottom)</span></span></div></div></div></div><div id=chatlog__message-container-1243346151634243675 class=chatlog__message-container data-message-id=1243346151634243675><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, May 23, 2024 7:33 p.m.">7:33 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>these will be ur channels</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1243915029708013578 class=chatlog__message-container data-message-id=1243915029708013578><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Saturday, May 25, 2024 9:14 a.m."><a href=#chatlog__message-container-1243915029708013578>2024-05-25 9:14 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><h1>Bad Moon Rising</h1>Welcome to Blood on the Clocktower! A game so fun not even death will part you from it! If you are not familiar with BotC, please look over the linked doc as we do some things differently then most other games hosted here.
+
+<strong>For players that played the last BotC game I ran:</strong> Nominations/voting will be handled differently, and the game will be played as closely as originally intended.
+
+<h3>Roles and Additional info.</h3><a href="https://docs.google.com/document/d/1J-uz1GMGjQHLfC4heIWrFCGsJyBzE8t8vXgVeO09gXA/edit?usp=sharing">https://docs.google.com/document/d/1J-uz1GMGjQHLfC4heIWrFCGsJyBzE8t8vXgVeO09gXA/edit?usp=sharing</a>
+
+<h3>Voting Mechanics.</h3><code class="chatlog__markdown-pre chatlog__markdown-pre--multiline language-yaml">Nomination, see the section on voteing above</code>
+<h3>Game Mechanics.</h3><code class="chatlog__markdown-pre chatlog__markdown-pre--multiline language-yaml">Day: 48-60 Hours
+Night: 24 Hours
+Evils do not have private chat.</code>
+<h3>Activity Requirements.</h3><code class="chatlog__markdown-pre chatlog__markdown-pre--multiline language-yaml">Prods: At least 25 posts each 24 hours. 
+- These 25 posts must be in relation to the game. 
+- 0 posts in 24h will result in 2 prods.
+- If you get 3 prods, you will be replaced.
+
+Please only sign up for this game if you are able to commit an adequate amount of time to it (1h+ each day).
+
+- !!! - BEING DEAD DOSE NOT EXSCLUDE YOU FROM PRODS - !!! -</code>
+<h3>Rules.</h3>Please make sure to have read the <u><strong>Game Rules</strong></u> section of our <span class="chatlog__markdown-mention">#&#128220;rules</span> channel, so that you do not accidentally break one of them, since it can lead to punishments, such as game bans or forceful replacement, which I would like to avoid if possible.
+
+<h3>Additional Servers.</h3>Please join the following server, it is required for this game.
+<ul><li><a href="https://discord.gg/4ygmH7b">https://discord.gg/4ygmH7b</a></li></ul></span> <span class=chatlog__edited-timestamp title="Saturday, May 25, 2024 9:25 a.m.">(edited)</span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://docs.google.com/document/d/1J-uz1GMGjQHLfC4heIWrFCGsJyBzE8t8vXgVeO09gXA/edit?usp=sharing"><div class="chatlog__markdown chatlog__markdown-preserve">BAD MOON RISING</div></a></div><div class=chatlog__embed-description><div class="chatlog__markdown chatlog__markdown-preserve">Setup Rules Welcome to Blood on the Clocktower! This is a unique social deduction game based around miss information and chaos. Although getting info is relatively easy, knowing whether or not it is accurate is not guaranteed. This game has plenty of unique mechanics, and I highly suggest anyone ...</div></div></div><div class=chatlog__embed-thumbnail-container><a class=chatlog__embed-thumbnail-link href=https://images-ext-1.discordapp.net/external/xHTZb5CPsZVVh09ae4AK8PnQ3gswilC9iHDhLXudL_I/https/lh7-us.googleusercontent.com/docs/AHkbwyJW9SsIdVRY77tZcUe378dZgpLtkINfqVg1fFds6u_kkd3rQg16COGQXzls4XCaoLUSnRyHffnyLd764cCW0pIXTWGtCbIUx3z8lFLDFDQDbYAw-NY%3Dw1200-h630-p> <img class=chatlog__embed-thumbnail src=https://images-ext-1.discordapp.net/external/xHTZb5CPsZVVh09ae4AK8PnQ3gswilC9iHDhLXudL_I/https/lh7-us.googleusercontent.com/docs/AHkbwyJW9SsIdVRY77tZcUe378dZgpLtkINfqVg1fFds6u_kkd3rQg16COGQXzls4XCaoLUSnRyHffnyLd764cCW0pIXTWGtCbIUx3z8lFLDFDQDbYAw-NY%3Dw1200-h630-p alt=Thumbnail loading=lazy> </a></div></div></div></div></div></div></div><div id=chatlog__message-container-1243915086033326191 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=1243915086033326191><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, May 25, 2024 9:14 a.m.">9:14 a.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1241854923130409041/1243915085793984512/Bad_Moon_Riseing-1.png?ex=66e82f33&amp;is=66e6ddb3&amp;hm=5d834c3c40d3d0a1500d65fe122dd4e58cd31bd0a6697b8c815bedeb92844c39&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1241854923130409041/1243915085793984512/Bad_Moon_Riseing-1.png?ex=66e82f33&amp;is=66e6ddb3&amp;hm=5d834c3c40d3d0a1500d65fe122dd4e58cd31bd0a6697b8c815bedeb92844c39&amp;" alt="Image attachment" title="Image: Bad_Moon_Riseing-1.png (1.03 MB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1243915518751150191 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=1243915518751150191><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, May 25, 2024 9:16 a.m.">9:16 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="color: rgb(241, 196, 15); background-color: rgba(241, 196, 15, 0.1);">@Alive</span> <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="_mementomorii.">@Days w/o misreading Kaz: 0</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="red_002">@Free</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(241, 196, 15); background-color: rgba(241, 196, 15, 0.1);">@Alive</span> <span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span><s><span class="chatlog__markdown-mention" title="eqsylootz">@EqsyLootz</span></s> <span class="chatlog__markdown-mention" title="m0onstarr">@m0onstarr</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <s><span class="chatlog__markdown-mention" title="dangerous_luka">@Danger!? Luka!</span></s>  <span class="chatlog__markdown-mention" title="queenofcheetahs">@Cheetah the Godfather &#128293;</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(241, 196, 15); background-color: rgba(241, 196, 15, 0.1);">@Alive</span> <span class="chatlog__markdown-mention" title="kayjayqueue">@Kay</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(241, 196, 15); background-color: rgba(241, 196, 15, 0.1);">@Alive</span> <span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="cackle47_25282">@Alex19</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(241, 196, 15); background-color: rgba(241, 196, 15, 0.1);">@Alive</span> <span class="chatlog__markdown-mention" title="cloudyshadow">@Dedicated Sheep Moderator (Jal)</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title=".jennifer21">@Jen</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="sinisfuel">@aerosol</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(241, 196, 15); background-color: rgba(241, 196, 15, 0.1);">@Alive</span> <span class="chatlog__markdown-mention" title="dragon_writer">@Dragon</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(241, 196, 15); background-color: rgba(241, 196, 15, 0.1);">@Alive</span> <span class="chatlog__markdown-mention" title="extasly">@Extasly</span></span> <span class=chatlog__edited-timestamp title="Tuesday, June 11, 2024 12:33 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1243936522978197515 class=chatlog__message-container data-message-id=1243936522978197515><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Saturday, May 25, 2024 10:39 a.m."><a href=#chatlog__message-container-1243936522978197515>2024-05-25 10:39 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+All roles are out ^^ it is now Night one, please confirm you understand your role and the game. <em>(<strong>Fun fact:</strong> Did you know that dead players can still speak? No? well you should have read the doc :3)</em>
+
+If you have a night action to perform please submit it now, as well as <em>(roles that say &quot;At Night\</em>&quot; don&#39;t act night one. notice the &quot; * &quot;)*
+
+If all players have confirmed/submitted actions by <span class="chatlog__markdown-timestamp" title="Saturday, May 25, 2024 7:00 p.m.">7:00 p.m.</span> game will start at <span class="chatlog__markdown-timestamp" title="Saturday, May 25, 2024 8:00 p.m.">8:00 p.m.</span> today! Otherwise we will be starting at <span class="chatlog__markdown-timestamp" title="Sunday, May 26, 2024 8:00 p.m.">Sunday, May 26, 2024 8:00 p.m.</span>.
+
+<h2>Anyone that dose not confirm withing 25 hours will be forced replaced ^^</h2>
+good luck!</span> <span class=chatlog__edited-timestamp title="Saturday, May 25, 2024 2:52 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1243936729573101619 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=1243936729573101619><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, May 25, 2024 10:40 a.m.">10:40 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>oh also seating arrangements</span></div><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1241854923130409041/1243936729296011275/image.png?ex=66e8435b&amp;is=66e6f1db&amp;hm=988e73f9c4d887f092e066bde3731ccb9301c319228442dda473954b9af8ab46&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1241854923130409041/1243936729296011275/image.png?ex=66e8435b&amp;is=66e6f1db&amp;hm=988e73f9c4d887f092e066bde3731ccb9301c319228442dda473954b9af8ab46&amp;" alt="Image attachment" title="Image: image.png (1.41 MB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1243940147049926676 class=chatlog__message-container data-message-id=1243940147049926676><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Saturday, May 25, 2024 10:54 a.m."><a href=#chatlog__message-container-1243940147049926676>2024-05-25 10:54 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> One more thing, the doc (see above) has additional information about your role, if you are new to BotC then I suggest looking at your role at the vary least. But always feel free to ask questions.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1243999763452395600 class=chatlog__message-container data-message-id=1243999763452395600><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Saturday, May 25, 2024 2:50 p.m."><a href=#chatlog__message-container-1243999763452395600>2024-05-25 2:50 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Day will start <span class="chatlog__markdown-timestamp" title="Sunday, May 26, 2024 8:00 p.m.">2024-05-26 8:00 p.m.</span></span> <span class=chatlog__edited-timestamp title="Sunday, May 26, 2024 12:16 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1244439926846783580 class=chatlog__message-container data-message-id=1244439926846783580><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Sunday, May 26, 2024 7:59 p.m."><a href=#chatlog__message-container-1244439926846783580>2024-05-26 7:59 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+
+Last night was an ill omen. As the full moon rose a crimson light washed over the town, causing all to cower in their homes... or so many would have assumed. In the center of the town&#39;s square was a corpse strung up in a macabre display. 
+
+<strong>A Demon has been summoned into the town, find it while it is still week.</strong>
+
+<span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)"><span class="chatlog__markdown-mention" title="lilybottom">@Sugar Crash &#127852; (LilyBottom)</span> was strung up like a puppet. They have died.</span>
+
+<strong>Day one has started!</strong>
+
+<strong>Nominations will start <span class="chatlog__markdown-timestamp" title="Monday, May 27, 2024 8:00 a.m.">2024-05-27 8:00 a.m.</span>.</strong>
+
+<em>(Remember you can whisper other players by pinging me in your private chat. More information is in the doc, or you can ask me.)</em></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1244456936452390972 class=chatlog__message-container data-message-id=1244456936452390972><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Sunday, May 26, 2024 9:07 p.m."><a href=#chatlog__message-container-1244456936452390972>2024-05-26 9:07 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="sinisfuel">@aerosol</span> has whispered <span class="chatlog__markdown-mention" title="cloudyshadow">@Dedicated Sheep Moderator (Jal)</span></span></div></div></div></div><div id=chatlog__message-container-1244457340489568328 class=chatlog__message-container data-message-id=1244457340489568328><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, May 26, 2024 9:09 p.m.">9:09 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="cloudyshadow">@Dedicated Sheep Moderator (Jal)</span> has whispered <span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1244638111925796865 class=chatlog__message-container data-message-id=1244638111925796865><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, May 27, 2024 9:07 a.m."><a href=#chatlog__message-container-1244638111925796865>2024-05-27 9:07 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> just a reminder about nominations!
+
+To nominat please type <code class="chatlog__markdown-pre chatlog__markdown-pre--inline">@lilybottom  I Nominate [Player Name]</code> pepole can then vote yes or np on that player. You may change your vote at anytime by stating so on the vote channel.
+
+Majority is required to execute someone, and a tie will result in no execution at all. 
+
+Happy voteing ^^ prods will be in 11hs</span></div></div></div></div><div id=chatlog__message-container-1244638550507524157 class=chatlog__message-container data-message-id=1244638550507524157><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, May 27, 2024 9:09 a.m.">9:09 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="_mementomorii.">@Days w/o misreading Kaz: 0</span> whispered <span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1244705971524341903 class=chatlog__message-container data-message-id=1244705971524341903><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, May 27, 2024 1:37 p.m."><a href=#chatlog__message-container-1244705971524341903>2024-05-27 1:37 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="_mementomorii.">@Days w/o misreading Kaz: 0</span> whispered <span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span> 
+<span class="chatlog__markdown-mention" title="extasly">@Extasly</span> whispered <span class="chatlog__markdown-mention" title="kayjayqueue">@Kay</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1244715411828772956 class=chatlog__message-container data-message-id=1244715411828772956><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, May 27, 2024 2:14 p.m."><a href=#chatlog__message-container-1244715411828772956>2024-05-27 2:14 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+<span class="chatlog__markdown-mention" title="eqsylootz">@EqsyLootz</span> has been replaced with <span class="chatlog__markdown-mention" title="m0onstarr">@m0onstarr</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1244720289598668861 class=chatlog__message-container data-message-id=1244720289598668861><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(255,201,244) title=lilybottom>Sugar Crash 🍬 (LilyBottom)</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1243915086033326191')"> <em>Click to see attachment</em> <span>🖼️</span> </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, May 27, 2024 2:34 p.m."><a href=#chatlog__message-container-1244720289598668861>2024-05-27 2:34 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> so, Sailor is on the script, as shown in the doc... I uh... forgot to add it to the image... this is vanilla <strong>Bad Moon Rising</strong> as shown here.
+<a href="https://wiki.bloodontheclocktower.com/Bad_Moon_Rising">https://wiki.bloodontheclocktower.com/Bad_Moon_Rising</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href=https://wiki.bloodontheclocktower.com/Bad_Moon_Rising><div class="chatlog__markdown chatlog__markdown-preserve">Bad Moon Rising</div></a></div></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1244740155600797819 class=chatlog__message-container data-message-id=1244740155600797819><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, May 27, 2024 3:52 p.m."><a href=#chatlog__message-container-1244740155600797819>2024-05-27 3:52 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="cloudyshadow">@Dedicated Sheep Moderator (Jal)</span> whispered <span class="chatlog__markdown-mention" title="dangerous_luka">@Danger!? Luka!</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1244760693203533887 class=chatlog__message-container data-message-id=1244760693203533887><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, May 27, 2024 5:14 p.m."><a href=#chatlog__message-container-1244760693203533887>2024-05-27 5:14 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="cloudyshadow">@Dedicated Sheep Moderator (Jal)</span> whispered <span class="chatlog__markdown-mention" title="cloudyshadow">@Dedicated Sheep Moderator (Jal)</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1244765216726712490 class=chatlog__message-container data-message-id=1244765216726712490><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, May 27, 2024 5:32 p.m."><a href=#chatlog__message-container-1244765216726712490>2024-05-27 5:32 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="_mementomorii.">@Days w/o misreading Kaz: 0</span> whispered <span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1244783532488790138 class=chatlog__message-container data-message-id=1244783532488790138><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, May 27, 2024 6:45 p.m."><a href=#chatlog__message-container-1244783532488790138>2024-05-27 6:45 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span> whispered <span class="chatlog__markdown-mention" title=".jennifer21">@Jen</span> 
+<span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span> whispered <span class="chatlog__markdown-mention" title="kayjayqueue">@Kay</span> 
+<span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span> whispered <span class="chatlog__markdown-mention" title="red_002">@Free</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1244808717686411344 class=chatlog__message-container data-message-id=1244808717686411344><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, May 27, 2024 8:25 p.m."><a href=#chatlog__message-container-1244808717686411344>2024-05-27 8:25 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+<span class="chatlog__markdown-mention" title="dangerous_luka">@Danger!? Luka!</span> has been replaced with <span class="chatlog__markdown-mention" title="queenofcheetahs">@Cheetah the Godfather &#128293;</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1244812316306833499 class=chatlog__message-container data-message-id=1244812316306833499><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, May 27, 2024 8:39 p.m."><a href=#chatlog__message-container-1244812316306833499>2024-05-27 8:39 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span> whispered <span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1244821849460969539 class=chatlog__message-container data-message-id=1244821849460969539><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, May 27, 2024 9:17 p.m."><a href=#chatlog__message-container-1244821849460969539>2024-05-27 9:17 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span> whispered <span class="chatlog__markdown-mention" title="m0onstarr">@m0onstarr</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245013628344729601 class=chatlog__message-container data-message-id=1245013628344729601><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, May 28, 2024 9:59 a.m."><a href=#chatlog__message-container-1245013628344729601>2024-05-28 9:59 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+
+Just a heads up dor nominations that will be ending soon;
+
+For <span class="chatlog__markdown-mention" title="_mementomorii.">@Days w/o misreading Kaz: 0</span> and <span class="chatlog__markdown-mention" title="dangerous_luka">@Danger!? Luka!</span> theirs will end <span class="chatlog__markdown-timestamp" title="Tuesday, May 28, 2024 2:00 p.m.">2024-05-28 2:00 p.m.</span>
+
+For <span class="chatlog__markdown-mention" title="dragon_writer">@Dragon</span> <span class="chatlog__markdown-timestamp" title="Tuesday, May 28, 2024 3:00 p.m.">2024-05-28 3:00 p.m.</span>
+
+For <span class="chatlog__markdown-mention" title="kayjayqueue">@Kay</span> and <span class="chatlog__markdown-mention" title="cloudyshadow">@Dedicated Sheep Moderator (Jal)</span>  <span class="chatlog__markdown-timestamp" title="Tuesday, May 28, 2024 4:00 p.m.">2024-05-28 4:00 p.m.</span>
+
+For <span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span> and <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span> <span class="chatlog__markdown-timestamp" title="Tuesday, May 28, 2024 6:30 p.m.">2024-05-28 6:30 p.m.</span>
+
+Any votes not made in this time will default to <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">. Remember highest over majority is executed, unless it&#39;s a tie, then no one is :3</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245030493779656834 class=chatlog__message-container data-message-id=1245030493779656834><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, May 28, 2024 11:06 a.m."><a href=#chatlog__message-container-1245030493779656834>2024-05-28 11:06 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> has whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span> 
+
+<span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> has whispered <span class="chatlog__markdown-mention" title="queenofcheetahs">@Cheetah the Godfather &#128293;</span></span> <span class=chatlog__edited-timestamp title="Tuesday, May 28, 2024 11:33 a.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245053978492932189 class=chatlog__message-container data-message-id=1245053978492932189><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, May 28, 2024 12:40 p.m."><a href=#chatlog__message-container-1245053978492932189>2024-05-28 12:40 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245074170799460486 class=chatlog__message-container data-message-id=1245074170799460486><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, May 28, 2024 2:00 p.m."><a href=#chatlog__message-container-1245074170799460486>2024-05-28 2:00 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span>  
+
+Kazuma nomination has finished with 5 yes&#39;. Which us not enough for execution.
+
+Kazuma <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Gypyx <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Sunny <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Dragon <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+M0onster <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Luka <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"> 
+Kay <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Ngekop <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Jen <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Free <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Sheepy <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Cheetah <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Lukundo <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+Dec <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+Alex <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+------------------------------------
+<span class="chatlog__markdown-mention" title="queenofcheetahs">@Cheetah the Godfather &#128293;</span> nomination has finished with 5 yes&#39;. Which us not enough for execution.
+
+Luka <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"> 
+Gypyx <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Sunny <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Kay <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Ngekop <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Jen <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Free <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Sheepy <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Lukundo <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Cheetah <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Kazuma <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+Dec <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+M0on <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+Icet <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+Alex <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+Dragon <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245077961707884697 class=chatlog__message-container data-message-id=1245077961707884697><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, May 28, 2024 2:15 p.m."><a href=#chatlog__message-container-1245077961707884697>2024-05-28 2:15 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="dragon_writer">@Dragon</span> whispered <span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245093813811155027 class=chatlog__message-container data-message-id=1245093813811155027><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, May 28, 2024 3:18 p.m."><a href=#chatlog__message-container-1245093813811155027>2024-05-28 3:18 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span>  
+
+Dragon nomination has finished with 8 yes&#39;. They have been placed in the block. 
+
+Kazuma <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Cheetah <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"> 
+Gypyx <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+Luka <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+M0onstarr <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Kay <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Sheepy <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Icet <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Lukundo <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Gypyx <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Dragon <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Alex <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+Free <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+Jen <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+Dec <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"></span> <span class=chatlog__edited-timestamp title="Tuesday, May 28, 2024 4:24 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245116701096542339 class=chatlog__message-container data-message-id=1245116701096542339><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, May 28, 2024 4:49 p.m."><a href=#chatlog__message-container-1245116701096542339>2024-05-28 4:49 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+Key nomination has ended with 5 yes&#39;. Dragon is still on the block.
+
+M0onstarr <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+Kay <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Ngekop <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Jen <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Sheepy <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Luka <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Icet  <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Lukundo <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Dragon <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+-------------------------------
+Sheepy&#39;s nomination has ended with 5 yes&#39;. Dragon is still on the block.
+
+Ngekop <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Sheepy <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Icet  <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Lukundo <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Alex <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245159318190428160 class=chatlog__message-container data-message-id=1245159318190428160><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, May 28, 2024 7:38 p.m."><a href=#chatlog__message-container-1245159318190428160>2024-05-28 7:38 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+ngekop&#39;s nomination has ended with 4 yes&#39;. Dragon is still on the block.
+
+Ngekop <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+Luka <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Icet  <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Lukundo <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+M0on <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Dragon <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Sheepy <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+-------------------------------------------------------------------------------
+Lukundo&#39;s nomination has ended with 5 yes&#39;. Dragon is still on the block.
+
+Ngekop <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Luka <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Icet <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Kazuma <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Sheepy <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Dragon <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245164725680210002 class=chatlog__message-container data-message-id=1245164725680210002><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, May 28, 2024 8:00 p.m."><a href=#chatlog__message-container-1245164725680210002>2024-05-28 8:00 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+
+The fallowing nominations have ended!
+
+<strong>Alex with 10</strong>
+Luka <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"> 
+Ngekop <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Jen <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Sunny <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Icet <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Lukundo <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Cheetah <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+m0onstarr <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Gypyx <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Dragon <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Sheepy <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"> 
+
+<strong>M0on with 4</strong>
+Icet <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Sunny <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Ngekop <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Sheepy <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+
+<strong>Jen with 7</strong>
+Ngekop <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Sunny <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+icet <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"> 
+Lukundo <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+M0on <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Cheetah <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Alex <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Sheepy <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+
+<span class="chatlog__markdown-mention" title="cackle47_25282">@Alex19</span> is now on the block!
+
+<strong>Prods!!</strong>
+
+<span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span>  was Prodded with 6/25 posts (1/3)
+
+Remeber 3 prods and you will be forece replaced ^^
+
+Congrats to <span class="chatlog__markdown-mention" title="m0onstarr">@m0onstarr</span> for having the most posts at 686!</span> <span class=chatlog__edited-timestamp title="Tuesday, May 28, 2024 8:23 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245212397149618247 class=chatlog__message-container data-message-id=1245212397149618247><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, May 28, 2024 11:09 p.m."><a href=#chatlog__message-container-1245212397149618247>2024-05-28 11:09 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> Nominations can not be made if they would extend day by more then 12 hours. So the nomination on sunny is invalid</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245243085852643359 class=chatlog__message-container data-message-id=1245243085852643359><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Wednesday, May 29, 2024 1:11 a.m."><a href=#chatlog__message-container-1245243085852643359>2024-05-29 1:11 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+Icet&#39;s nomination has ended with 2 yes&#39;. Alex is still on the block.
+
+Alex <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Sheepy <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Ngekop <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+
+<span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)"><span class="chatlog__markdown-mention" title="cackle47_25282">@Alex19</span> has been executed. But did not die.</span>
+
+<strong>Night ends <span class="chatlog__markdown-timestamp" title="Thursday, May 30, 2024 1:00 a.m.">2024-05-30 1:00 a.m.</span></strong></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245602637819281501 class=chatlog__message-container data-message-id=1245602637819281501><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Thursday, May 30, 2024 1:00 a.m."><a href=#chatlog__message-container-1245602637819281501>2024-05-30 1:00 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+The crimson moon rose once again last night, as everyone woke fearful of what the day would bring they looked to the center of town...
+
+<span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)">No one died last night... maybe their is no demon?</span>
+
+Nominations will start in <span class="chatlog__markdown-timestamp" title="Thursday, May 30, 2024 1:00 p.m.">2024-05-30 1:00 p.m.</span>.</span> <span class=chatlog__edited-timestamp title="Thursday, May 30, 2024 1:02 a.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1245604270053654568 class=chatlog__message-container data-message-id=1245604270053654568><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, May 30, 2024 1:06 a.m.">1:06 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Updated Seating btw</span></div><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1241854923130409041/1245604269621776384/image.png?ex=66e865a0&amp;is=66e71420&amp;hm=8be57ba4cc706f4ea99c2749fe7ea9ddd6768a313dfb10242c08274e7b99640d&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1241854923130409041/1245604269621776384/image.png?ex=66e865a0&amp;is=66e71420&amp;hm=8be57ba4cc706f4ea99c2749fe7ea9ddd6768a313dfb10242c08274e7b99640d&amp;" alt="Image attachment" title="Image: image.png (1.46 MB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245758434373275808 class=chatlog__message-container data-message-id=1245758434373275808><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Thursday, May 30, 2024 11:19 a.m."><a href=#chatlog__message-container-1245758434373275808>2024-05-30 11:19 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="ray_695">@Free&#39;s Main</span> replaced <span class="chatlog__markdown-mention" title="red_002">@Free</span></span></div></div></div></div><div id=chatlog__message-container-1245759518315642901 class=chatlog__message-container data-message-id=1245759518315642901><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, May 30, 2024 11:23 a.m.">11:23 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="_mementomorii.">@Days w/o misreading Kaz: 0</span> whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span> 
+
+<span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span> whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span></span></div></div></div></div><div id=chatlog__message-container-1245761199321120789 class=chatlog__message-container data-message-id=1245761199321120789><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, May 30, 2024 11:30 a.m.">11:30 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span> whispered <span class="chatlog__markdown-mention" title="dragon_writer">@Dragon</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245784109700087868 class=chatlog__message-container data-message-id=1245784109700087868><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Thursday, May 30, 2024 1:01 p.m."><a href=#chatlog__message-container-1245784109700087868>2024-05-30 1:01 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+Nominations are now open, and will be done slightly differently. For origination sake I will be creating threads for each nom and you will vote yes and no with in them.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245790228891832513 class=chatlog__message-container data-message-id=1245790228891832513><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Thursday, May 30, 2024 1:25 p.m."><a href=#chatlog__message-container-1245790228891832513>2024-05-30 1:25 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="kayjayqueue">@Kay</span> whispered <span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245797376111804526 class=chatlog__message-container data-message-id=1245797376111804526><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Thursday, May 30, 2024 1:54 p.m."><a href=#chatlog__message-container-1245797376111804526>2024-05-30 1:54 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span> whispered <span class="chatlog__markdown-mention" title="kayjayqueue">@Kay</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245807328041762879 class=chatlog__message-container data-message-id=1245807328041762879><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Thursday, May 30, 2024 2:33 p.m."><a href=#chatlog__message-container-1245807328041762879>2024-05-30 2:33 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="kayjayqueue">@Kay</span> whisper <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245812252586545262 class=chatlog__message-container data-message-id=1245812252586545262><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Thursday, May 30, 2024 2:53 p.m."><a href=#chatlog__message-container-1245812252586545262>2024-05-30 2:53 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span> whispered <span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245815126905589964 class=chatlog__message-container data-message-id=1245815126905589964><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Thursday, May 30, 2024 3:04 p.m."><a href=#chatlog__message-container-1245815126905589964>2024-05-30 3:04 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="cloudyshadow">@Dedicated Sheep Moderator (Jal)</span> whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245817752690888724 class=chatlog__message-container data-message-id=1245817752690888724><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Thursday, May 30, 2024 3:14 p.m."><a href=#chatlog__message-container-1245817752690888724>2024-05-30 3:14 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="cloudyshadow">@Dedicated Sheep Moderator (Jal)</span> whispered <span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245825914911199292 class=chatlog__message-container data-message-id=1245825914911199292><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Thursday, May 30, 2024 3:47 p.m."><a href=#chatlog__message-container-1245825914911199292>2024-05-30 3:47 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span> whispered <span class="chatlog__markdown-mention" title="kayjayqueue">@Kay</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1245945837779947530 class=chatlog__message-container data-message-id=1245945837779947530><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Thursday, May 30, 2024 11:43 p.m."><a href=#chatlog__message-container-1245945837779947530>2024-05-30 11:43 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span> whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246091363997712435 class=chatlog__message-container data-message-id=1246091363997712435><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Friday, May 31, 2024 9:22 a.m."><a href=#chatlog__message-container-1246091363997712435>2024-05-31 9:22 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span> whispered <span class="chatlog__markdown-mention" title="ray_695">@Free&#39;s Main</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246130183354974311 class=chatlog__message-container data-message-id=1246130183354974311><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Friday, May 31, 2024 11:56 a.m."><a href=#chatlog__message-container-1246130183354974311>2024-05-31 11:56 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="sinisfuel">@aerosol</span> whispered <span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246155222611398799 class=chatlog__message-container data-message-id=1246155222611398799><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Friday, May 31, 2024 1:35 p.m."><a href=#chatlog__message-container-1246155222611398799>2024-05-31 1:35 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+<span class="chatlog__markdown-mention" title="cackle47_25282">@Alex19</span> nomination has ended with 9/8 yes&#39;. <strong>They are on the block!</strong>
+
+Lukundo <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"> 
+M0on <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+Sunny <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Cheetah <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"> 
+Icet <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Sheepy <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"> 
+Ngekop <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Jen <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"> 
+Kay <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Gypyx <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Kazuma <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Dragon <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246212261710794924 class=chatlog__message-container data-message-id=1246212261710794924><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Friday, May 31, 2024 5:22 p.m."><a href=#chatlog__message-container-1246212261710794924>2024-05-31 5:22 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+<span class="chatlog__markdown-mention" title="extasly">@Extasly</span> nomination has ended with 3/9 yes&#39;. <strong>They are safe</strong>
+
+Gypyx <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png">
+Lukundo <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"> 
+Free <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Moon <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"></span> <span class=chatlog__edited-timestamp title="Friday, May 31, 2024 5:22 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1246213053486202890 class=chatlog__message-container data-message-id=1246213053486202890><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, May 31, 2024 5:25 p.m.">5:25 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Man I missed Prod again</span></div></div></div></div><div id=chatlog__message-container-1246213105663344693 class=chatlog__message-container data-message-id=1246213105663344693><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, May 31, 2024 5:25 p.m.">5:25 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>I keep missing that the day has passed</span></div></div></div></div><div id=chatlog__message-container-1246213392927297628 class=chatlog__message-container data-message-id=1246213392927297628><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, May 31, 2024 5:27 p.m.">5:27 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Day ends <span class="chatlog__markdown-timestamp" title="Saturday, June 1, 2024 1:00 a.m.">2024-06-01 1:00 a.m.</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246247064460066876 class=chatlog__message-container data-message-id=1246247064460066876><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Friday, May 31, 2024 7:40 p.m."><a href=#chatlog__message-container-1246247064460066876>2024-05-31 7:40 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> Since thier is no discution and no more nominations can be made or are curently running, I am going to end day early <span class="chatlog__markdown-timestamp" title="Friday, May 31, 2024 8:00 p.m.">2024-05-31 8:00 p.m.</span></span></div></div></div></div><div id=chatlog__message-container-1246247278553993326 class=chatlog__message-container data-message-id=1246247278553993326><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, May 31, 2024 7:41 p.m.">7:41 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>from now on if their are no current nominations and no more that can be made, day will end early.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246251843814948965 class=chatlog__message-container data-message-id=1246251843814948965><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Friday, May 31, 2024 7:59 p.m."><a href=#chatlog__message-container-1246251843814948965>2024-05-31 7:59 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+
+Day has ended. The town has decided on who to execute.
+
+<span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)"><span class="chatlog__markdown-mention" title="cackle47_25282">@Alex19</span> has been executed. They have died.</span>
+
+<strong>Night ends <span class="chatlog__markdown-timestamp" title="Saturday, June 1, 2024 8:00 p.m.">2024-06-01 8:00 p.m.</span></strong></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246255243302535278 class=chatlog__message-container data-message-id=1246255243302535278><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Friday, May 31, 2024 8:13 p.m."><a href=#chatlog__message-container-1246255243302535278>2024-05-31 8:13 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="queenofcheetahs">@Cheetah the Godfather &#128293;</span>  has been prodded with 10/25 (1/3)
+<span class="chatlog__markdown-mention" title="sinisfuel">@aerosol</span>  has been prodded with 18/25 (1/3)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246614468859924490 class=chatlog__message-container data-message-id=1246614468859924490><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Saturday, June 1, 2024 8:00 p.m."><a href=#chatlog__message-container-1246614468859924490>2024-06-01 8:00 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+Their was a massacre last night, 3 people died last night.
+
+<span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)"><span class="chatlog__markdown-mention" title="_mementomorii.">@Days w/o misreading Kaz: 0</span> was picked apart. Died last night. </span>
+<span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)"><span class="chatlog__markdown-mention" title="m0onstarr">@m0onstarr</span> was missing their head. Died last night. </span>
+<span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)"><span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span> is nothing but meat. Died last night. </span>
+
+<strong>Nominations start <span class="chatlog__markdown-timestamp" title="Sunday, June 2, 2024 8:00 a.m.">2024-06-02 8:00 a.m.</span></strong></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246616796249981090 class=chatlog__message-container data-message-id=1246616796249981090><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Saturday, June 1, 2024 8:10 p.m."><a href=#chatlog__message-container-1246616796249981090>2024-06-01 8:10 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Updated Seating</span></div><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1241854923130409041/1246616796014841886/image.png?ex=66e8c8dd&amp;is=66e7775d&amp;hm=a59ca6076a8c40fda047ce1ab1a84c5b9a2648beffb7dc8d46c66dff32e392bf&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1241854923130409041/1246616796014841886/image.png?ex=66e8c8dd&amp;is=66e7775d&amp;hm=a59ca6076a8c40fda047ce1ab1a84c5b9a2648beffb7dc8d46c66dff32e392bf&amp;" alt="Image attachment" title="Image: image.png (1.39 MB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1246617352729006100 class=chatlog__message-container data-message-id=1246617352729006100><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, June 1, 2024 8:12 p.m.">8:12 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+For those of you that are dead, you are still expected to play. Also, you have <u><strong>ONE</strong></u> vote for the rest of the game. Please remember this, as I may not remind you when you vote.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246619366838243329 class=chatlog__message-container data-message-id=1246619366838243329><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Saturday, June 1, 2024 8:20 p.m."><a href=#chatlog__message-container-1246619366838243329>2024-06-01 8:20 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span> whispered <span class="chatlog__markdown-mention" title="sinisfuel">@aerosol</span></span></div></div></div></div><div id=chatlog__message-container-1246620261692997793 class=chatlog__message-container data-message-id=1246620261692997793><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, June 1, 2024 8:23 p.m.">8:23 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="cloudyshadow">@Dedicated Sheep Moderator (Jal)</span> whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246623476199198781 class=chatlog__message-container data-message-id=1246623476199198781><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Saturday, June 1, 2024 8:36 p.m."><a href=#chatlog__message-container-1246623476199198781>2024-06-01 8:36 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="sinisfuel">@aerosol</span> whispered <span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span></span></div></div></div></div><div id=chatlog__message-container-1246624224328814654 class=chatlog__message-container data-message-id=1246624224328814654><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, June 1, 2024 8:39 p.m.">8:39 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="sinisfuel">@aerosol</span> whispered <span class="chatlog__markdown-mention" title="m0onstarr">@m0onstarr</span></span></div></div></div></div><div id=chatlog__message-container-1246625493084799097 class=chatlog__message-container data-message-id=1246625493084799097><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, June 1, 2024 8:44 p.m.">8:44 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span> whispered <span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246631856774844527 class=chatlog__message-container data-message-id=1246631856774844527><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Saturday, June 1, 2024 9:09 p.m."><a href=#chatlog__message-container-1246631856774844527>2024-06-01 9:09 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="m0onstarr">@m0onstarr</span> whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246644067245228033 class=chatlog__message-container data-message-id=1246644067245228033><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Saturday, June 1, 2024 9:58 p.m."><a href=#chatlog__message-container-1246644067245228033>2024-06-01 9:58 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span> 
+<span class="chatlog__markdown-mention" title=".jennifer21">@Jen</span> whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span> 
+<span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span> whispered <span class="chatlog__markdown-mention" title=".jennifer21">@Jen</span> 
+<span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span> whispered <span class="chatlog__markdown-mention" title="_mementomorii.">@Days w/o misreading Kaz: 0</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246667976003031122 class=chatlog__message-container data-message-id=1246667976003031122><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Saturday, June 1, 2024 11:33 p.m."><a href=#chatlog__message-container-1246667976003031122>2024-06-01 11:33 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="m0onstarr">@m0onstarr</span>  whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246687898309492797 class=chatlog__message-container data-message-id=1246687898309492797><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Sunday, June 2, 2024 12:52 a.m."><a href=#chatlog__message-container-1246687898309492797>2024-06-02 12:52 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="queenofcheetahs">@Cheetah the Godfather &#128293;</span> whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246810987068264470 class=chatlog__message-container data-message-id=1246810987068264470><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Sunday, June 2, 2024 9:01 a.m."><a href=#chatlog__message-container-1246810987068264470>2024-06-02 9:01 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> nominations open</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246815989622902804 class=chatlog__message-container data-message-id=1246815989622902804><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Sunday, June 2, 2024 9:21 a.m."><a href=#chatlog__message-container-1246815989622902804>2024-06-02 9:21 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="extasly">@Extasly</span> whispered <span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1246983875050209380 class=chatlog__message-container data-message-id=1246983875050209380><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Sunday, June 2, 2024 8:28 p.m."><a href=#chatlog__message-container-1246983875050209380>2024-06-02 8:28 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+Prods!!!!!!
+
+<span class="chatlog__markdown-mention" title="_mementomorii.">@Days w/o misreading Kaz: 0</span> was prodded with 13/25 (1/3)
+<span class="chatlog__markdown-mention" title="ray_695">@Free&#39;s Main</span> was prodded with 12/25 (1/3)
+<span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> was prodded with 10/25 (2/3)
+
+Pls be more active ^^</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1247166189247926334 class=chatlog__message-container data-message-id=1247166189247926334><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, June 3, 2024 8:33 a.m."><a href=#chatlog__message-container-1247166189247926334>2024-06-03 8:33 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="ray_695">@Free&#39;s Main</span>  whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span> 
+
+<span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> whispered <span class="chatlog__markdown-mention" title="m0onstarr">@m0onstarr</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1247322283123675259 class=chatlog__message-container data-message-id=1247322283123675259><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, June 3, 2024 6:53 p.m."><a href=#chatlog__message-container-1247322283123675259>2024-06-03 6:53 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span> whispered <span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1247328127600824391 class=chatlog__message-container data-message-id=1247328127600824391><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, June 3, 2024 7:16 p.m."><a href=#chatlog__message-container-1247328127600824391>2024-06-03 7:16 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span> whispered <span class="chatlog__markdown-mention" title="dragon_writer">@Dragon</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1247353628059111455 class=chatlog__message-container data-message-id=1247353628059111455><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, June 3, 2024 8:57 p.m."><a href=#chatlog__message-container-1247353628059111455>2024-06-03 8:57 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+the town has decided to execute <span class="chatlog__markdown-mention" title="sinisfuel">@aerosol</span> 
+
+The game continues. Night ends <span class="chatlog__markdown-timestamp" title="Tuesday, June 4, 2024 8:00 p.m.">2024-06-04 8:00 p.m.</span>.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1247353757356785796 class=chatlog__message-container data-message-id=1247353757356785796><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(255,201,244) title=lilybottom>Sugar Crash 🍬 (LilyBottom)</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1247353628059111455')"> <span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+the town has decided to execute <span class="chatlog__markdown-mention" title="sinisfuel">@aerosol</span> 
+
+The game continues. Night ends <span class="chatlog__markdown-timestamp" title="Tuesday, June 4, 2024 8:00 p.m.">2024-06-04 8:00 p.m.</span>. </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, June 3, 2024 8:58 p.m."><a href=#chatlog__message-container-1247353757356785796>2024-06-03 8:58 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Sunny is dead btw</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1247711338856321054 class=chatlog__message-container data-message-id=1247711338856321054><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, June 4, 2024 8:39 p.m."><a href=#chatlog__message-container-1247711338856321054>2024-06-04 8:39 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+Sorry for late start no one died... but
+
+<span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)"> <span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span> has come back to life! </span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1247716740243259493 class=chatlog__message-container data-message-id=1247716740243259493><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, June 4, 2024 9:00 p.m."><a href=#chatlog__message-container-1247716740243259493>2024-06-04 9:00 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="m0onstarr">@m0onstarr</span> whispered <span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span></span></div></div></div></div><div id=chatlog__message-container-1247717529141510195 class=chatlog__message-container data-message-id=1247717529141510195><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, June 4, 2024 9:04 p.m.">9:04 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="c.atasyl">@Danger?! Icet!</span> whispered <span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span></span></div></div></div></div><div id=chatlog__message-container-1247717755394723961 class=chatlog__message-container data-message-id=1247717755394723961><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, June 4, 2024 9:04 p.m.">9:04 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title=".jennifer21">@Jen</span> whispered <span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span></span></div></div></div></div><div id=chatlog__message-container-1247718106621546559 class=chatlog__message-container data-message-id=1247718106621546559><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, June 4, 2024 9:06 p.m.">9:06 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title=".jennifer21">@Jen</span> whispered <span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1247941847012085895 class=chatlog__message-container data-message-id=1247941847012085895><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Wednesday, June 5, 2024 11:55 a.m."><a href=#chatlog__message-container-1247941847012085895>2024-06-05 11:55 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="m0onstarr">@m0onstarr</span> whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span> 
+<span class="chatlog__markdown-mention" title="sinisfuel">@aerosol</span> whispered <span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span></span> <span class=chatlog__edited-timestamp title="Wednesday, June 5, 2024 11:55 a.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1247942076172210226 class=chatlog__message-container data-message-id=1247942076172210226><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, June 5, 2024 11:56 a.m.">11:56 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Also <span class="chatlog__markdown-mention" style="">@Alive Line AR</span> I opened nominations for yall</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1248066626989854803 class=chatlog__message-container data-message-id=1248066626989854803><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Wednesday, June 5, 2024 8:11 p.m."><a href=#chatlog__message-container-1248066626989854803>2024-06-05 8:11 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+Prod time!!
+
+<span class="chatlog__markdown-mention" title="dragon_writer">@Dragon</span> has been prodded with 0/25 posts (2/3)
+<span class="chatlog__markdown-mention" title="extasly">@Extasly</span> prodded with 3/25 (1/3)
+
+GL yall</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1248271669185745021 class=chatlog__message-container data-message-id=1248271669185745021><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Thursday, June 6, 2024 9:45 a.m."><a href=#chatlog__message-container-1248271669185745021>2024-06-06 9:45 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1248426310414503946 class=chatlog__message-container data-message-id=1248426310414503946><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Thursday, June 6, 2024 8:00 p.m."><a href=#chatlog__message-container-1248426310414503946>2024-06-06 8:00 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+The town has decided to execute <span class="chatlog__markdown-mention" title="sinisfuel">@aerosol</span> 
+
+<span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)"> Sunny was executed, they did not die.</span>
+
+EoN is <span class="chatlog__markdown-timestamp" title="Friday, June 7, 2024 8:00 p.m.">2024-06-07 8:00 p.m.</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1248788615396327484 class=chatlog__message-container data-message-id=1248788615396327484><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Friday, June 7, 2024 8:00 p.m."><a href=#chatlog__message-container-1248788615396327484>2024-06-07 8:00 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+It is the start of another day, and another bloody scene in the town square.
+
+<span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)"><span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span> was found dangling form a tree. They have died.</span>
+<span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)"><span class="chatlog__markdown-mention" title=".jennifer21">@Jen</span>&#39;s head was fished out of the well. They have died.</span>
+<span class="chatlog__markdown-spoiler chatlog__markdown-spoiler--hidden" onclick="showSpoiler(event, this)"><span class="chatlog__markdown-mention" title="red_002">@Free</span> is nothing then a pare of bloodied boots. They have died. </span>
+
+Due to the lack of discussion/nominations as of recent. You may now forgo your nomination be pinging me in the vote channel, if all living players forgo their nomination or have nominated, and there is no currently running nominations; the day will end.
+
+With that being said. <strong>Nominations open <span class="chatlog__markdown-timestamp" title="Saturday, June 8, 2024 8:00 p.m.">2024-06-08 8:00 p.m.</span>.</strong></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1248791027226247300 class=chatlog__message-container data-message-id=1248791027226247300><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Friday, June 7, 2024 8:09 p.m."><a href=#chatlog__message-container-1248791027226247300>2024-06-07 8:09 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title=".jennifer21">@Jen</span> whispered <span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1248824316657926236 class=chatlog__message-container data-message-id=1248824316657926236><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Friday, June 7, 2024 10:21 p.m."><a href=#chatlog__message-container-1248824316657926236>2024-06-07 10:21 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title=".jennifer21">@Jen</span> whispered <span class="chatlog__markdown-mention" title="ngekop">@Ngekop</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1248999579698073681 class=chatlog__message-container data-message-id=1248999579698073681><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Saturday, June 8, 2024 9:58 a.m."><a href=#chatlog__message-container-1248999579698073681>2024-06-08 9:58 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> nominations open</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1249162983179812954 class=chatlog__message-container data-message-id=1249162983179812954><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Saturday, June 8, 2024 8:47 p.m."><a href=#chatlog__message-container-1249162983179812954>2024-06-08 8:47 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> Prods have been skips as almost everone failed to pass them... Please be more active.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1249458820044820480 class=chatlog__message-container data-message-id=1249458820044820480><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Sunday, June 9, 2024 4:23 p.m."><a href=#chatlog__message-container-1249458820044820480>2024-06-09 4:23 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="cloudyshadow">@Dedicated Sheep Moderator (Jal)</span> whispered <span class="chatlog__markdown-mention" title="thelukundo">@The Lukundo</span></span></div></div></div></div><div id=chatlog__message-container-1249459428982263939 class=chatlog__message-container data-message-id=1249459428982263939><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, June 9, 2024 4:25 p.m.">4:25 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+<span class="chatlog__markdown-mention" title="queenofcheetahs">@Cheetah the Godfather &#128293;</span> nomination has ended with 5/4 yes&#39;. <strong>They are on the block!</strong>
+
+Lukundo <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Gypyx <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Cheetah <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Kay <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Free <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1249610518881243219 class=chatlog__message-container data-message-id=1249610518881243219><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, June 10, 2024 2:26 a.m."><a href=#chatlog__message-container-1249610518881243219>2024-06-10 2:26 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> sorry forgot to end day.
+
+<span class="chatlog__markdown-mention" title="queenofcheetahs">@Cheetah the Godfather &#128293;</span> was executed and died. Game continues.
+
+Night ends normal time I suppose.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1249875758806073345 class=chatlog__message-container data-message-id=1249875758806073345><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, June 10, 2024 8:00 p.m."><a href=#chatlog__message-container-1249875758806073345>2024-06-10 8:00 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+
+No one died last night...
+
+Since there are more dead players then alive, I will be <strong>opening nominations immediately!</strong>
+
+Good luck day end <span class="chatlog__markdown-timestamp" title="Wednesday, June 12, 2024 8:00 p.m.">2024-06-12 8:00 p.m.</span>.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1249908479125098578 class=chatlog__message-container data-message-id=1249908479125098578><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Monday, June 10, 2024 10:10 p.m."><a href=#chatlog__message-container-1249908479125098578>2024-06-10 10:10 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title=".jennifer21">@Jen</span> whispered <span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1250193260123652096 class=chatlog__message-container data-message-id=1250193260123652096><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, June 11, 2024 5:01 p.m."><a href=#chatlog__message-container-1250193260123652096>2024-06-11 5:01 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+I would appreciate more activity out of you all, especially those of you that are dead. I don&#39;t wana replace half the game.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1250254453672775681 class=chatlog__message-container data-message-id=1250254453672775681><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, June 11, 2024 9:04 p.m."><a href=#chatlog__message-container-1250254453672775681>2024-06-11 9:04 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+<span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> nomination has ended with 3/4 yes&#39;. The will not be executed.
+
+Icet <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Jen <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="evil"
+    title="evil"
+    src="https://cdn.discordapp.com/emojis/1029915652007403641.png"> 
+Jal <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png">
+Lukundo <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="good"
+    title="good"
+    src="https://cdn.discordapp.com/emojis/1029915560277979136.png"></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1250257373025538088 class=chatlog__message-container data-message-id=1250257373025538088><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Tuesday, June 11, 2024 9:16 p.m."><a href=#chatlog__message-container-1250257373025538088>2024-06-11 9:16 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> 
+
+<span class="chatlog__markdown-mention" title="_mementomorii.">@Days w/o misreading Kaz: 0</span> 
+<span class="chatlog__markdown-mention" title="ray_695">@Free&#39;s Main</span> 
+<span class="chatlog__markdown-mention" title="queenofcheetahs">@Cheetah the Godfather &#128293;</span><span class="chatlog__markdown-mention" title="sinisfuel">@aerosol</span> 
+<span class="chatlog__markdown-mention" title="dragon_writer">@Dragon</span> 
+<span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span>
+
+<strong>Have all being replace :3</strong></span></div></div></div></div><div id=chatlog__message-container-1250258763571658752 class=chatlog__message-container data-message-id=1250258763571658752><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, June 11, 2024 9:21 p.m.">9:21 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> due to the high number of replacements I am pausing the game until replacements can be found</span></div></div></div></div><div id=chatlog__message-container-1250258850632826950 class=chatlog__message-container data-message-id=1250258850632826950><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, June 11, 2024 9:22 p.m.">9:22 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>and if we cant... uhh ig ill can the game</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1250955911506300938 class=chatlog__message-container data-message-id=1250955911506300938><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Thursday, June 13, 2024 7:32 p.m."><a href=#chatlog__message-container-1250955911506300938>2024-06-13 7:32 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> looks like I need to can the game. I only have 4/6 reps and 2 of them seem to only be doing out of an obligation.
+
+I am not sure if I should call it a draw or declare who I think was going to win. Regardless I&#39;ll reveal everything in a few hours so feel free to do some final guesses of who is who in your player chat ^^</span></div></div></div></div><div id=chatlog__message-container-1250955990472458270 class=chatlog__message-container data-message-id=1250955990472458270><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, June 13, 2024 7:32 p.m.">7:32 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Hope you all had a fun time!</span></div></div></div></div><div id=chatlog__message-container-1250956109368262687 class=chatlog__message-container data-message-id=1250956109368262687><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, June 13, 2024 7:32 p.m.">7:32 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><s>maby this is just not the server for botc ;~;</s></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1251053323340218438 class=chatlog__message-container data-message-id=1251053323340218438><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Friday, June 14, 2024 1:59 a.m."><a href=#chatlog__message-container-1251053323340218438>2024-06-14 1:59 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line AR</span> game is officially canned. The roles are bellow!</span></div><div class="chatlog__attachment chatlog__attachment--hidden" onclick=showSpoiler(event,this)><div class=chatlog__attachment-spoiler-caption>SPOILER</div><a href="https://cdn.discordapp.com/attachments/1241854923130409041/1251053322962600007/SPOILER_image.png?ex=66e871f3&amp;is=66e72073&amp;hm=380d7d6b1546e1761362f42ff1a779dbe2cb18674e886064a8a400859759aac8&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1241854923130409041/1251053322962600007/SPOILER_image.png?ex=66e871f3&amp;is=66e72073&amp;hm=380d7d6b1546e1761362f42ff1a779dbe2cb18674e886064a8a400859759aac8&amp;" alt="Image attachment" title="Image: SPOILER_image.png (2.06 MB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1251053376616271924 class=chatlog__message-container data-message-id=1251053376616271924><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, June 14, 2024 1:59 a.m.">1:59 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="lunex">@Lunexia</span> game is over ig</span></div></div></div></div><div id=chatlog__message-container-1251053526671691879 class=chatlog__message-container data-message-id=1251053526671691879><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, June 14, 2024 2:00 a.m.">2:00 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>pepole could talk in chat</span></div></div></div></div><div id=chatlog__message-container-1251053623253663754 class=chatlog__message-container data-message-id=1251053623253663754><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, June 14, 2024 2:00 a.m.">2:00 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>tbh, if dec got voted it was basicly an ato win for evils</span></div></div></div></div><div id=chatlog__message-container-1251053685950255178 class=chatlog__message-container data-message-id=1251053685950255178><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, June 14, 2024 2:00 a.m.">2:00 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>so I feel like I should give them the win</span></div></div></div></div><div id=chatlog__message-container-1251053747522506813 class=chatlog__message-container data-message-id=1251053747522506813><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, June 14, 2024 2:00 a.m.">2:00 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>but ill let the archivers dicide that</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1251120718910062613 class=chatlog__message-container data-message-id=1251120718910062613><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/46d5fc03b098ff77aee4c948cb5d4ad3.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(255,201,244) title=lilybottom>Sugar Crash 🍬 (LilyBottom)</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1251053376616271924')"> <span class="chatlog__markdown-mention" title="lunex">@Lunexia</span> game is over ig </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(64,153,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Friday, June 14, 2024 6:27 a.m."><a href=#chatlog__message-container-1251120718910062613>2024-06-14 6:27 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>why am i the one being pinged</span></div></div></div></div><div id=chatlog__message-container-1251120733262708768 class=chatlog__message-container data-message-id=1251120733262708768><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, June 14, 2024 6:27 a.m.">6:27 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>what</span></div></div></div></div><div id=chatlog__message-container-1251120734915530772 class=chatlog__message-container data-message-id=1251120734915530772><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, June 14, 2024 6:27 a.m.">6:27 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>cool ig</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1251175846270472342 class=chatlog__message-container data-message-id=1251175846270472342><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/244876682777985034/e4f3210559efb00ac831613bc9251784.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(255,201,244) title=lilybottom data-user-id=244876682777985034>Sugar Crash 🍬 (LilyBottom)</span> <span class=chatlog__timestamp title="Friday, June 14, 2024 10:06 a.m."><a href=#chatlog__message-container-1251175846270472342>2024-06-14 10:06 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Uh idk</span></div></div></div></div><div id=chatlog__message-container-1251175865652351008 class=chatlog__message-container data-message-id=1251175865652351008><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, June 14, 2024 10:06 a.m.">10:06 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Sorry</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1251673699552071783 class=chatlog__message-container data-message-id=1251673699552071783><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/46d5fc03b098ff77aee4c948cb5d4ad3.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(64,153,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Saturday, June 15, 2024 7:04 p.m."><a href=#chatlog__message-container-1251673699552071783>2024-06-15 7:04 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>ok so since lily isnt doing it ill tell him, <span class="chatlog__markdown-mention" title="._melancholic_.">@Mel</span> this ended.</span> <span class=chatlog__edited-timestamp title="Sunday, June 16, 2024 7:14 a.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1251857454644330568 class=chatlog__message-container data-message-id=1251857454644330568><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/416757703516356628/8832d0207cb6d9df9c592e6efc8b3b73.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/135784580077715458/46d5fc03b098ff77aee4c948cb5d4ad3.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(64,153,255) title=lunex>Lunexia</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1251673699552071783')"> ok so since lily isnt doing it ill tell him, <span class="chatlog__markdown-mention" title="._melancholic_.">@Mel</span> this ended. </span> <span class=chatlog__reply-edited-timestamp title="Sunday, June 16, 2024 7:14 a.m.">(edited)</span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(134,115,161) title=._melancholic_. data-user-id=416757703516356628>Mel</span> <span class=chatlog__timestamp title="Sunday, June 16, 2024 7:14 a.m."><a href=#chatlog__message-container-1251857454644330568>2024-06-16 7:14 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Ill handle this soon</span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 121 message(s)</div><div class=postamble__entry>Timezone: UTC-5</div></div>
