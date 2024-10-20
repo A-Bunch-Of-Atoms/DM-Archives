@@ -1,0 +1,589 @@
+<!DOCTYPE html><html lang=en><head><title>Discord Mafia - sp55-graveyard</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-twitch{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/648663810772697089/a_f9deadc152d185356cb503afb448d0c4.gif?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>Discord Mafia</div><div class=preamble__entry>temp-archive-14 / sp55-graveyard</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1287862238073458719 class=chatlog__message-container data-message-id=1287862238073458719><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/286565458826625024/f9c26b1fa8cb27a72dd9fc14f17f828c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(172,172,172) title=konkonfairydragon data-user-id=286565458826625024>Kon</span> <span class=chatlog__timestamp title="Monday, September 23, 2024 3:44 p.m."><a href=#chatlog__message-container-1287862238073458719>2024-09-23 3:44 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="ray_695">@Free&#39;s Main</span> 
+<strong>Surveilance Operator</strong>
+I spy, I spy with my little eye...
+<em>VIP Investigative Person</em>
+
+<strong>Abilities</strong>
+<em>Cameras</em>
+Choose someone to survey every night. You will recieve their night results not caused by their own actions alongside yours. Additionally roll 1d4. On a 4 you will also recieve night results, resulting from their own actions.
+
+<em>Track</em>
+At day you may choose to track someone. Untill you decide to stop you will always know when they use an ability on someone and who.
+
+<em>Stalk</em>
+Stalk someone, taking 4 phases of inaction to finish. You will learn their exact role.
+
+<strong>Passives</strong>
+<em>VIP knowledge</em>
+You are aware of ???.
+
+<em>In custody</em>
+If you were to die or get thrown out, someone will inherit your abilities.
+
+Wincon:Get rid of all those useless plebians within this mall.</span> <span class=chatlog__edited-timestamp title="Monday, September 23, 2024 3:45 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1287862417384144988 class=chatlog__message-container data-message-id=1287862417384144988><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, September 23, 2024 3:45 p.m.">3:45 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="ask_for_forgiveness">@Bazooka</span>
+<strong>Caution</strong>
+Last word said before the accident...
+<em>Amazon Evil Item</em>
+
+<strong>Abilities</strong>
+<em>Slip</em>
+Cause a puddle to be before someone else&#39;s doorstep. If they visit they will fall on their but and their ability will fail. Puddles last for 2 slips.
+
+<em>Knife</em>
+Place a knife on the puddle before someone&#39;s doorstep with a puddle. If they visit, they will fall on the knife, dying.
+
+<em>Sign</em>
+Choose at day if you wish to reverse your slip puddles, so that visitors instead slip.
+
+<strong>Passives</strong>
+<em>Caution</em>
+Your visits are astral and cannot be tracked or seen
+
+<em>The missing sign</em>
+At any time you may decide to go missing. This will do nothing other than remove you from the game and make you uninteractable for 4 phases.
+
+Wincon: Eliminate everyone and anything not submitting to your organization.</span></div></div></div></div><div id=chatlog__message-container-1287862466100985878 class=chatlog__message-container data-message-id=1287862466100985878><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, September 23, 2024 3:45 p.m.">3:45 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="derpsnorlax">@Derp</span>
+<strong>Paul Blart</strong>
+A diabetic mall cop...
+<em>Neutral Benign Person</em>
+
+<strong>Abilities</strong>
+<em>Diabetic</em>
+Protect your target at night in a different way.... 3 uses.
+
+<em>Check</em>
+Check someone for your target at day. You both will be told their allignment. 1 use.
+
+<strong>Passives</strong>
+<em>Low blood sugar</em>
+If your target dies, you will die 2 phases afterward.
+
+<em>Protection</em>
+You have a target. They wont be revealed after your death. They are [REDACTED].
+
+<em>Guidance</em>
+On the first day you have a chat with your target. You will lose it afterward.
+
+Wincon: Survive untill the end.</span></div></div></div></div><div id=chatlog__message-container-1287862869198635231 class=chatlog__message-container data-message-id=1287862869198635231><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, September 23, 2024 3:47 p.m.">3:47 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="flameflyer">@Guy Ol’ Fieri (Giles)</span> LEFT THE TOWN
+<strong>Inflateable Tube Man</strong>
+Funny man go brrrrr
+<em>Neutral Benign Item</em>
+
+<strong>Ability</strong>
+<em>Protect</em>
+Choose someone every phase, you will take all actions they may take onto yourself.
+
+<strong>Passives</strong>
+<em>Inflated</em>
+The first time you are attacked, you survive
+
+<em>Slightly deflated</em>
+The second time you are attacked, redirect the attack to the person to your right or left, randomly
+
+<em>Fully deflated</em>
+The third time you are attacked, you lose your ability to protect.
+
+<em>Funny tube man</em>
+When you are thrown out, you are instead attacked twice.
+
+Wincon: Die!</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1288224187374108682 class=chatlog__message-container data-message-id=1288224187374108682><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/286565458826625024/f9c26b1fa8cb27a72dd9fc14f17f828c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(172,172,172) title=konkonfairydragon data-user-id=286565458826625024>Kon</span> <span class=chatlog__timestamp title="Tuesday, September 24, 2024 3:43 p.m."><a href=#chatlog__message-container-1288224187374108682>2024-09-24 3:43 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="gappy_zero">@Carmappy (Gappy)</span> 
+[NO ROLE]</span></div></div></div></div><div id=chatlog__message-container-1288224487719964722 class=chatlog__message-container data-message-id=1288224487719964722><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, September 24, 2024 3:44 p.m.">3:44 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="howism">@how</span> 
+<strong>Auntie Anne&#39;s</strong>
+In buisness since 1988
+<em>Thief Killing Item</em>
+
+<strong>Abilities</strong>
+<em>Sales Tactics</em>
+At day make someone&#39;s votes become permanent for this and the next day. The amount of votes on said person cannot decrease, and may only increase. This will be announced. You will steal anyone thrown out with this.
+
+<em>Pretzels</em>
+Az night sell pretzels to someone. They will be protected for the night. Twice you may poison them. Poison only works on Persons, not items.
+
+<strong>Passives</strong>
+<em>Long Legacy</em>
+You have 2 votes for the first 3 days, those are public.
+
+<em>Old Age</em>
+It will take 1 more vote for you to be hammered for the first 3 days.
+
+<em>Wait... that tasted weird</em>
+You will know if you have poisoned someone that can win with you and that you can heal them using another pretzel.
+
+Wincon: Steal everything and leave no witnesses.</span></div></div></div></div><div id=chatlog__message-container-1288224695459643412 class=chatlog__message-container data-message-id=1288224695459643412><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, September 24, 2024 3:45 p.m.">3:45 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="jeand.arch">@Jean D. Arch</span>
+<strong>Retail Accountant</strong>
+Wow, we still have a lot of stock... for now
+<em>Neutral Evil Person</em>
+
+<strong>Abilities</strong>
+<em>Check the back</em>
+Check someone at night to see if they are an item or not, if they are, redirect any action on them onto you. Any visit related effects will also be drawn onto you.
+
+<em>Stock</em>
+Stock someone up, out of reach, giving them defense from attacks for 2 nights, but taking away their vote. 2 uses.
+
+<strong>Passives</strong>
+<em>Taking account</em>
+You always know the exact amount of items left in the game
+
+<em>Damaged stock</em>
+You will know whenever an item is attacked
+
+<em>Accounting</em>
+Your vote will randomly count between 0 and 2, you do not know which.
+
+Wincon: Have at least 1 item be alive at the end of the game, if you fail you immeadily die.</span></div></div></div></div><div id=chatlog__message-container-1288225166769393798 class=chatlog__message-container data-message-id=1288225166769393798><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, September 24, 2024 3:46 p.m.">3:46 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="redhood0134">@Red hood</span> 
+<strong>Escalator</strong>
+Goin up, goin down, goin up, goin down, goi...
+<em>VIP Attacker Item</em>
+
+<strong>Abilities</strong>
+<em>Goin up</em>
+Mark someone as your target 1. If there is a target 2, then permanently transport the two. There can be a max of 4 permanently transported people.
+
+<em>Goin down</em>
+Mark someone as your target 2. If there is a target 1, then transport them normally.
+
+<em>Full stop</em>
+You may use this ability additionally to <em>Goin up</em> and <em>Goin down</em>. Instead of transporting, both marked targets will instead be attacked.
+
+<strong>Passives</strong>
+<em>VIP knowledge</em>
+You are aware of ???
+
+<em>Functional Inheritance</em>
+As long as you arent stolen, you may choose someone to inherit your abilities
+
+Wincon:Get rid of all those useless plebians within this mall.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1288609728347377674 class=chatlog__message-container data-message-id=1288609728347377674><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/286565458826625024/f9c26b1fa8cb27a72dd9fc14f17f828c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(172,172,172) title=konkonfairydragon data-user-id=286565458826625024>Kon</span> <span class=chatlog__timestamp title="Wednesday, September 25, 2024 5:15 p.m."><a href=#chatlog__message-container-1288609728347377674>2024-09-25 5:15 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="_mementomorii.">@Kazuma</span>
+<strong>Mall Manager</strong>
+Probably very painfull to know that your mall will fall into ruin.
+<em>Neutral Benign Person</em>
+
+<strong>Abilities</strong>
+<em>Power over the mall</em>
+At day, you may immeadily decide to throw someone out, lynching them. One use.
+
+<em>Shoo</em>
+At night you may shoo someone out of the store, effectively roleblocking them.
+
+<em>Manager of the Mall</em>
+At day, you may immeadily decide to have noone thrown out, ending the voting and having noone thrown out. One use.
+
+<strong>Passives</strong>
+<em>I&#39;m the one in charge</em>
+You start with a votepower of 3 and you are revealed as the mall manager at the beginning of the game.
+
+<em>I pass it onto you</em>
+Should you be thrown out, you may pass your votes on someone of your choice
+
+Wincon: Survive!</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1288987924985286719 class=chatlog__message-container data-message-id=1288987924985286719><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/708908470992240650/f85ee7bc67ee1ff41c2a427f1e962e6f.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(41,191,222) title=ngekop data-user-id=708908470992240650>Ngekop</span> <span class=chatlog__timestamp title="Thursday, September 26, 2024 6:17 p.m."><a href=#chatlog__message-container-1288987924985286719>2024-09-26 6:17 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="queenofcheetahs">@Cheetah the Godfather</span>
+<strong>Video Game Store</strong>
+The most proliferated way to steal money from people right under their noses
+<em>Thief Support Item</em>
+
+<strong>Abilities</strong>
+<em>Sales</em>
+Every night you may sell someone a game, they will be informed of such.
+
+<em>Now pay!</em>
+At any time you may choose to controll everyone you have sold a game to. You cannot controll those again.
+
+<strong>Passives</strong>
+<em>Tryouts</em>
+You will sell a game to the last person voting you
+
+<em>Brand new game</em>
+2 people start the game with a game
+
+Wincon: Steal everything and leave no witnesses.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1288993389655883862 class=chatlog__message-container data-message-id=1288993389655883862><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/286565458826625024/f9c26b1fa8cb27a72dd9fc14f17f828c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(172,172,172) title=konkonfairydragon data-user-id=286565458826625024>Kon</span> <span class=chatlog__timestamp title="Thursday, September 26, 2024 6:39 p.m."><a href=#chatlog__message-container-1288993389655883862>2024-09-26 6:39 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="kirinyang">@kirin yang</span> 
+<strong>A drone</strong>
+You pick, you fly, you deliver…
+<em>Amazon Support Item</em>
+
+<strong>Abilities</strong>
+<em>Delivery</em>
+Each day, you may choose a player not aligned with your organization. You will delivery an item of your choice they will be able to use once:
+<ul><li>knife: used to stab someone at night, killing them.</li><li>energy drink: used to be able to perform double action at night.</li><li>vest: provides defense towards any attack the night of their choice.</li></ul>Each time you use delivery on someone, you will be able to give the same item to yourself or a teammate as well.
+
+<em>Track</em>
+When using <em>Delivery</em>, you may choose to track the item you delivered and get to know when it is used and how/on whom.
+3 uses
+
+<em>Fly</em>
+At night, you may choose to fly up out of anyone’s reach, making their actions on you fail, as well as watching your partners, detecting any visitors they have that night.
+2 uses
+
+<strong>Passives</strong>
+<em>Inventory Management</em>
+You cannot deliver the same item twice in a row.
+
+<em>Unavailability</em>
+The nights you decide to use <em>Fly</em>, you will not be able to keep track on the items you used <em>Track</em> on, meaning you will not receive any information if they were used that night (including knowing they were used).
+
+Wincon: Eliminate everyone and anything not submitting to your organization.</span></div></div></div></div><div id=chatlog__message-container-1288993589896155196 class=chatlog__message-container data-message-id=1288993589896155196><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, September 26, 2024 6:40 p.m.">6:40 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="denith_">@Deni</span>
+<strong>Dumb blonde with Daddys Plastic</strong>
+Wow... i really didnt expect such a spoiled brat to exist, THROW HER OUT BOYS
+<em>Neutral Evil Person</em>
+
+<strong>Abilities</strong>
+<em>Dressup</em>
+At any time you may decide what you appear as to investigative actions. When lynched you will still reveal your true role
+
+<em>The power of money</em>
+Pay someone to not kill you. If they planned to attack you, they will take your credit card and you will be unable to use this.
+
+<em>Spoiled</em>
+Pick 2 players. Swap their votecounts publicly.
+
+<strong>Passives</strong>
+<em>Last purchase</em>
+When you get thrown out, you will take someone that has voted you with you at random.
+
+<em>Spoiled Brats</em>
+You know the existence of another role.
+
+Wincon: Be thrown out of the mall.</span></div></div></div></div><div id=chatlog__message-container-1288993748902215792 class=chatlog__message-container data-message-id=1288993748902215792><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, September 26, 2024 6:40 p.m.">6:40 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="snxwney">@Snow</span>
+<strong>Snowboots</strong>
+Dry, stable, stylish and warm, come at me winter!
+<em>Amazon Killing Item</em>
+
+<strong>Abilities</strong>
+<em>Firmness</em>
+Each night, you may choose a player, including yourself. Your snow boots will provide this player with stability to be able to perform their actions tonight and the following day, even if they are roleblocked. You cannot target the same player twice in a row. This action cannot be stopped.
+
+<em>Icicle</em>
+Each day, you may build an icicle at a player’s house’s ceiling. Starting next night, each phase the player performs an action, it will shake and stick less to the ceiling. The second time this happens, the icicle will fall, attacking said player at the end of the corresponding phase. You cannot use this ability if there is already an icicle at another player’s house.
+
+<em>Walk</em>
+At night, you may walk around a player’s house and and see if they come out to act. If this happens, you will learn their exact role at the end of the following night. You cannot use this ability twice in a row.
+2 uses
+
+<strong>Passives</strong>
+<em>Speed</em>
+You are so fast, you will be able to perform up to two actions each night. If you execute two actions, you will not be able to use any additional item you may have that night.
+
+<em>Warmth</em>
+If you place an icicle on a player’s house and this player can win with you, you will learn this and may choose to melt the icicle at their house.
+
+Wincon: Eliminate everyone and anything not submitting to your organization.</span></div></div></div></div><div id=chatlog__message-container-1288994017140277308 class=chatlog__message-container data-message-id=1288994017140277308><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, September 26, 2024 6:42 p.m.">6:42 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="goldenone">@Sam</span> 
+<strong>The Player</strong>
+Gaming, growing, building...
+<em>VIP Support Person</em>
+
+<strong>Abilities</strong>
+<em>Upgrade</em>
+Your empire is weak and at 0…for now. Each phase you will automatically upgrade this by 1. You may do this by 2 but you will be unable to perform any action besides <em>Upgrade</em>, including <em>Reward</em>, this and the following phase.
+
+<em>Reward</em>
+Every time you have upgraded your empire by 4, you will gain a charge of this ability. You may use this ability at night to either attack a player of your choice, or protect yourself or a teammate for the night while also roleblocking any player of your choice. You may not pick the same action in consecutive uses of this ability.
+0 uses
+
+<em>Security Investment!</em>
+Each night, you can use the money you gained during the day. This will allow you to rent for a night a special system that you can install at the home of either of your partners or your own. For each player (not including yourself) that visits your target that night, your empire will be upgraded by 1. You will learn how many visitors were they and learn the identity of those visitors who cannot win with you.
+
+<strong>Passives</strong>
+<em>VIP knowledge</em>
+You are aware of ???
+
+<em>Compensation</em>
+Each time a teammate of yours dies, your empire will automatically upgrade by 2.
+
+Wincon: Get rid of all those useless plebians within this mall.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1288998425907695667 class=chatlog__message-container data-message-id=1288998425907695667><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/286565458826625024/f9c26b1fa8cb27a72dd9fc14f17f828c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(172,172,172) title=konkonfairydragon data-user-id=286565458826625024>Kon</span> <span class=chatlog__timestamp title="Thursday, September 26, 2024 6:59 p.m."><a href=#chatlog__message-container-1288998425907695667>2024-09-26 6:59 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="hellofuhheh_90998">@hello (Anna)</span> 
+<strong>Queen of Money</strong>
+Often called a spoiled brat by many
+<em>Neutral Evil Person</em>
+
+<strong>Abilities</strong>
+<em>Purchase</em>
+At night you may choose to purchase someone if they are an item. This will effectively remove them from the game without a role reveal untill your death.
+
+<em>Whine</em>
+You didnt get what you wanted and now you are crying. Go and roleblock 2 different players instead of purchasing anything.
+
+<strong>Passives</strong>
+<em>Made with Money</em>
+As long as you have someone purchased you are susceptible to stealing. If someone steals from you, you immeadily will die aswell.
+
+<em>Homeroom</em>
+Anyone you stole will be able to chat with you 24/7 in a private chat. You may decide if they are allowed to use abilities or not.
+
+<em>Annoying Brat</em>
+Nobody likes spoiled brats, You cannot win with evil factions. As long as you are alive, you will steal their win from them. They are informed of this if there are X times 2+2 people left, where X is the amount of faction members.
+
+Wincon: Survive till the end of the game with at least 2 items purchased. They will win alongside you.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1289362731937435712 class=chatlog__message-container data-message-id=1289362731937435712><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/708908470992240650/f85ee7bc67ee1ff41c2a427f1e962e6f.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(41,191,222) title=ngekop data-user-id=708908470992240650>Ngekop</span> <span class=chatlog__timestamp title="Friday, September 27, 2024 7:07 p.m."><a href=#chatlog__message-container-1289362731937435712>2024-09-27 7:07 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="lunex">@Lunexia</span> 
+[NO ROLE]</span> <span class=chatlog__edited-timestamp title="Friday, September 27, 2024 7:22 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1289362878897324093 class=chatlog__message-container data-message-id=1289362878897324093><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, September 27, 2024 7:07 p.m.">7:07 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="cloudyshadow">@Jalandh</span> 
+<strong>Paul Blart</strong>
+Insert some stupid text here...
+<em>Thief Evil Person</em>
+
+<strong>Abilities</strong>
+<em>Thieving</em>
+At night, steal someone if they are an item. This is effectively a kill.
+Alternatively if they are a person, beat them to death.
+
+<em>Denial</em>
+At day, pick someone, their votepower will be 0 for the next 3 days, starting count, the one this was activated in. May be used twice in the same day. 2 uses.
+
+<em>Clumsy Guardian</em>
+At night, alongside stealing someone, you may guard someone, knowing who visits them, but there will always be 1 random person mixed in your restults.
+
+<strong>Passives</strong>
+<em>Movie link</em>
+As long as the Paul Blart movie is still &quot;alive&quot;, you will survive. After &quot;dying&quot; you may continue voting and talking, however your votepower will become 0.5. If both of you &quot;die&quot;, you die together.
+
+<em>Hypoglycemic Crash</em>
+After using <em>Denial</em> you cannot act the next night.
+
+Wincon: Steal everything and leave no witnesses.</span></div></div></div></div><div id=chatlog__message-container-1289363061815377941 class=chatlog__message-container data-message-id=1289363061815377941><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, September 27, 2024 7:08 p.m.">7:08 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="mrrfiish">@Mr. Fish</span> 
+<strong>Paul Blart: Mall Cop</strong>
+Insert some stupid movie oneliner here...
+<em>Thief Evil Item</em>
+
+<strong>Abilities</strong>
+<em>Thieving</em>
+At night, steal someone if they are an item. This is effectively a kill.
+Alternatively if they are a person, beat them to death.
+
+<em>Rewatch</em>
+At day, choose someone and learn who they visited last night, if at all.
+
+<strong>Passives</strong>
+<em>Character link</em>
+As long as the Paul Blart character is still &quot;alive&quot;, you will survive. After &quot;dying&quot; you may continue voting and talking, however your votepower will become 0.5. If both of you &quot;die&quot;, you die together.
+
+<em>Scratched Disk</em>
+Your Votepower varies greatly, ranging from -3 to 3, however you wont know which. This will be decided at the start of the game and will never change. This will deactivate when your &quot;die&quot;.
+
+<em>Broken Disk</em>
+If you were to die getting voted out, the paul blart character will be enraged, their VP will increase to 2 publicly viewed.
+
+Wincon: Steal everything and leave no witnesses.</span></div></div></div></div><div id=chatlog__message-container-1289363185178120276 class=chatlog__message-container data-message-id=1289363185178120276><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, September 27, 2024 7:08 p.m.">7:08 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="nickatixgaming">@Nickatix</span> 
+<strong>Shoe</strong>
+Run…RUN!!!
+<em>Neutral Chaos Item</em>
+
+<strong>Abilities</strong>
+<em>Step by step</em>
+Each phase, you make pick a player. If that player dies in the following two phases (not the one in which you pick this ability), you will gain a charge of <em>Walk towards me</em>
+
+<em>Walk towards me</em>
+At night, you can target a player. If that player performed any action on a target, they will perform it on you instead. If this was a killing action, they will visit you but the visit will have no effect. This player will be unaware of this.
+0 uses
+
+<em>Run fast, run far</em>
+Each night, you may choose a player. If this player is part of an evil faction, you will run towards them and have them deal you a basic attack alongside their night action. They will not be aware they performed this attack, but the visit will be seen to investigative abilities.
+
+<strong>Passives</strong>
+<em>Run for your life</em>
+The first two times you are attacked, you will run away and survive. The player (or players) who attacked you will be roleblocked the next night!
+
+<em>Here I stand</em>
+The first time you are lynched, if any, you will stay in the game and the last person who voted you will not be able to perform any action the following night and will visit you instead. This visit has no effect and the player will die at the end of the night.
+
+WIncon: Get visited 7 times and leave the game in victory immediately after.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1290025430367080501 class=chatlog__message-container data-message-id=1290025430367080501><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/708908470992240650/f85ee7bc67ee1ff41c2a427f1e962e6f.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(41,191,222) title=ngekop data-user-id=708908470992240650>Ngekop</span> <span class=chatlog__timestamp title="Sunday, September 29, 2024 3:00 p.m."><a href=#chatlog__message-container-1290025430367080501>2024-09-29 3:00 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title=".xxsalemxx">@Salem</span> 
+<strong>Shopping cart</strong>
+[NO ROLE]</span></div></div></div></div><div id=chatlog__message-container-1290025496830283878 class=chatlog__message-container data-message-id=1290025496830283878><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, September 29, 2024 3:00 p.m.">3:00 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> 
+<strong>Technology Department</strong>
+[NO ROLE]</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1290064514368278671 class=chatlog__message-container data-message-id=1290064514368278671><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/708908470992240650/f85ee7bc67ee1ff41c2a427f1e962e6f.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(41,191,222) title=ngekop data-user-id=708908470992240650>Ngekop</span> <span class=chatlog__timestamp title="Sunday, September 29, 2024 5:35 p.m."><a href=#chatlog__message-container-1290064514368278671>2024-09-29 5:35 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="pokemoncross">@Sprigatito from Cumbria</span>
+<strong>Shopping cart from Fortnite</strong>
+You are an unstoppable force, just don’t crash with an unmovable object…
+<em>Neutral Killing Item</em>
+
+<strong>Abilities</strong>
+<em>Ramping them down</em>
+Each night, you may choose a player and drive them away from the mall. This will render them missing and essentially killed.
+
+<em>Carry passengers</em>
+At day, you may choose a player to take as passenger. This will force them to get carried away with you. The next night, any visit directed towards you, will affect them instead.
+3 uses
+
+<em>Collect</em>
+When using <em>Ramping them down</em>, you may also activate this ability. If your target dies, this will allow you to steal a charge of a random ability of theirs, which you may be able to use at any point in the game. You cannot use this ability if you used <em>Carry passengers</em> the previous day.
+
+<strong>Passives</strong>
+<em>Brakes? What’s that?</em>
+You will always keep moving until you clash into a wall (die). This movement will make it harder to catch you. You cannot be hammered and you need at least (half of the players) + 2 votes at the end of day to get executed. If you reach majority at any point or you end up with the most votes at the end of the day, even if you don’t die, you will lose all charges of <em>Carry passengers</em> and one use if this will be consumed.
+2 uses
+
+<em>Sponsorship</em>
+At the beginning of the game, it will be announced: <em>There is a Shopping Cart in the mall, be careful not to get carried away</em>.
+
+Wincon: Live to see everyone except at most one player, excluding neutrals who can win with you, be dead.</span></div></div></div></div><div id=chatlog__message-container-1290065627981287456 class=chatlog__message-container data-message-id=1290065627981287456><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, September 29, 2024 5:40 p.m.">5:40 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>———————-</span></div></div></div></div><div id=chatlog__message-container-1290065646167789691 class=chatlog__message-container data-message-id=1290065646167789691><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, September 29, 2024 5:40 p.m.">5:40 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>———————-</span></div></div></div></div><div id=chatlog__message-container-1290065661715939462 class=chatlog__message-container data-message-id=1290065661715939462><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, September 29, 2024 5:40 p.m.">5:40 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>———————-</span></div></div></div></div><div id=chatlog__message-container-1290065687456251945 class=chatlog__message-container data-message-id=1290065687456251945><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, September 29, 2024 5:40 p.m.">5:40 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="gappy_zero">@Carmappy (Gappy)</span>
+<strong>Shoplifter</strong>
+You are a shoplifter, more commonly known as a thief
+<em>Neutral Killing Person</em>
+
+<strong>Abilities</strong>
+<em>Theft</em>
+Every night you may choose to steal someone. This will render them missing and essentially killed. Will only work on items, not people.
+
+<em>Brutality</em>
+Every day you may choose to shoot your gun. This will kill people, but will not harm items. This triggers at the end of the day.
+
+<em>Break in</em>
+Every phase you may visit someone to find out if they are an item or a person, this will make you unable to use any other abilities that phase. This triggers at the end of the day.
+
+<strong>Passives</strong>
+<em>Thieves instinct</em>
+You always know if your neighbours are an item or a person, the same applies if you kill someone that isnt your direct neighbour.
+
+<em>Annoying charade</em>
+Up to three players that can win with you will learn of your existence.
+
+Wincon: Rob the store of all items.</span></div></div></div></div><div id=chatlog__message-container-1290066820119920671 class=chatlog__message-container data-message-id=1290066820119920671><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, September 29, 2024 5:44 p.m.">5:44 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="lunex">@Lunexia</span>
+<strong>Security</strong>
+The two man squad of this place
+<em><s>Neutral Chaos</s> Police Person</em>
+
+<strong>Abilities</strong>
+<em>By the power of GUN, i compell you</em>
+Use your gun in the day voting channel by writing /shoot [target ping] [host ping]. They will immediately die, disregarding defense status. Gain a use every time a thief dies. Can be used indefinetly as long as this ability has uses left. 2 uses.
+
+<em>Anti Theft System</em>
+Every day, check someone if they are a thief. If they are you will be told. You cannot use this and your gun in the same day. This will trigger at the end of the day.
+
+<em>Security Protocol</em>
+At night choose someone to protect against attacks alongside yourself. After being attacked, you lose this ability.
+
+<strong>Passives</strong>
+<em>Security Cameras</em>
+You always know the amount of thieves left in the game.
+
+<em>Two squad members</em>
+You have two lives, you will be informed when this triggers.
+
+WIncon: <s>Be alive, the moment all thieves are dead. You will leave the town afterwards.</s> Eliminate everyone not submitting to you and your faction.</span></div></div></div></div><div id=chatlog__message-container-1290066891825483826 class=chatlog__message-container data-message-id=1290066891825483826><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, September 29, 2024 5:45 p.m.">5:45 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span>
+<strong>Technology Department</strong>
+The most advanced innovations!
+<em>VIP Evil Item</em>
+
+<strong>Abilities</strong>
+<em>Paralyze</em>
+During the day, you may choose to, at any point of your choice, lock the votes, making everyone be unable to change their vote.
+2 uses
+
+<em>Hacking System</em>
+Each night, you may choose a player. 
+During the day, you may decide at any point before it ends, to activate this ability, which will make your target get executed instead of the most voted person if your target voted them.
+1 use
+
+<em>Discovery</em>
+At any moment, you may choose a player. If this player dies by any means, their role will not be revealed to anyone but yourself.
+1 use 
+
+<strong>Passives</strong>
+<em>VIP knowledge</em>
+You are aware of two other existing factions: the Thieves and the Police!
+
+<em>Recharge</em>
+The first time you are attacked, you will survive and gain one charge of an ability of your choice you have no charges remaining of; if you have at least one remaining charge of each, you gain none.
+
+Wincon: Get rid of all those useless plebians within this mall.</span></div></div></div></div><div id=chatlog__message-container-1290066962264752168 class=chatlog__message-container data-message-id=1290066962264752168><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, September 29, 2024 5:45 p.m.">5:45 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title=".xxsalemxx">@Salem</span>
+<strong>Shopping cart</strong>
+Pick and keep going!
+<em>Police Evil Item</em>
+
+<strong>Abilities</strong>
+<em>Picking items</em>
+Each night, you may go through the player list and pick two players to use this ability on. If both are Item, you will learn this and recollect them both for the following day, secretly making their votes not count. You may not pick the same two players twice.
+2 uses
+
+<em>Pick me up!</em>
+At night, you may choose a player to use this ability on. You will have them be busy picking you up for the night, roleblocking them. Every action that happens to you that night will affect them as well.
+
+<em>Moving around</em>
+At day, you will wander around and may pick a player. You will learn if they are an item or not.
+
+<strong>Passives</strong>
+<em>Don’t stop</em>
+You must keep going. You cannot perform the same action two nights in a row.
+
+<em>Emptiness benefit</em>
+If at night you are unable to perform any action, you may pick a player. If that player is an Item and you die the following day, that player will die as well.
+
+Wincon: Eliminate everyone not submitting to you and your faction.</span> <span class=chatlog__edited-timestamp title="Sunday, September 29, 2024 5:45 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1290067117659652170 class=chatlog__message-container data-message-id=1290067117659652170><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, September 29, 2024 5:46 p.m.">5:46 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="icarus0120">@Bunny</span> 
+<strong>Art Gallery</strong>
+Can’t stop appreciating such masterpieces…
+<em>Police Investigative Item</em>
+
+<strong>Abilities</strong>
+<em>Painting</em>
+Each day, you may give a player of your choice a painting. They will be unaware of this and this cannot be tracked. You can pick a teammate but not yourself.
+
+<em>Beware</em>
+At night, you can pick any player with a painting on their house to visit and make sure the painting is safe. While doing this, you will learn who did your target visit and who visited them.
+
+<em>Appreciation</em>
+Each night, you may pick four players without a painting at their home to visit your gallery. While these players are distracted doing so, you will get the exact role of one of them at random, but you will not learn which player has that role.
+2 uses
+
+<strong>Passives</strong>
+<em>Can’t steal from me</em>
+Your gallery is a safe place. If a night you choose to not act, you will hide in your gallery, making all the actions on you fail for that night.
+
+<em>Recognition</em>
+You are talented, but you don’t get enough credit for it, which makes every visit to your gallery feel special! Each night where you don’t hide and at least one person visits you, you will get an extra painting, allowing you to give out two paintings the following day and use <em>Beware</em> on two people the following night.
+
+Wincon: Eliminate everyone not submitting to you and your faction.</span> <span class=chatlog__edited-timestamp title="Sunday, September 29, 2024 5:46 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1290067442906693714 class=chatlog__message-container data-message-id=1290067442906693714><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, September 29, 2024 5:47 p.m.">5:47 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="gamelover6669">@Gamelover (Meredith)</span>
+<strong>Shopping Cart</strong>
+Sponsored by &quot;/()=!$()?/()&quot;
+<em>Neutral Benign Item</em>
+
+<strong>Abilities</strong>
+<em>Cart around</em>
+You may decide to cart someone around, this will cause them to appear at your house. Any ability used on you will also be used on them. Any ability used on them will fail.
+
+<em>Wait i have a sponsorship?</em>
+At day you may target someone once. they will be informed of your rolecard and they may decide to reveal theirs to you. [Anything within [] will not be revealed]
+
+[<em>Payment</em>]
+[You may target the person you have targeted with <em>Wait i have a sponsorship?</em> with this. If they havent revealed their role to you, you may kill them and assume their role.] [Otherwise you will protect them by speeding away from any attackers.]
+
+<strong>Passives</strong>
+<em>Cart runnin</em>
+If the one you have targeted with <em>Wait i have a sponsorship?</em> is a factional role, you will be immune to said faction&#39;s abilities
+
+<em>Cart line</em>
+You will know if the person you carted around using <em>Cart around</em> is a person or an item.
+
+Wincon: Survive till the end of the game</span></div></div></div></div><div id=chatlog__message-container-1290067532341973136 class=chatlog__message-container data-message-id=1290067532341973136><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, September 29, 2024 5:47 p.m.">5:47 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="char._.coal">@coal</span>
+<strong>Stepped on, forgotten piece of gum on the porcelain floor</strong>
+Its just a gum... or IS IT?
+<em>Police Support Item</em>
+
+<strong>Abilities</strong>
+<em>Split</em>
+Gives your target the <em>Foot trap</em> Passive. If you get cleaned up, you will move there instead of being cleaned up. One time use.
+
+<em>Broken Floor</em>
+The porcelain floor is broken here. Every time one of your neighbours die to someone other than your faction, you gain a charge of this. Throw a piece of porcelain at someone, attacking them. No uses.
+
+
+<strong>Passives</strong>
+<em>Foot trap</em>
+When a person visits you, they will get roleblocked instead for the first time. Does nothing to items and carefull people.
+
+<em>Where&#39;s the janitor in this place?</em>
+The first time someone visits you thrice, they will clean you up, effectively killing you
+
+<em>Chewed</em>
+Whenever you are being chewed you are unable to be lynched the next day. This will be announced
+
+Wincon: Eliminate everyone not submitting to you and your faction.</span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 32 message(s)</div><div class=postamble__entry>Timezone: UTC-5</div></div>
