@@ -1,0 +1,614 @@
+<!DOCTYPE html><html lang=en><head><title>Discord Mafia - sp59-event-results</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-twitch{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/648663810772697089/a_f9deadc152d185356cb503afb448d0c4.gif?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>Discord Mafia</div><div class=preamble__entry>Temp Archive 15 / sp59-event-results</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1310432163984048200 class=chatlog__message-container data-message-id=1310432163984048200><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/504813861950586891/a_03decd9d70c29b1793ce189a1be69844.gif?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=dangerous_luka data-user-id=504813861950586891>Danger!? Luka!</span> <span class=chatlog__timestamp title="Sunday, November 24, 2024 9:29 p.m."><a href=#chatlog__message-container-1310432163984048200>2024-11-24 9:29 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># Question 1</span></div></div></div></div><div id=chatlog__message-container-1310432272851406881 class=chatlog__message-container data-message-id=1310432272851406881><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:30 p.m.">9:30 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Question 1) What is the coolest pokemon? 
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Charizard (3)
+- The Ugly Fruit
+- Zero
+- Kazuma
+
+Arceus (2)
+- How
+- Jar
+
+Pikachu (2)
+- Pikkonot
+- Snow
+
+Rayquazza (2)
+- Free
+- Dahkah
+
+Ash Greninja (1)
+- Allan
+
+Mega Rayquazza (1)
+- Paint
+
+Scyther (1)
+- Lily
+
+Mewtwo (1)
+- Giles
+
+Xurkitree (1)
+- Dart
+
+Jolteon (1)
+- Cane
+
+Houndoom (1)
+- Zee
+
+Vanilluxe (1)
+- Ile
+
+Gengar (1)
+- Aeo
+
+Espeon (1)
+- Kyne
+
+Greninja (1)
+- Chomps
+
+Kyogre (1)
+- Dec</code></span> <span class=chatlog__edited-timestamp title="Sunday, November 24, 2024 9:46 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1310432383820107836 class=chatlog__message-container data-message-id=1310432383820107836><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:30 p.m.">9:30 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># Question 2</span></div></div></div></div><div id=chatlog__message-container-1310432524274634833 class=chatlog__message-container data-message-id=1310432524274634833><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:31 p.m.">9:31 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Question 2) In combat, if you could have one Pok&#233;mon item, what would it be? 
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Leftovers (7)
+- Lily
+- TUF
+- Hurricane
+- Kazuma
+- Kyne
+- Chomps
+- How
+
+Full Restore (2)
+- Giles
+- Zee
+
+Choice Scarf (2)
+- Ile
+- Dahkah 
+
+Incinium-z (1)
+- Allan
+
+Reviver Seed (1)
+- Paint
+
+Ability Shield (1)
+- Pikkonot
+
+Assault Vest (1)
+- Dart
+
+Focus Sash (1)
+- Z3RO
+
+Choice Band (1)
+- Free
+
+Pokeball (1)
+- Aeo
+
+Hmm the health potion(idr the name) (1)
+- Snow
+
+Focus Band (1)
+- Dec
+
+Life Orb (1)
+- Jar</code></span> <span class=chatlog__edited-timestamp title="Sunday, November 24, 2024 9:51 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1310432652750229515 class=chatlog__message-container data-message-id=1310432652750229515><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:31 p.m.">9:31 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># Question 3</span></div></div></div></div><div id=chatlog__message-container-1310432772812308530 class=chatlog__message-container data-message-id=1310432772812308530><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:31 p.m.">9:31 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Question 3) What is the best Pok&#233;mon mainline game?
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Pokemon XY (3)
+- Free
+- Ile
+- Kazuma
+
+Pokemon Black 2/White 2 (2)
+- Paint
+- Zee
+
+Soul Silver (2)
+- Lily
+- Dec
+
+Pokemon Black and White (2)
+- Giles
+- Chomps
+
+Ruby and Sapphire (1)
+- Allan
+
+Pokemon Go (1)
+- Pikkonot
+
+Pokemon Sun and Moon (1)
+- Fruit 
+
+Ultra Sun Ultra Moon (1)
+- Dart
+
+Platinum (1)
+- Zero
+
+Diamond &amp; Pearl (1)
+- Cane
+
+Pokemon Violet (1)
+- Aeo
+
+Pokemon Silver (1)
+- Kyne
+
+HeartGold &amp; SoulSilver (1)
+- Dahkah
+
+Charizard (1)
+- Snow
+
+Pokemon Sun (1)
+- How
+
+Pokemon Scarlet and Violet (1)
+- Dirt</code></span> <span class=chatlog__edited-timestamp title="Sunday, November 24, 2024 9:38 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1310432866274115675 class=chatlog__message-container data-message-id=1310432866274115675><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:32 p.m.">9:32 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># Question 4</span></div></div></div></div><div id=chatlog__message-container-1310433022000234570 class=chatlog__message-container data-message-id=1310433022000234570><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:32 p.m.">9:32 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Question 4) What is the best Pok&#233;mon non-mainline game?
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Pokemon Go (4)
+- Pikkonot
+- Free
+- Kazuma
+- Kyne
+
+PMD Explorers of Sky (3)
+- Paint
+- Dahkah
+- Zero
+
+Pokemon Mystery Dungeon (3)
+- Giles
+- Hurricane
+- Dirt
+
+Uranium (2)
+- Allan
+- Dec
+
+Pokemon Ranger (1)
+- Lily
+
+PMD Explorers of Time (1)
+- Fruit
+
+New Pokemon Snap (1)
+- Dart
+
+Pokemon TCG (1)
+- Zee
+
+Pokemon Ranger Shadow of Almia (1)
+- Ile
+
+Yugioh (1)
+- Aeo
+
+Piplup (1)
+- Snow
+
+Legends Arcues (1)
+- Chomps
+
+That one Pinball game (1)
+- How</code></span> <span class=chatlog__edited-timestamp title="Sunday, November 24, 2024 9:35 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1310433213403103324 class=chatlog__message-container data-message-id=1310433213403103324><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:33 p.m.">9:33 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># Question 5</span> <span class=chatlog__edited-timestamp title="Sunday, November 24, 2024 9:33 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1310433286509559838 class=chatlog__message-container data-message-id=1310433286509559838><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:34 p.m.">9:34 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Question 5) Which season of the Pok&#233;mon anime is the most well thought out?
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Season 1 (9) 
+- Allan
+- Lily
+- Pikkonot 
+- Giles
+- Zee
+- Kyne
+- Snow
+- Chomps
+- Dec
+
+Pokemon XYZ (8)
+- Dart
+- Zero
+- Free
+- Ile
+- Kazuma
+- Dahkah
+- Jar 
+- Paint
+
+Pokemon Black and White (1)
+- Fruit
+
+Sinnoh (1)
+- Hurricane
+
+Season 2 (1)
+- Aeo
+
+No idea as I&#39;ve never watched the pokemon anime (1)
+- How</code></span> <span class=chatlog__edited-timestamp title="Sunday, November 24, 2024 10:01 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1310433571311456256 class=chatlog__message-container data-message-id=1310433571311456256><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:35 p.m.">9:35 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># Question 6</span></div></div></div></div><div id=chatlog__message-container-1310433594170413126 class=chatlog__message-container data-message-id=1310433594170413126><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:35 p.m.">9:35 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Question 6) Who would win, 1 billion lions or 1 of every single Pok&#233;mon?
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">1 of every single Pok&#233;mon (21)
+- allan
+- Paint
+- Lily
+- pikkonot
+- Fruit
+- Giles
+- Dartrevas
+- 53R0
+- Hurricane
+- Free
+- zee
+- ile
+- Kazuma
+- Aeoliae
+- inikyne
+- Dahkah
+- Snow
+- Chomps
+- Dec
+- how
+- jar</code></span></div></div></div></div><div id=chatlog__message-container-1310433645873336382 class=chatlog__message-container data-message-id=1310433645873336382><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:35 p.m.">9:35 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># Question 7</span></div></div></div></div><div id=chatlog__message-container-1310433786445566053 class=chatlog__message-container data-message-id=1310433786445566053><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:36 p.m.">9:36 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Question 7) Who is the most adorable Pok&#233;mon?
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Eevee (7)
+- Paint
+- 53R0
+- Free
+- Kazuma
+- inikyne
+- Dahkah
+- how
+
+Pikachu (4)
+- pikkonot
+- Giles
+- Aeoliae
+- jar
+
+Mew (1)
+- allan
+
+Alcremie (1)
+- Lily
+
+Goomy (1)
+- Fruit
+
+Xurkitree (1)
+- Dartrevas
+
+Happiny (1)
+- Hurricane
+
+Tepig (1)
+- zee
+
+Piplup (1)
+- ile
+
+Squirtle (1)
+- Snow
+
+Mudkip (1)
+- Chomps
+
+Snom (1)
+- Dec</code></span></div></div></div></div><div id=chatlog__message-container-1310433906247471114 class=chatlog__message-container data-message-id=1310433906247471114><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:36 p.m.">9:36 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># Question 8</span></div></div></div></div><div id=chatlog__message-container-1310434021624385566 class=chatlog__message-container data-message-id=1310434021624385566><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:36 p.m.">9:36 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Question 8) If you could have one Pok&#233;mon as a pet, who would it be?
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Eevee (6)
+- allan
+- Paint
+- Giles
+- 53R0
+- Hurricane
+- Dahkah
+
+Pikachu (3)
+- pikkonot
+- Free
+- jar
+
+Alcremie (1)
+- Lily
+
+Goomy (1)
+- Fruit
+
+Porygon-Z (1)
+- Dartrevas
+
+Tepig (1)
+- zee
+
+Klefki (1)
+- ile
+
+Espeon (1)
+- Kazuma
+
+Ngekop (screw this guy) (1)
+- Aeoliae
+
+Flareon (1)
+- inikyne
+
+Bulbisuar (1)
+- Snow
+
+Mudkip (1)
+- Chomps
+
+Riolu (1)
+- Dec
+
+that one sheep one in gen 8 (1)
+- how</code></span></div></div></div></div><div id=chatlog__message-container-1310434152989986877 class=chatlog__message-container data-message-id=1310434152989986877><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:37 p.m.">9:37 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># Do not discuss question 9 or 10.</span></div></div></div></div><div id=chatlog__message-container-1310434163605766174 class=chatlog__message-container data-message-id=1310434163605766174><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:37 p.m.">9:37 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># Question 9</span></div></div></div></div><div id=chatlog__message-container-1310434309345247254 class=chatlog__message-container data-message-id=1310434309345247254><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:38 p.m.">9:38 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Question 9) Who is the most suspicious player?
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Dec (7)
+- Giles
+- Free
+- Kazuma
+- Aeoliae
+- Snow
+- Dec
+- jar
+
+Chomps (3)
+- 53R0
+- Dahkah
+- Chomps
+
+Snow (2)
+- allan
+- Fruit
+
+inikyne (2)
+- Lily
+- pikkonot
+
+Fruit (2)
+- Hurricane
+- zee
+
+None (1)
+- Paint
+
+Paint (1)
+- Dartrevas
+
+ile (1)
+- ile
+
+allan (1)
+- inikyne
+
+how (1)
+- how</code></span> <span class=chatlog__edited-timestamp title="Sunday, November 24, 2024 9:38 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1310434468896571465 class=chatlog__message-container data-message-id=1310434468896571465><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:38 p.m.">9:38 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># Question 10</span> <span class=chatlog__edited-timestamp title="Sunday, November 24, 2024 9:38 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1310434615634432020 class=chatlog__message-container data-message-id=1310434615634432020><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:39 p.m.">9:39 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Question 10) Who is the towniest player?
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">53R0 (5)
+- Lily
+- Fruit
+- zee
+- Dahkah
+- Snow
+
+inikyne (4)
+- Hurricane
+- ile
+- Aeoliae
+- inikyne
+
+allan (2)
+- allan
+- Giles
+
+Dec (2)
+- Paint
+- Dec
+
+Paint (2)
+- Free
+- jar
+
+Free (1)
+- pikkonot
+
+Dartrevas (1)
+- Dartrevas
+
+Snow (1)
+- 53R0
+
+Kazuma (1)
+- Kazuma
+
+Chomps (1)
+- Chomps
+
+how (1)
+- how</code></span></div></div></div></div><div id=chatlog__message-container-1310434696223522877 class=chatlog__message-container data-message-id=1310434696223522877><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:39 p.m.">9:39 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># Question 11</span> <span class=chatlog__edited-timestamp title="Sunday, November 24, 2024 9:40 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1310434802914300035 class=chatlog__message-container data-message-id=1310434802914300035><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:40 p.m.">9:40 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Question 11) Who is the player most likely to endgame?
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">How (4)
+- Allan
+- Giles
+- Zero
+- How
+
+Kyne (3)
+- Lily
+- Fruit
+- Ile
+
+Grace/Ile (3)
+- Kyne
+- Dahkah
+- Cane  
+
+Allan (2)
+- Paint
+- Snow
+
+Me (2)
+- Dart
+- Chomps
+
+Zero (1)
+- Free
+
+Fruit (1)
+- Zee
+
+Dart (1)
+- Kazuma
+
+Dec (1)
+- Dec
+
+Paint (1)
+- Jar
+
+Hurricane (1)
+- Pikkonot
+
+Chomps (1)
+- Aeo</code></span> <span class=chatlog__edited-timestamp title="Monday, November 25, 2024 10:05 a.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1310434876842967152 class=chatlog__message-container data-message-id=1310434876842967152><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:40 p.m.">9:40 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># Question 12</span></div></div></div></div><div id=chatlog__message-container-1310434987425927188 class=chatlog__message-container data-message-id=1310434987425927188><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, November 24, 2024 9:40 p.m.">9:40 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Question 12) Is cereal as soup?
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Yes (13)
+- Paint
+- Lily
+- Fruit
+- Giles
+- Dart
+- Cane
+- Zbest
+- Ile
+- Aeo
+- Kyne
+- Dahkah
+- Chomps
+- How
+
+No (8)
+- Allan
+- Pikkonot
+- Zero
+- Free
+- Kazuma
+- Snow
+- Dec
+- Jar</code></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1310449452284121088 class=chatlog__message-container data-message-id=1310449452284121088><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/504813861950586891/a_03decd9d70c29b1793ce189a1be69844.gif?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=dangerous_luka data-user-id=504813861950586891>Danger!? Luka!</span> <span class=chatlog__timestamp title="Sunday, November 24, 2024 10:38 p.m."><a href=#chatlog__message-container-1310449452284121088>2024-11-24 10:38 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Giles: 28
+Dahkah/Aqua: 28
+Kazuma: 26
+Zero: 25
+Kyne: 25
+Free: 24
+Lily: 23
+Fruit: 23
+Allan: 22
+Paint: 22
+Cane: 21
+Pikkonot: 20
+Grace: 20
+Snow: 20
+How: 20
+Chomps: 20
+Dec: 19
+Jar/Cheetah: 19
+Aero: 18
+Dart: 16</code></span> <span class=chatlog__edited-timestamp title="Monday, November 25, 2024 10:05 a.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1311405366709583882 class=chatlog__message-container data-message-id=1311405366709583882><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/504813861950586891/a_03decd9d70c29b1793ce189a1be69844.gif?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=dangerous_luka data-user-id=504813861950586891>Danger!? Luka!</span> <span class=chatlog__timestamp title="Wednesday, November 27, 2024 1:56 p.m."><a href=#chatlog__message-container-1311405366709583882>2024-11-27 1:56 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Good news:
+I have finally gotten a script to compare character count working after about a half hour of trying.</span> <span class=chatlog__edited-timestamp title="Wednesday, November 27, 2024 1:56 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1311490352418652190 class=chatlog__message-container data-message-id=1311490352418652190><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/504813861950586891/a_03decd9d70c29b1793ce189a1be69844.gif?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=dangerous_luka data-user-id=504813861950586891>Danger!? Luka!</span> <span class=chatlog__timestamp title="Wednesday, November 27, 2024 7:34 p.m."><a href=#chatlog__message-container-1311490352418652190>2024-11-27 7:34 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>I&#39;ll be revealing from lowest score to highest score.</span></div></div></div></div><div id=chatlog__message-container-1311490529539653742 class=chatlog__message-container data-message-id=1311490529539653742><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:35 p.m.">7:35 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># Fist off, Hurricane&#39;s message:</span> <span class=chatlog__edited-timestamp title="Wednesday, November 27, 2024 7:35 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1311490532962205696 class=chatlog__message-container data-message-id=1311490532962205696><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:35 p.m.">7:35 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Diary Entry No.13:
+
+Today is Saturday, yet the weekend feeling still truly hasn&#39;t hit me. How strange.</span></div></div></div></div><div id=chatlog__message-container-1311490645709553777 class=chatlog__message-container data-message-id=1311490645709553777><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:35 p.m.">7:35 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 18th</span> <span class=chatlog__edited-timestamp title="Wednesday, November 27, 2024 7:37 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1311490879785140335 class=chatlog__message-container data-message-id=1311490879785140335><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:36 p.m.">7:36 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Ile - 34 
+I dont have the time for this</span></div></div></div></div><div id=chatlog__message-container-1311490907681329202 class=chatlog__message-container data-message-id=1311490907681329202><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:36 p.m.">7:36 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 17th</span> <span class=chatlog__edited-timestamp title="Wednesday, November 27, 2024 7:37 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1311491020654903397 class=chatlog__message-container data-message-id=1311491020654903397><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:37 p.m.">7:37 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Zero - 58</span></div></div></div></div><div id=chatlog__message-container-1311491023272415313 class=chatlog__message-container data-message-id=1311491023272415313><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:37 p.m.">7:37 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Have Hippopotomonstrosesquippedaliophobia? Press your fears now! Supercalifragilisticexpialidocious!</span></div></div></div></div><div id=chatlog__message-container-1311491069116026881 class=chatlog__message-container data-message-id=1311491069116026881><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:37 p.m.">7:37 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 16th</span> <span class=chatlog__edited-timestamp title="Wednesday, November 27, 2024 7:37 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1311491253564604416 class=chatlog__message-container data-message-id=1311491253564604416><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:38 p.m.">7:38 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Dart - 60
+S0!? W3 698/2 p01n7&#39;d 4t the watch: &quot;the quick, brown fox jump5 over the lazy dog.&quot; (What; why?) [X]</span></div></div></div></div><div id=chatlog__message-container-1311491266483322970 class=chatlog__message-container data-message-id=1311491266483322970><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:38 p.m.">7:38 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 15th</span></div></div></div></div><div id=chatlog__message-container-1311491520087724173 class=chatlog__message-container data-message-id=1311491520087724173><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:39 p.m.">7:39 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Dec - 68
+&quot;Hello, how are you Jimothy?&quot; &quot;Hey Xavier, did you see that quick brown fox hop over that fence?&quot;</span></div></div></div></div><div id=chatlog__message-container-1311491546608042025 class=chatlog__message-container data-message-id=1311491546608042025><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:39 p.m.">7:39 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 14th</span></div></div></div></div><div id=chatlog__message-container-1311491796404015205 class=chatlog__message-container data-message-id=1311491796404015205><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:40 p.m.">7:40 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Lily - 69
+Don&#39;t you know how bad I am at writing I&#39;m not winning this so sad. I am just rambling at this point</span></div></div></div></div><div id=chatlog__message-container-1311491806026010704 class=chatlog__message-container data-message-id=1311491806026010704><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:40 p.m.">7:40 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 13th</span></div></div></div></div><div id=chatlog__message-container-1311491986888331345 class=chatlog__message-container data-message-id=1311491986888331345><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:40 p.m.">7:40 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Kyne - 69
+Uh hello I dont know too much about pokemon but oh well, my favourite pokemon is turtwig as he slays</span></div></div></div></div><div id=chatlog__message-container-1311491994832601138 class=chatlog__message-container data-message-id=1311491994832601138><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:40 p.m.">7:40 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 12th</span></div></div></div></div><div id=chatlog__message-container-1311492065296908340 class=chatlog__message-container data-message-id=1311492065296908340><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:41 p.m.">7:41 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>How - 73
+The bee likes to help animals and destroy the laws of physics. As such, physics dislikes bees aswell</span> <span class=chatlog__edited-timestamp title="Wednesday, November 27, 2024 7:42 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1311492072871563396 class=chatlog__message-container data-message-id=1311492072871563396><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:41 p.m.">7:41 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 11th</span></div></div></div></div><div id=chatlog__message-container-1311492391001128960 class=chatlog__message-container data-message-id=1311492391001128960><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:42 p.m.">7:42 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Pikkonot - 74
+Life is a series of small moments; cherish them, for they build the story of who we are meant to be.</span></div></div></div></div><div id=chatlog__message-container-1311492400732176534 class=chatlog__message-container data-message-id=1311492400732176534><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:42 p.m.">7:42 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 10th</span></div></div></div></div><div id=chatlog__message-container-1311492511424057354 class=chatlog__message-container data-message-id=1311492511424057354><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:43 p.m.">7:43 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Chomps - 74
+Hello everyone how are you doing mafia town vote kill lynch execute hammer chop mylo lylo day nighth</span></div></div></div></div><div id=chatlog__message-container-1311492574824894587 class=chatlog__message-container data-message-id=1311492574824894587><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:43 p.m.">7:43 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>*Everyone past this point evolves!!!</strong> (Note: Do not mention this in <span class="chatlog__markdown-mention">#sp59-event-reveal</span>)</span> <span class=chatlog__edited-timestamp title="Wednesday, November 27, 2024 7:43 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1311492613450371143 class=chatlog__message-container data-message-id=1311492613450371143><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:43 p.m.">7:43 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 9th</span></div></div></div></div><div id=chatlog__message-container-1311492770900348928 class=chatlog__message-container data-message-id=1311492770900348928><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:44 p.m.">7:44 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Snow - 72 
+So my name is hurricane. I’m very old as Snow would say so now it’s time to go play codenames bye.</span></div></div></div></div><div id=chatlog__message-container-1311492777653043281 class=chatlog__message-container data-message-id=1311492777653043281><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:44 p.m.">7:44 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 8th</span></div></div></div></div><div id=chatlog__message-container-1311493069786320917 class=chatlog__message-container data-message-id=1311493069786320917><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:45 p.m.">7:45 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><em>Oh yeah - their is going to be a HUGE string of ties coming up. I manually calculated a few of these. This is just a coincidence.</em></span></div></div></div></div><div id=chatlog__message-container-1311493071619231884 class=chatlog__message-container data-message-id=1311493071619231884><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:45 p.m.">7:45 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Paint - 76 
+In the middle of a quiet forest, a little bird sings sweet melodies to greet the rising sun.</span></div></div></div></div><div id=chatlog__message-container-1311493081345818636 class=chatlog__message-container data-message-id=1311493081345818636><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:45 p.m.">7:45 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 7th</span></div></div></div></div><div id=chatlog__message-container-1311493235486752829 class=chatlog__message-container data-message-id=1311493235486752829><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:45 p.m.">7:45 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Aqua - 76
+Pok&#233;mon’s a world of creatures to catch, train, and battle, inspiring games, shows, and endless fun.</span></div></div></div></div><div id=chatlog__message-container-1311493243719913512 class=chatlog__message-container data-message-id=1311493243719913512><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:45 p.m.">7:45 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 6th</span></div></div></div></div><div id=chatlog__message-container-1311493371000262727 class=chatlog__message-container data-message-id=1311493371000262727><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:46 p.m.">7:46 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Free - 76
+The night ends after you count your position in trouble, trust your brain, and fight em all.........</span></div></div></div></div><div id=chatlog__message-container-1311493375836553227 class=chatlog__message-container data-message-id=1311493375836553227><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:46 p.m.">7:46 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 5th</span></div></div></div></div><div id=chatlog__message-container-1311493508233953301 class=chatlog__message-container data-message-id=1311493508233953301><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:46 p.m.">7:46 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Fruit - 76
+fly law say no way bee can fly wig smol to get thic bod in sky bee fly no bee car wha hu thin is tru</span></div></div></div></div><div id=chatlog__message-container-1311493514940383273 class=chatlog__message-container data-message-id=1311493514940383273><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:47 p.m.">7:47 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 4th</span></div></div></div></div><div id=chatlog__message-container-1311493614794309724 class=chatlog__message-container data-message-id=1311493614794309724><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:47 p.m.">7:47 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Kazuma - 76
+The quick brown fox jumps over the lazy dog while the sun sets behind the distant, rolling hills.Wow</span></div></div></div></div><div id=chatlog__message-container-1311493630351118489 class=chatlog__message-container data-message-id=1311493630351118489><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:47 p.m.">7:47 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 3rd</span></div></div></div></div><div id=chatlog__message-container-1311493745044095068 class=chatlog__message-container data-message-id=1311493745044095068><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:47 p.m.">7:47 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Cheetah - 76 
+According to all known laws of aviation, there is no way that a bee should be able to fly. Its tiny.</span></div></div></div></div><div id=chatlog__message-container-1311493758969184276 class=chatlog__message-container data-message-id=1311493758969184276><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:47 p.m.">7:47 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 2nd</span></div></div></div></div><div id=chatlog__message-container-1311493775322906626 class=chatlog__message-container data-message-id=1311493775322906626><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:48 p.m.">7:48 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><em>This is where the ties stop.</em></span></div></div></div></div><div id=chatlog__message-container-1311493880948195328 class=chatlog__message-container data-message-id=1311493880948195328><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:48 p.m.">7:48 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Aeoryi - 79
+What was heard was only a distant thinking of eternal sighs. Levels of sears else thought you saw it</span> <span class=chatlog__edited-timestamp title="Wednesday, November 27, 2024 7:48 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1311493918541615167 class=chatlog__message-container data-message-id=1311493918541615167><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:48 p.m.">7:48 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve># 1st</span></div></div></div></div><div id=chatlog__message-container-1311493981485666356 class=chatlog__message-container data-message-id=1311493981485666356><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:48 p.m.">7:48 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Allan - 81</span></div></div></div></div><div id=chatlog__message-container-1311493983796596776 class=chatlog__message-container data-message-id=1311493983796596776><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, November 27, 2024 7:48 p.m.">7:48 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Pokemon&#39;s intricate world challenges the mind evolution strategy of bonds that defy time with itself</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1312595219870515262 class=chatlog__message-container data-message-id=1312595219870515262><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/504813861950586891/a_03decd9d70c29b1793ce189a1be69844.gif?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(186,85,211) title=dangerous_luka data-user-id=504813861950586891>Danger!? Luka!</span> <span class=chatlog__timestamp title="Saturday, November 30, 2024 8:44 p.m."><a href=#chatlog__message-container-1312595219870515262>2024-11-30 8:44 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Okay, first off - how I expect you to solve this. Let&#39;s walk through it:</span></div></div></div></div><div id=chatlog__message-container-1312595259003371611 class=chatlog__message-container data-message-id=1312595259003371611><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:44 p.m.">8:44 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>As said Pok&#233;mon trainer is talking about his journey to you, he ends up getting to his gym series. Each of his badges were hard fought victories, but what jumps out to you the most is the battle against []. He ended up using [], [], [], [], [], [] against the opponents Pok&#233;mon of [], [], [], [], [], []. 
+
+The question I have to ask you, what is in the brackets? You may submit up to 3 potential answers for each bracket.
+
+Hint: The 1st [] is green, and a player who has played on this server before.
+Hint 2: The following 12 brackets consist of 1 fire type, 1 electric type, and over 3 ice types.
+Hint 3: The 1st 6 Pok&#233;mon are designed to replicate a gym leaders team.</span></div></div></div></div><div id=chatlog__message-container-1312595306042491002 class=chatlog__message-container data-message-id=1312595306042491002><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:45 p.m.">8:45 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Instantly, let&#39;s delete the irrelevant text <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="curtain"
+    title="curtain"
+    src="https://cdn.discordapp.com/emojis/665028465040424996.png"></span> <span class=chatlog__edited-timestamp title="Saturday, November 30, 2024 8:45 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1312595523383070720 class=chatlog__message-container data-message-id=1312595523383070720><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:45 p.m.">8:45 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>but what jumps out to you the most is the battle against []. He ended up using [], [], [], [], [], [] against the opponents Pok&#233;mon of [], [], [], [], [], []. 
+
+Hint: The 1st [] is green, and a player who has played on this server before.
+Hint 2: The following 12 brackets consist of 1 fire type, 1 electric type, and over 3 ice types.
+Hint 3: The 1st 6 Pok&#233;mon are designed to replicate a gym leaders team.</span></div></div></div></div><div id=chatlog__message-container-1312595559823179786 class=chatlog__message-container data-message-id=1312595559823179786><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:46 p.m.">8:46 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>First off, for the first bracket.</span></div></div></div></div><div id=chatlog__message-container-1312595589611130901 class=chatlog__message-container data-message-id=1312595589611130901><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:46 p.m.">8:46 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Green / A player who has played on this server before</span></div></div></div></div><div id=chatlog__message-container-1312595643587362916 class=chatlog__message-container data-message-id=1312595643587362916><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:46 p.m.">8:46 p.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1310412766078697556/1312595643398623322/image.png?ex=675c3ab4&amp;is=675ae934&amp;hm=9ca9574f02c05f509b966a352df4d783908de0e2f8be542bd726cbf8a53b6e31&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1310412766078697556/1312595643398623322/image.png?ex=675c3ab4&amp;is=675ae934&amp;hm=9ca9574f02c05f509b966a352df4d783908de0e2f8be542bd726cbf8a53b6e31&amp;" alt="Image attachment" title="Image: image.png (133.12 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1312596026103959593 class=chatlog__message-container data-message-id=1312596026103959593><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:47 p.m.">8:47 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>After deciding MIH is the first bracket, let&#39;s go for the other ones.</span></div></div></div></div><div id=chatlog__message-container-1312596058412679199 class=chatlog__message-container data-message-id=1312596058412679199><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:48 p.m.">8:48 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Hint 3: The 1st 6 Pok&#233;mon are designed to replicate a gym leaders team.</div></div></span></div></div></div></div><div id=chatlog__message-container-1312596069955272845 class=chatlog__message-container data-message-id=1312596069955272845><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:48 p.m.">8:48 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">Hint 2: The following 12 brackets consist of 1 fire type, 1 electric type, and over 3 ice types.</div></div></span></div></div></div></div><div id=chatlog__message-container-1312596097465843712 class=chatlog__message-container data-message-id=1312596097465843712><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:48 p.m.">8:48 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><div class="chatlog__markdown-quote"><div class="chatlog__markdown-quote-border"></div><div class="chatlog__markdown-quote-content">The gym leaders team is a rematch team.</div></div></span></div></div></div></div><div id=chatlog__message-container-1312596174330662962 class=chatlog__message-container data-message-id=1312596174330662962><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:48 p.m.">8:48 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>So, you know:
+1) It&#39;s a gym leaders rematch team 
+2) It likely contains over 3 ice types. e.g. it&#39;s an ice gym leader</span></div></div></div></div><div id=chatlog__message-container-1312596234162147368 class=chatlog__message-container data-message-id=1312596234162147368><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:48 p.m.">8:48 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>To be blunt, their wasn&#39;t a great way to diferentiate between the ice gym leaders. It&#39;s why I gave you 5 guesses for each one :3</span></div></div></div></div><div id=chatlog__message-container-1312596255452561448 class=chatlog__message-container data-message-id=1312596255452561448><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:48 p.m.">8:48 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>In this case, it was Pryce&#39;s team. So:</span></div></div></div></div><div id=chatlog__message-container-1312596315766788167 class=chatlog__message-container data-message-id=1312596315766788167><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:49 p.m.">8:49 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>2: Abomnasnow
+3: Dewgong
+4: Glalie
+5: Frosslass
+6: Walrein
+7: Mamoswine</span></div></div></div></div><div id=chatlog__message-container-1312596407789817877 class=chatlog__message-container data-message-id=1312596407789817877><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:49 p.m.">8:49 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Now, we move onto 8-13</span></div></div></div></div><div id=chatlog__message-container-1312596534461992990 class=chatlog__message-container data-message-id=1312596534461992990><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:50 p.m.">8:50 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>You know that it&#39;s Pryce&#39;s team due to it being a ice type gym leader. The way you find out what 8-13 is without strictly using RNG is the images: 
+<a href="https://discord.com/channels/648663810772697089/1309269880268128306/1312225452286283816" onclick="scrollToMessage(event, '1312225452286283816')">https://discord.com/channels/648663810772697089/1309269880268128306/1312225452286283816</a>
+Were pretty clearly of red <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="GW_kek_dog"
+    title="GW_kek_dog"
+    src="https://cdn.discordapp.com/emojis/776170462849794088.png"></span></div></div></div></div><div id=chatlog__message-container-1312596630515482676 class=chatlog__message-container data-message-id=1312596630515482676><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:50 p.m.">8:50 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>So google Red&#39;s gen 2 team in hg/ss:</span></div></div></div></div><div id=chatlog__message-container-1312596660773457960 class=chatlog__message-container data-message-id=1312596660773457960><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:50 p.m.">8:50 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>And, you have your team!</span></div></div></div></div><div id=chatlog__message-container-1312596693866250321 class=chatlog__message-container data-message-id=1312596693866250321><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:50 p.m.">8:50 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>8: Pikachu
+9: Charizard
+10: Venusaur
+11: Lapras
+12: Snorlax
+13: Blastoise</span></div></div></div></div><div id=chatlog__message-container-1312597710603554918 class=chatlog__message-container data-message-id=1312597710603554918><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:54 p.m.">8:54 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>1: MIH
+2: Abomnasnow
+3: Dewgong
+4: Glalie
+5: Frosslass
+6: Walrein
+7: Mamoswine
+8: Pikachu
+9: Charizard
+10: Venusaur
+11: Lapras
+12: Snorlax
+13: Blastoise
+
+Points:
+Zero - 7 (Largely correct.)
+Free - 4 (Largely correct.) 
+Kyne - 4 (Got some correct.) 
+Kry - 2 (Got one correct.) 
+Kazuma - 1 (Participation point). 
+Star - 1 (Participation point.)
+Fruit - 1 (Participation point.)
+Aqua - 1 (Participation point.) 
+--------------------------------------------
+Snow - .5 (Participation point)
+Bunny - 0 (Did not participate)
+Dec - 0 (Did not participate) 
+Cheetah - 0 (Did not participate) 
+Allan - 0 (Did not participate)
+Paint - 0 (Did not Participate)
+Lily - 0 (Did not particiate)
+Ekko - 0 (Did not particiate)
+
+Cut off line is where people don&#39;t evolve. I&#39;m closing <span class="chatlog__markdown-mention">#sp59-event-reveal</span> in 2 minutes.</span> <span class=chatlog__edited-timestamp title="Saturday, November 30, 2024 8:54 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1312597758489661451 class=chatlog__message-container data-message-id=1312597758489661451><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:54 p.m.">8:54 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Let me know if you think I made a mistake ^-^</span></div></div></div></div><div id=chatlog__message-container-1312597918447964231 class=chatlog__message-container data-message-id=1312597918447964231><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:55 p.m.">8:55 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><em><strong>Due to the complexcity of this event, I will not be proding for not participating. This will not apply to every event in the future. Their will be prods for not participating.</strong></em></span></div></div></div></div><div id=chatlog__message-container-1312598518350745720 class=chatlog__message-container data-message-id=1312598518350745720><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:57 p.m.">8:57 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><a href="https://discord.com/channels/648663810772697089/1309269880268128306/1312225385798434816" onclick="scrollToMessage(event, '1312225385798434816')">https://discord.com/channels/648663810772697089/1309269880268128306/1312225385798434816</a>
+Nobody converts.</span></div></div></div></div><div id=chatlog__message-container-1312598595677196319 class=chatlog__message-container data-message-id=1312598595677196319><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, November 30, 2024 8:58 p.m.">8:58 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Pokemon that you could have converted into:
+<ul><li>Charizard</li><li>Eevee</li><li>Alolan Ninetails</li><li>Gardevoir</li><li>Arceus</li></ul></span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 96 message(s)</div><div class=postamble__entry>Timezone: UTC-5</div></div>
