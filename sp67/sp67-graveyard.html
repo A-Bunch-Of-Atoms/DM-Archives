@@ -1,0 +1,733 @@
+<!DOCTYPE html><html lang=en><head><title>Discord Mafia - sp67-graveyard</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-twitch{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/648663810772697089/a_dcbb31569260a2daffa627b0efab76e0.gif?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>Discord Mafia</div><div class=preamble__entry>temp archive 18 / sp67-graveyard</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1356501493318160474 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=1356501493318160474><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Tuesday, April 1, 2025 1:32 a.m."><a href=#chatlog__message-container-1356501493318160474>2025-04-01 1:32 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><h2>D0 - my sleeping schedule</h2>
+(rc)</span></div></div></div></div><div id=chatlog__message-container-1356501522367778927 class=chatlog__message-container data-message-id=1356501522367778927><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, April 1, 2025 1:32 a.m.">1:32 a.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1356501522027909221/rainbow.gif?ex=6897863d&amp;is=689634bd&amp;hm=4549bc2720342c13d78a78979b9f8c79aac4b89b610d0e4f49ada334e731c752&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1356501522027909221/rainbow.gif?ex=6897863d&amp;is=689634bd&amp;hm=4549bc2720342c13d78a78979b9f8c79aac4b89b610d0e4f49ada334e731c752&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1358096202960470339 class=chatlog__message-container data-message-id=1358096202960470339><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Saturday, April 5, 2025 11:09 a.m."><a href=#chatlog__message-container-1358096202960470339>2025-04-05 11:09 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="nominomu727">@nominomu</span>&#39;s role - <strong>Abstraction</strong>
+
+What are you? You are just… the idea of Abstraction.
+
+When self aware beings all across the universe think to be abstract, in any way, either in music or in life, you are pleased. How do you exist? Well, the idea of Abstraction is what causes the mighty civilisations to expand, and that is a power that may not be understood by others…
+
+But from whatever realm of existence you resided in, the Wormhole would know of, at least, know enough to take you into a realm where you can act, and manipulate, the players around you to see how their differences and thoughts are apart of the system, that can remove and change the differences to create something better. 
+
+If that requires change, now you have the power to do so. Power the Wormhole chose you for.
+
+__
+
+<strong>You are a member of the Town.</strong>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Abstract Extracting
+
+Each Night, you may choose 2 groups of players, each having 3 players, down to 2/1 if there is not enough players to target.
+
+You will learn the difference in number of players, of the amount of towns in each group.
+
+For example, if there was 2 town in 1 group and 1 town in another group, you will be told “The difference of Town in each group is 1.”
+
+If there was 3 town in 1 group and 0 town in another, you will be told “The difference of Town in each group is 3.”
+
+You have to use different players for consecutive nights until there is too few players to do so. After that point, you may choose players to keep for 1 more night to check in a group. You can only do this to then fill the remaining gaps with the other non consecutively picked players.</code>
+
+<strong>You win when all threats to the Town have been eliminated.</strong></span> <span class=chatlog__edited-timestamp title="Tuesday, April 8, 2025 11:41 a.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1358253442870673580 class=chatlog__message-container data-message-id=1358253442870673580><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Saturday, April 5, 2025 9:34 p.m."><a href=#chatlog__message-container-1358253442870673580>2025-04-05 9:34 p.m.</a></span></div><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1358253437120155658/rainbow.gif?ex=68974e56&amp;is=6895fcd6&amp;hm=d1144d2b695287052cd7c124a52f2c96a50ec4e41058dc2020e7051b3f5cdbbd&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1358253437120155658/rainbow.gif?ex=68974e56&amp;is=6895fcd6&amp;hm=d1144d2b695287052cd7c124a52f2c96a50ec4e41058dc2020e7051b3f5cdbbd&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1359188032955220038 class=chatlog__message-container data-message-id=1359188032955220038><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Tuesday, April 8, 2025 11:27 a.m."><a href=#chatlog__message-container-1359188032955220038>2025-04-08 11:27 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="_mementomorii.">@Lune is the best (Kaz)</span>&#39;s role - <strong>Hatsune Miku</strong>
+
+…
+…
+
+You exist! 
+
+You didn&#39;t before, obviously, but now your concept, everything about you is real, in this weird world you are suddenly in, nothing like the world you were made around…
+
+Being able to walk, talk, move around, you can’t stand still :D you just want to do everything, but for now, you can at least interact with the other entities that are as confused as you, maybe seeing why people are on edge… why should they? OH 
+
+I don&#39;t hear any music :(
+
+__
+
+<strong>You are a Member of the Town.</strong> (Town Investigative)
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">World is Mine
+
+Each night, you can check a player. You will be informed if they have a disrupting ability. Killing counts as this.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Too Alive
+
+Now you are alive, you feel like you can do everything! You gain +1 VP for every even day.</code>
+
+<strong>You win when all threats to the Town have been eliminated.</strong></span> <span class=chatlog__edited-timestamp title="Tuesday, April 8, 2025 11:48 a.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1359188117533233183 class=chatlog__message-container data-message-id=1359188117533233183><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, April 8, 2025 11:28 a.m.">11:28 a.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1359188117042761828/rainbow.gif?ex=68976913&amp;is=68961793&amp;hm=d37519148db051fc7c7780e794713c3a290c09c6031c7833fb1c05de8d2db833&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1359188117042761828/rainbow.gif?ex=68976913&amp;is=68961793&amp;hm=d37519148db051fc7c7780e794713c3a290c09c6031c7833fb1c05de8d2db833&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1359188294155374734 class=chatlog__message-container data-message-id=1359188294155374734><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, April 8, 2025 11:29 a.m.">11:29 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="mobiletaskforce">@Hero (feat. @Friend, @Enemy)</span>&#39;s role - <strong>Lobotomy E.G.O::Red Eyes &amp; Penitence Ryōshū</strong>
+
+N.F.W? Where am I?
+
+The alarms rang, and we were heading out, but something bright went around me, and as it disappeared, the Wormhole that separated me from rookies…
+
+… I need to get back. Just when we were told the Training Team needs reinforcements?
+
+I cant really do my job as a Support Captain if i am not there. And more importantly. If I dont see any damage happen then I cant yell out my annoyance at them for the damage… 
+
+At any case, by helping this new group with whatever problem there is that stops us all returning where we came from, that seems like the best approach. With S.H. and S.F with me of course.
+
+__
+
+<strong>You are a member of the Town.</strong> (Town Support)
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Skullface
+
+Your E.G.O weapon is ready to spread Penitence. Each Night, you may target a player. You will leave a lasting mark of Penitence. This will prevent any disruptive abilities against the target affecting them once, but persist until 4 phases have passed since the original use, until used. The player targeting a player marked by Penitence with a disruptive ability will be informed their ability “failed due to a lasting protection.” If you do this, you will gain a charge for your Spiderhead.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Spiderhead x0
+
+Your E.G.O weapon is ready to be held strong against anything blocking the way back to the Company. When you gain a charge from Skullface, you may select a target on another night. You can multitask this with Skullface. The target will gain Powerful defense that night, protected by the natural instinct and your power, wielding such a weapon as Spiderhead.</code>
+
+<strong>You win when all threats to the Town have been eliminated.</strong></span> <span class=chatlog__edited-timestamp title="Tuesday, April 8, 2025 11:48 a.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1360058427128418304 class=chatlog__message-container data-message-id=1360058427128418304><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Thursday, April 10, 2025 9:06 p.m."><a href=#chatlog__message-container-1360058427128418304>2025-04-10 9:06 p.m.</a></span></div><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1360058426822230107/rainbow.gif?ex=689747dd&amp;is=6895f65d&amp;hm=4c567a1da03ee20a68134d02b2a19bba4a11baf8ae222f4517fe3bf015cd0f41&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1360058426822230107/rainbow.gif?ex=689747dd&amp;is=6895f65d&amp;hm=4c567a1da03ee20a68134d02b2a19bba4a11baf8ae222f4517fe3bf015cd0f41&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1360058565879922900 class=chatlog__message-container data-message-id=1360058565879922900><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, April 10, 2025 9:07 p.m.">9:07 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="shockinsword">@Suki</span>&#39;s role - <strong>Absolute Radiance</strong>
+
+Absolute… 
+
+Attacking at my strongest is a foolish dream from this Knight, not matter what path they took.
+
+When I fueled the flames of the Infection, there was always the chance someone would come with the intent of silencing my spread and influence, but I will not be silenced again, and no one dares to silence me again. Not at this power.
+
+…
+
+What is this? I am… not in my world anymore but… similar somehow?
+
+A Wormhole just went through my body, taking me in my ultimate form, to this new world… but there is something here…
+
+<strong>... that is it. There is a trace of the Void here, from my world.</strong> I do not know why or how, maybe it came off of something from my world… but something isolated in this environment… in THIS form…
+
+<strong>ANCIENT ENEMY… HAS NOWHERE TO HIDE HERE.</strong>
+
+__
+
+<strong>You are a Neutral Killing.</strong>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">The Void-Stained
+
+There is a player that has the traces of the Void on them. You know they are Town.
+
+When you get your role, you can select 9 players. If this is not done, they will be selected randomly. You will be informed if the Void-Stained player is in or not in those 9 players at the start of Day 1.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Sword Burst
+
+Each night, you may target a player, roleblocking them with the power of the Absolute Radiance. At the end of the next day, they will be hit by a Powerful attack, the direct contact being poison to the minds of the manipulated. The Town will be informed they died to the Infection.</code></span> <span class=chatlog__edited-timestamp title="Thursday, April 10, 2025 9:07 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1360058928028848280 class=chatlog__message-container data-message-id=1360058928028848280><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, April 10, 2025 9:08 p.m.">9:08 p.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1360058927852818473/rainbow.gif?ex=68974855&amp;is=6895f6d5&amp;hm=c7a3dff67c3ee41e89767565b8e5fd09b3f92e3002de13eef3e35732a4a95d63&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1360058927852818473/rainbow.gif?ex=68974855&amp;is=6895f6d5&amp;hm=c7a3dff67c3ee41e89767565b8e5fd09b3f92e3002de13eef3e35732a4a95d63&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1360059000753885285 class=chatlog__message-container data-message-id=1360059000753885285><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, April 10, 2025 9:08 p.m.">9:08 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="allangamesyt">@allan gamesyt</span>&#39;s role - <strong>ash ketchum</strong>
+
+You won the Masters Eight Tournament!!!!
+
+Wow, beating Leon… Holding that trophy… it&#39;s everything I ever wanted… 
+
+When I sleep that night, I am just doused in happiness, with Pikachu beside me, and all of my friends I’ve caught and shared in this journey. But my dream was weird… I just woke up and, everything is distorted… I cant hear anyone properly! But no one is hearing me yell, saying something is wrong!
+
+Then the Ultra Wormhole appeared.
+
+And in front of it appeared a man.
+
+In his suit.
+
+With his Persian on his side.
+
+A Rainbow logo of the Rocket logo I know by heart, on the right side of his suit.
+
+And the voice that I have heard in person once in Unova, but countless times over the Rocket’s radio.
+
+This Giovanni spoke to me:
+
+<strong>”Look at you now child. You have surrounded yourself with powerful beings, numerous over your travels. This is the way! You surround yourself with power and strike when the moment is ready, my Team Rocket has however, always struggled. Even with the power of the Ultra Beasts, I summoned every Leader I could, with the same logic as me. Rainbow Rocket was born! But alas, I was defeated again. By another young Trainer.”</strong>
+
+<strong>”But now, I have pushed the Pokemon behind the Ultra Wormholes to their limits, and I have achieved the final stage of my domination.”</strong>
+
+<h2>I can create Wormholes to all dimensions.</h2>
+<strong>”The plan is ready. I will summon the most powerful beings across every universe to the Distortion World, and crush them all together, leaving me, and my selected executives, to rule all universes. Rainbow Rocket will rule supreme!”</strong>
+
+<strong>”I tell you this child, because I know the power from our universe is strong. So as the most powerful trainer, at the most powerful you have ever been, Ash, you will be the Leader of my Executives. Eliminate all the threats to me, and I will give you eternal happiness.”</strong></span> <span class=chatlog__edited-timestamp title="Friday, April 11, 2025 9:34 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1360059065556009071 class=chatlog__message-container data-message-id=1360059065556009071><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, April 10, 2025 9:09 p.m.">9:09 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Persians gem dulls, and suddenly, the power paralyzing me and Pikachu that I didn’t notice was happening, was gone. I know this is bad, and no time for remarks, which Pikachu knows and shoots a Thunderbolt at Giovanni.
+
+But the second he stopped talking, a Master Ball was in his hand, and a Pokemon took the attack. When the smoke cleared. A Mega Mewtwo Y was floating, unharmed, with a bubble around his master with his Persian. It’s eyes were a purple fire, controlled to Giovanni’s will. As the trio move back to disappear through the Ultra Wormhole, the controlled Legendary extends its tri paw, and Ash and Pikachu recoil from the mind attack. The portal closes and leaves you two alone. But the damage was done.
+
+You think of how horrible Giovannis plans are, and how you would never agree to such a thing! But… where are these memories coming from? These thoughts? Did the Mewtwo give them to me? They feel so… real…
+
+Have I forgotten all of the times that I have felt powerless? Seeing Legendary and Mythical Pokemon, doing as they please, as I can barely do anything? Why was I okay with this struggle?
+
+Maybe Giovanni is right, with being around power, and control, maybe I can make sure everything is normal, and to stop evil for good. My evil. <strong>I will stop everything with the power, from Giovanni. I must eliminate the threats to our good world.</strong>
+
+—</span></div></div></div></div><div id=chatlog__message-container-1360059130152222882 class=chatlog__message-container data-message-id=1360059130152222882><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, April 10, 2025 9:09 p.m.">9:09 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>You are the Mafia Head. Manipulated by Giovanni, you are here to enact his plan, and destroy the threats to your New World, as the Lead Executive of Rainbow Rocket, along with your new Executives, summoned to this world to help you and Giovanni.
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Raichu - The untapped peak of the Thunderstone
+
+Your dark and calculated partner will grant you Powerful Defense for a single hit. The attacker will be told “Your target had a Protect used on them!”</code>
+
+<strong>Before you left, you gathered the powers from your universe to boost some of your Pokemon to their highest potential! The unnatural level, power, and control are your tools to reach Giovanni’s Peace.</strong> (eliminating all threats to the Mafia!!!)
+
+*You can use up to 2 Pokemon each night, each one being able to be used twice per game unless stated.**
+
+<h2>Mega Charizard X</h2>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">With the power of the Fire Dragon, You can empower your Factional Kill to Burn any visitors to your target and yourself. Burned targets are revealed to you and any defense or protection will not work on them whilst they are Burned.
+
+You have to be the person to do the factional kill to use this ability. You cannot Burn another member of the Mafia.</code></span></div></div></div></div><div id=chatlog__message-container-1360059215628079167 class=chatlog__message-container data-message-id=1360059215628079167><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, April 10, 2025 9:09 p.m.">9:09 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><h2>Z-Powered Snorlax</h2>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">With the ability to make your once always lazy Pokemon to go wherever you want at remarkable speed, you can use Snorlax on another player. No one else can visit this player that night, and the player is roleblocked.
+
+The target will be told:
+
+“A large round creature was sleeping in the doorway the entrance to your temporary residence! No one could get in or out… It wandered off in the morning.**
+
+The target’s visitors would be told:
+
+“A large round creature was sleeping at your targets residence, blocking the entrance! You would think it was to protect the target, but it was blocking them in too…”
+
+You have the ability to use this with your factional kill, but only once, to confirm a kill on the slot, and the damage this would cause would give clues to help the town in terms of game flavor with the destruction the Z Crystal caused. This is your only warning. You cannot use any other ability with Snorlax otherwise, and your other Mafias abilities will also be blocked on the target if they also targeted alongside Snorlax.</code>
+
+<h2>Great Tusk</h2>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Your Donphan went through a transformation, to an ancient form with increased power… and defenses. Each night, you can give a target a buff that lasts for the next day, which reduces the votes against them by -1.</code></span></div></div></div></div><div id=chatlog__message-container-1360059640490102966 class=chatlog__message-container data-message-id=1360059640490102966><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, April 10, 2025 9:11 p.m.">9:11 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><h2>Gigantimax Lapras</h2>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Each night, you can choose to release Lapras out of it’s Pokeball. The game will reveal at the start of the next day the presence of a “Peaceful monster the size of a skyscraper, with a chilling aurora circling it’s body.”
+
+The information of what Gigantimax Lapras does will be redacted in your rolecard if you die.</code>
+
+<strong>&quot;I will not let you see everything. Executives will never fail! I will see to it...&quot;</strong>
+
+<h2>Fishvish</h2>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Dracovish and Arctovish, the failed halves of the Ancient Mythical Fishvish, finally made whole, giving the power of the ancient seas. Twice per game, you can attack a player with a Basic attack at night, done from afar with the ancient water summoned by the Monster Fish. You cannot use any other Pokemon alongside this attack, but this attack is separate from the Factional Kill.</code>
+
+<strong>You win if the Mafia reach parity with the rest of the players.</strong></span></div></div></div></div><div id=chatlog__message-container-1360061129757425664 class=chatlog__message-container data-message-id=1360061129757425664><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, April 10, 2025 9:17 p.m.">9:17 p.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1360061129417818303/rainbow.gif?ex=68974a61&amp;is=6895f8e1&amp;hm=6154850ead5e12a8634db0ff9d8544da327d646a71373988b959fe860e260915&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1360061129417818303/rainbow.gif?ex=68974a61&amp;is=6895f8e1&amp;hm=6154850ead5e12a8634db0ff9d8544da327d646a71373988b959fe860e260915&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1360427519139909804 class=chatlog__message-container data-message-id=1360427519139909804><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Friday, April 11, 2025 9:33 p.m."><a href=#chatlog__message-container-1360427519139909804>2025-04-11 9:33 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="just_zade">@Zade</span>&#39;s role - <strong>Rule 6</strong>
+
+<em>bonks</em> 
+
+You are yourself. Zade. 
+
+There are many nsfw rules in many servers but not all of them are called Rule 6, but maybe… Rule 6 is the true NSFW rule?
+
+You certainly feel that way when a Wormhole suddenly appears under your feet, with your phone open on uh, anyways
+
+Suddenly you are in a world where, <s>discord rules don’t matter? LEGALLY I CANT SAY THIS</s> your power and knowledge are there to be used for good
+
+Or, whatever good you like, or uh, wait what was roleblocker called again? Escort? Oh dear.
+
+<em>_</em>
+
+<strong>You are a member of the Town.</strong> (Town Support)
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Each Night, you can distract a player, with whatever Rule 6 imagination allows you to do. This roleblocks them.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">If anyone says anything that may be classed as an inappropriate innuendo, you can ask a Host if it is eligible. If so, they gain a 1 shot night roleblock, with the message:
+
+**Your dirty mind has appeased the dark powers of Rule 6. For 1 night, alongside your abilities, you can select a player. They will be roleblocked.**
+
+This can be done to any player but only once.</code>
+
+<strong>You win when all threats to the Town have been eliminated.</strong></span> <span class=chatlog__edited-timestamp title="Friday, April 11, 2025 9:34 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1360427957503528961 class=chatlog__message-container data-message-id=1360427957503528961><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, April 11, 2025 9:35 p.m.">9:35 p.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1360427957369307136/rainbow.gif?ex=68974e84&amp;is=6895fd04&amp;hm=efe65dd6b5b4f642e5f283f3281abd524a99295152b6df381ef8ef82e32ab257&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1360427957369307136/rainbow.gif?ex=68974e84&amp;is=6895fd04&amp;hm=efe65dd6b5b4f642e5f283f3281abd524a99295152b6df381ef8ef82e32ab257&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1360428483251015862 class=chatlog__message-container data-message-id=1360428483251015862><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, April 11, 2025 9:37 p.m.">9:37 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="rickiboi">@shark in a pool</span>&#39;s role - <strong>Hornet</strong>
+
+My path has been long.
+
+It was already weird and confusing going through the mental probing from the ritual of the Godseeker, but the Knight was reportedly heading to the core of the Infection. All I can do is see the Infected Tendril outside of the Black Egg, ever spreading… Maybe the Knight will remove this evil and the Void can be free again?
+
+But why? Why was I taken at this time? Something ripped me from this world, from the world I was just about to get closure from? I don&#39;t know, but there is some reason why I was taken, with this Wormhole that appeared under my feet… putting me into a cold and separate world.
+
+I do not know what is going on, but I feel the same thing in my core, something wrong with the entities around me… I need to work out what is going on, and get back to my world. I am the final bastion to the Black Egg if all else fails.
+
+__
+
+<strong>You are a member of the Town.</strong> (Town Protective)
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Gossamer Defense
+
+Each Night, you may target a player, and grant them Powerful defense, defending them with your mastered technique of your thread. This also stops roleblocks directed at your target that were from players with non-Town alignments.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Infection Paranoia x3
+
+Three times per game, you may target another player, alongside your Gossamer Defense if necessary. You will find out if they are Neutral or not.</code>
+
+<strong>You win when all threats to the Town have been eliminated.</strong></span> <span class=chatlog__edited-timestamp title="Friday, April 11, 2025 9:37 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1360433159459835914 class=chatlog__message-container data-message-id=1360433159459835914><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Friday, April 11, 2025 9:55 p.m."><a href=#chatlog__message-container-1360433159459835914>2025-04-11 9:55 p.m.</a></span></div><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1360433159061246082/rainbow.gif?ex=6897535c&amp;is=689601dc&amp;hm=83d0806aca019679c1f548c776aab00f1b69cd340e7b1960d092d851395f0922&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1360433159061246082/rainbow.gif?ex=6897535c&amp;is=689601dc&amp;hm=83d0806aca019679c1f548c776aab00f1b69cd340e7b1960d092d851395f0922&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1360433216355569794 class=chatlog__message-container data-message-id=1360433216355569794><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, April 11, 2025 9:55 p.m.">9:55 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="dr_stoner">@Dr. Stoner</span>&#39;s role - <strong>Koh</strong>
+
+…
+
+Your mind holds the knowledge of people and places, lost to the time you have lived through in your world. But, you are alone here. No Mother, no other spirits that would interact with you. Just because you interacted with the humans..? They do not know how you see others below you. They are just there, pests in my long life, with fresh faces to give me power.
+
+I have uncountable faces and stories packed up in my body… is that why… this Wormhole is here? I was waiting for that boy, but before I could decide what to do, a man walked out of the Wormhole.
+
+<strong>”You are a magnificent creature. What you would have done on my world… is irrelevant now. You have unprecedented knowledge, Koh. But your world is not the only world out there that you can steal from. Faces with much more to give, even more than my own.</strong>
+
+<strong>”Be by my side as an Executive, and I will give you the faces of things from all over the universe, and with that knowledge, we will manipulate every world and rule with the strength of the Executives. I wish you a warm welcome! With us, all faces will belong to you…”</strong>
+
+His words… are nothing but words from another foolishly brave human. 
+
+But I will never have a chance of this again, of new faces, not seeped in the same tradition and not alone against Avatars like him…</span> <span class=chatlog__edited-timestamp title="Friday, April 11, 2025 9:56 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1360433436191625357 class=chatlog__message-container data-message-id=1360433436191625357><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, April 11, 2025 9:56 p.m.">9:56 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>__
+
+<strong>You have joined forces with the power that created the Wormholes, taking entities from across the universe to defeat together, to leave the universe free to steal from. You are a member of the Mafia.</strong>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Sweet Words
+
+Each night, you may visit a target, and talk to them with your innocent words and deceptive faces. They will let you in on any feedback they receive that night. This visit is undetectable.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Face Stealing x3
+
+Three times per game, at Night, you may follow the Factional Kill, or use this alongside yourself doing the Factional Kill. If the target does not die, your ability is refunded. If the target dies, you receive a 1-shot charge of an ability relevant to their rolecard, with the knowledge gained from the face you stole.</code></span></div></div></div></div><div id=chatlog__message-container-1360433495796744254 class=chatlog__message-container data-message-id=1360433495796744254><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, April 11, 2025 9:57 p.m.">9:57 p.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1360433495436038154/rainbow.gif?ex=689753ac&amp;is=6896022c&amp;hm=14fa270d62433d7b9e1e83cdd08815a7d725c23f8593dd0e6aa7300315e97916&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1360433495436038154/rainbow.gif?ex=689753ac&amp;is=6896022c&amp;hm=14fa270d62433d7b9e1e83cdd08815a7d725c23f8593dd0e6aa7300315e97916&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1360445966620033144 class=chatlog__message-container data-message-id=1360445966620033144><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Friday, April 11, 2025 10:46 p.m."><a href=#chatlog__message-container-1360445966620033144>2025-04-11 10:46 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="ziel.16">@Ziel (Nge&#39;s sis)</span>&#39;s role - <strong>Whole</strong>
+
+You are an ant.
+
+Or, a kind of ant. Unknown to you are the species called ants, a mass of tiny armies with what give off the sense of thinking together. However, they do not think together, they just think the same enough where all of their actions lead to creating superstructures and populating their planet with a range inconceivably big for their size.
+
+But your species does not work this way. Your brains are connected, but weirdly…
+
+At a similar population to these “ants”, you can communicate between each other telepathically, in a limited range, to use your tiny brains together, for your own survival.
+
+But when the Wormhole sucked you in… you realised something…
+
+<em>Your species is really small.</em>
+
+<strong>So an armada of your species came to this place… unintentionally.</strong>
+
+<em>Your species is also used to a gravity-intense world.</em>
+
+<strong>So amassing yourself as tiny bodies into a towering presence… is something the other entities can respect as we solve this world… now that you are Whole.</strong></span> <span class=chatlog__edited-timestamp title="Friday, April 11, 2025 10:46 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1360446072027349013 class=chatlog__message-container data-message-id=1360446072027349013><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, April 11, 2025 10:46 p.m.">10:46 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>__
+
+<strong>You are a member of the Town.</strong> (Town Power)
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Passive - Physical Aura
+
+You have 2 Vote Power for the entire game. Your Vote Power cannot be changed by any means.</code>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Siphon
+
+Each night, you may siphon some of your many entities to grant power to your target.
+
+If the Night phase is odd, the player will get a 1 shot Day Shot, that deals Basic damage. If you are selected to be shot by this, your entities will kill the host.
+
+If the Night phase is even, the player will get a 1 shot Day Check. They will be told if their chosen target is Town or not.
+
+You cannot select a player twice until 2 more Night phases have passed. (eg. n1 targets being retargetable for n4)</code></span></div></div></div></div><div id=chatlog__message-container-1360446105208492032 class=chatlog__message-container data-message-id=1360446105208492032><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, April 11, 2025 10:47 p.m.">10:47 p.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1360446104889593966/rainbow.gif?ex=68975f6b&amp;is=68960deb&amp;hm=e382b24510e88b5999a675ffa3bbc3365a80d516b872df805af0730f79289c3e&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1360446104889593966/rainbow.gif?ex=68975f6b&amp;is=68960deb&amp;hm=e382b24510e88b5999a675ffa3bbc3365a80d516b872df805af0730f79289c3e&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1360823307515199549 class=chatlog__message-container data-message-id=1360823307515199549><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Saturday, April 12, 2025 11:45 p.m."><a href=#chatlog__message-container-1360823307515199549>2025-04-12 11:45 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="abunchofatoms">@Mommy Atoms</span>&#39;s role - <strong>The Narrator</strong>
+
+<em>… I am not there anymore… No…</em>
+
+<em>I have my old body… Is this something I forgot? From before I destroyed my life, alongside the process of Life and Death? No. I got everything right. That’s always been clear, from all that I’ve seen as an echo.</em>
+<em>I’ve been taken from that world, somehow. I saw a bright circle surround me… Something external to the Construct.</em>
+
+<em>The fact I have my body back from before… everything… alongside this weird place with, things that don’t make sense being here too… wait.</em>
+
+<strong>Do I need to make the Construct here?</strong>
+
+<em>...</em>
+<em>...</em>
+
+<em>It is… too risky, I know the parameters of my own world, not this distorted place. I just need to get back, and if the other things that are around me can help, I can return to the world where the Shifting Mould is ready to remove, and not here where Death is ready for us all… but going back to that world alive is complicated. Hm.</em></span> <span class=chatlog__edited-timestamp title="Saturday, April 12, 2025 11:46 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1360823389345939498 class=chatlog__message-container data-message-id=1360823389345939498><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, April 12, 2025 11:46 p.m.">11:46 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>__
+
+<strong>You are a member of the Town.</strong> (Town Protective)
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Re-entering the Construct
+
+Each night, you can choose to protect a target. If they are attacked, you sacrifice yourself instead and die. Your first power back in the Construct is to attack the attacker with a Powerful attack.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">The Narration Continues
+
+At any point in the game, you can select a target, separate to your protection. If you successfully die using your ability, the target is able to receive 2 messages a day from you, until they die. The message cap is 100 characters.</code>
+
+<strong>You win when all threats to the Town have been eliminated.</strong></span></div></div></div></div><div id=chatlog__message-container-1360823425677135943 class=chatlog__message-container data-message-id=1360823425677135943><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, April 12, 2025 11:46 p.m.">11:46 p.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1360823425353912441/rainbow.gif?ex=68976d53&amp;is=68961bd3&amp;hm=14867a7895d706ad328cf4f12384d9b4f6801faff4d189ab4aa4c9258c04261e&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1360823425353912441/rainbow.gif?ex=68976d53&amp;is=68961bd3&amp;hm=14867a7895d706ad328cf4f12384d9b4f6801faff4d189ab4aa4c9258c04261e&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1361537041552244937 class=chatlog__message-container data-message-id=1361537041552244937><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Monday, April 14, 2025 11:02 p.m."><a href=#chatlog__message-container-1361537041552244937>2025-04-14 11:02 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="iwytcoasmp">@reggy</span>&#39;s role - <strong>The Illiterate Professor</strong>
+
+Well, it’s been rough. 
+
+You are the top of your field, but have always wanted to be a teacher. No matter how many awards you got, you just wanted to know you were the best at what you did, before heading down into the teaching profession.
+
+But you’ve became a joke! You know so much and students want to learn from you so badly, but you can’t read their clumsy handwriting! When you got them to write it online, your eyes couldn’t deal with the lines of text on the screen, and in paper form, the font was either too small, or too big, and you couldn’t get through all of their papers in time! No assistant knows the profession to your degree to help you…
+
+Maybe when the joke of my profession was the biggest it had ever been was why this Wormhole sucked me away…
+
+But I am here with all of these entities, and we can barely communicate! They will also just hand me papers that I can&#39;t read either! This isn’t an escape… We just need to get out of this to our own worlds… Huh? What’s my profession? Social Deduction. Why? I mean, what&#39;s the harm of informing people here, if I can figure out my problems back home afterwards…
+
+__</span> <span class=chatlog__edited-timestamp title="Monday, April 14, 2025 11:02 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1361537147492110366 class=chatlog__message-container data-message-id=1361537147492110366><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, April 14, 2025 11:02 p.m.">11:02 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>You are a Member of the Town.</strong> (Town Protective)
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Passive - Social Deduction Rule 25.3 - Safety Awareness
+
+If you have no 25.0 Papers currently active, or are all used up on the same night, you will be untargetable at night, and any targets trying to visit you will be told: “Your target was missing!”</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Social Deduction Rule 25.0 x5
+
+Five times per game, at night, you may hand out a Paper to a player that informs them how to use social manipulation to look innocent at night. They gain a 1 shot vest that can save them from Basic Attacks. You can give the same player multiple 25.0 Papers, and hand out multiple per night.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Social Deduction Rule 66.7 x2
+
+Twice per game, at night, you may hand out a Paper to a player that their soul can read, and it informs them how to maintain the ability to vote. They can only place their vote once, and can be used at any point of the game. You cannot give the same player multiple 66.7 Papers.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Social Deduction Rule 99.9 x1
+
+Once per game, at night, you may hand out a Paper to a player that passes on your final mastered social deduction technique: how to summon a gun. The player will gain a 1 shot Basic attack, which they have to use the next night.</code>
+
+<strong>You win when all threats to the Town have been eliminated.</strong></span></div></div></div></div><div id=chatlog__message-container-1361537428875120822 class=chatlog__message-container data-message-id=1361537428875120822><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, April 14, 2025 11:03 p.m.">11:03 p.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1361537428510474360/rainbow.gif?ex=6897634b&amp;is=689611cb&amp;hm=359d8fba22201c004ea80f2eb6f9dcf028d5e3b42a0b92bbbebf770fe498252b&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1361537428510474360/rainbow.gif?ex=6897634b&amp;is=689611cb&amp;hm=359d8fba22201c004ea80f2eb6f9dcf028d5e3b42a0b92bbbebf770fe498252b&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1361537487721205821 class=chatlog__message-container data-message-id=1361537487721205821><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, April 14, 2025 11:03 p.m.">11:03 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="icarus0120">@Bunny</span>&#39;s role - <strong>Bunny</strong>
+
+The life of a bunny is, well, blissfully ignorant, naturally.
+
+Most of you live together, surviving but no worry about what comes after each day, just frollicking and co existing with your fluffy family.
+
+Some of you live protected and fed, not free but your desires met, clueless about the love and care put into you, only grateful of the hands that do it, deep down…
+
+But even your own identity and memory disappeared when going through the Wormhole. You just know… you were one of the Bunnies. You know everything about your race now, now self aware… too… self… aware…
+
+Your happy blissful ignorance… that part of your mind was scattered when entering this alien place. Your instincts just say one thing. <strong>Your answer is not to do anything but be one with the other entities, with unity, you can feel supported, be around the comforting or familiar faces Bunnies across time and space are used to.</strong>
+
+<strong>... but there&#39;s no need to work together to achieve that, is there?</strong>
+
+__</span> <span class=chatlog__edited-timestamp title="Monday, April 14, 2025 11:04 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1361537600422281216 class=chatlog__message-container data-message-id=1361537600422281216><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, April 14, 2025 11:04 p.m.">11:04 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>You are a <strong>Neutral Evil.</strong>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Passive - BunFluff (not fluffing Bunny)
+
+You have a Powerful Defense barrier, that can protect you once, and you are alerted if it is broken. Also, whilst BunFluff is active, any Mafia or Evil-siding Neutrals will be told you are a Neutral Evil whilst visiting you, and that you can win alongside them.</code>
+ 
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">BunBun Essense Transfer
+
+Each Night, you may target a player, and redirect them to another target, with the power of cute eyes in the dark, confusing the player. However, the player will only be told “You were controlled!”. You are informed if the control failed, but not why, unless you are roleblocked.
+
+The 1st target, if the control hits, will permanently give them a BunBun essence. If the target successfully targeted someone, either your 2nd target or any other targets they may have selected if they were control immune, would also gain a BunBun essence.
+
+BunBun essence is an untraceable effect that will permanently persist on any player. You feel better knowing they have apart of familiarity, maybe closer to your memories… and you are informed which players join the list of other players affected by the BunBun essence.
+
+Excluding the previous parameters, BunBun essence can spread by a player who has the effect already from a previous night, visiting another player, or being roleblocked. That/Those other players will then gain BunBun essence, alongside yourself ONLY if you are roleblocked. This process can happen after your death.</code>
+
+<strong>You win either if you are alive at the end of the game, with Mafia and Evil-siding Neutrals winning, or if you successfully spread your BunBuns to every alive player before the end of the game.</strong>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">When achieving the wincon where you have successfully spread your BunBuns to every player, you are announced a winner, and taken out of the game.</code></span></div></div></div></div><div id=chatlog__message-container-1361537629673357344 class=chatlog__message-container data-message-id=1361537629673357344><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, April 14, 2025 11:04 p.m.">11:04 p.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1361537629396406272/rainbow.gif?ex=6897637a&amp;is=689611fa&amp;hm=6116c75a13abce4c90eb8da59376e07b4ed48629efe9e7e09c6434943eca9193&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1361537629396406272/rainbow.gif?ex=6897637a&amp;is=689611fa&amp;hm=6116c75a13abce4c90eb8da59376e07b4ed48629efe9e7e09c6434943eca9193&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1361557933430931598 class=chatlog__message-container data-message-id=1361557933430931598><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Tuesday, April 15, 2025 12:25 a.m."><a href=#chatlog__message-container-1361557933430931598>2025-04-15 12:25 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="konkonfairydragon">@Kon</span>&#39;s role - <strong>XD001</strong>
+
+…
+
+You have… never felt warmth… All you have known is the desire to destroy, with the power radiating in you so hard that no Pokemon or human can compare in might and destruction.
+
+This trainer… they have me now from Snagging me from the previous trainer I was bound to, but they are trying to… change me? How pitiful. My Shadow heart is as strong as the Shadow I control. But as we get closer to this Purity Chamber… something in me wants out. The thing that could destroy my Shadow powers. I was hopeless to what was about to happen…
+
+And then something happened that shouldn’t have happened.
+
+<h2>A Wormhole appeared. Out of it was a man, and a Persian to his side, and a rainbow R on his black suit.</h2>
+I was summoned and defeated, by countless powerful Pokemon, coming from the Wormhole behind this “<em>Trainer</em>”. And I was stolen. But when I was healed and summoned, I realised… I was still a Shadow. I was still powerful.
+
+<strong>”It took me a while to find you. The most destructive Pokemon to ever exist. I know the power of Shadow Pokemon, but you are the peak of this beautiful anomaly.”</strong>
+
+<strong>”If you help me destroy these beings, that I will summon to you and the other Executives, we can destroy them and rule over all universes, with the power of untethered Ultra Wormholes, where you will be free to destroy and rampage with no more restraints from Trainers. That tempts you, doesn’t it?”</strong>
+
+<strong>”Rainbow Rocket is here to give power to those who deserve it, and surrounding ourselves with power is how you achieve your goals! You will be surrounded by the power to destroy the rebellious minded. I will take you there.”</strong>
+
+Destroying, rampaging, no questions, that is the way of a Shadow Pokemon. Hearts are what slows us down. Hearts are what I will live off.
+
+__</span> <span class=chatlog__edited-timestamp title="Tuesday, April 15, 2025 12:25 a.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1361558106278072542 class=chatlog__message-container data-message-id=1361558106278072542><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, April 15, 2025 12:25 a.m.">12:25 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>You are XD001, A Shadow Lugia, captured by Giovanni to help defeat the entities that would harm his rule over the universe. You are a member of the Mafia, and share the normal scum wincon.</strong>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Passive - Shadow Down
+
+The purple energy empowering your wings prevent you from being roleblocked.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Shadow Blast
+
+Each night, You may target a player.
+
+If they are not a member of your Mafia, you will learn if they are a Town or not, due to how the attack goes for the Heart on non-Pokemon, and outs their struggles to you. 
+
+If they are Town, you learn their sub alignment
+
+If they targeted a member of your Mafia, that action will roleblock them, with both you and the target being informed their action failed. This can only happen to a player once.
+
+If they are a member of your Mafia, they will be granted Powerful Defense until the end of the day after the next night.
+
+If that Mafia target was attacked and was supposed to die, or they are lynched, they will instead die at the end of the next night, whilst having their night action replaced with a Powerful attack.</code>
+
+<strong>You win if the Mafia reach parity with the rest of the players.</strong></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1361892007198457957 class=chatlog__message-container data-message-id=1361892007198457957><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Tuesday, April 15, 2025 10:32 p.m."><a href=#chatlog__message-container-1361892007198457957>2025-04-15 10:32 p.m.</a></span></div><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1361892006879563917/rainbow.gif?ex=68975c05&amp;is=68960a85&amp;hm=960a116490e7444e84b43cf907aa54c220d19d63a2b0e8e177fd152fdf529691&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1361892006879563917/rainbow.gif?ex=68975c05&amp;is=68960a85&amp;hm=960a116490e7444e84b43cf907aa54c220d19d63a2b0e8e177fd152fdf529691&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1361892384669175951 class=chatlog__message-container data-message-id=1361892384669175951><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, April 15, 2025 10:34 p.m.">10:34 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="theuglyfruit">@Fruit (Defective Detective)</span>&#39;s role - <strong>Princess Shroob</strong>
+
+Ugh.
+
+They thought they were clever, and thought they were actually getting somewhere!!!! You think you can just down my Mother Ship and think you can get away with your pesky little lives? These brothers are the worst…
+
+I find them and then… This bright… hole? Has taken me to this place. And I hate it.
+
+Barren. Nothing here, just weird rocks and a purple sky… 
+
+My planet was the same. What can we do when our home was withering away, cold, all we wanted was their world… a place that we could rule like there, but anywhere better than the same wasteland this new place is. 
+
+Ugh. I want out, and if it means working with these things? I can keep finding the best place for my Shroobs.
+
+__</span> <span class=chatlog__edited-timestamp title="Tuesday, April 15, 2025 10:34 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1361892501832863934 class=chatlog__message-container data-message-id=1361892501832863934><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, April 15, 2025 10:34 p.m.">10:34 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>You are a member of the Town.</strong> (Town JOAT)
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Passive - Shroob Royal Throne
+
+Each Night, you may extend your shield parameters to another player. You will grant them and yourself Powerful Defense. If you do not or cannot use this, you will still protect yourself. You can only block 1 attack, then this passive is removed.</code>
+
+<strong>The abilities you can use are determined by the state of your Throne Passive:</strong>
+
+<strong>If your Throne is active:</strong>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Mechanical Arm x1
+
+Once per game, you can extend your Mechanical Arm to move the rocks, hiding the other entities temporary residence, so you can see for yourself where they are going. You will be told who your target visits. If they do not visit, you are informed but you do not lose your charge.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Penetrating Lasers x2
+
+Twice per game, you can use your powerful lasers to break through anything hard enough to resist any brute force coming their way. The target will permanently lose all defense and any protection they do gain will be nullified. They will be told “Your residence has been destroyed by a laser! You cannot gain any protection, and any potential defense you did have is gone!”</code>
+
+<strong>If your Throne is deactivated:</strong>
+ 
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Focused Energy Ball x2
+
+Twice per game, you can focus an energy ball attack to hunt for the anomalies blocking you from leaving this cold place. You deal a Basic, Astral attack to the target.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Encircling Star x1
+
+Once per game, you can use your star attack to trap an entity, stuck inside a star spinning faster and faster around them, they will reveal their secrets. You will be informed if the target is a member of the Town, a Mafia, or a Neutral.</code>
+
+<strong>You win when all threats to the Town have been eliminated.</strong></span></div></div></div></div><div id=chatlog__message-container-1361892543729631282 class=chatlog__message-container data-message-id=1361892543729631282><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, April 15, 2025 10:34 p.m.">10:34 p.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1361892543394091118/rainbow.gif?ex=68975c85&amp;is=68960b05&amp;hm=9c90f30d0350e8c5625b27aaa0725cf56c3915e6eff67eba73f5ce224ac9cccf&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1361892543394091118/rainbow.gif?ex=68975c85&amp;is=68960b05&amp;hm=9c90f30d0350e8c5625b27aaa0725cf56c3915e6eff67eba73f5ce224ac9cccf&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1361892975017333020 class=chatlog__message-container data-message-id=1361892975017333020><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, April 15, 2025 10:36 p.m.">10:36 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>&#39;s role - <strong>coughing baby vs hydrogen bomb</strong>
+
+As the powers behind the Wormhole went to work, somehow, the most powerful being to ever exist, ended up being… this…
+
+So
+
+It turns out, being a baby, and having chicken pox whilst being looked after by your concerned parents, whilst coughing at the right nanosecond, was enough to make them the most powerful being to ever exist.
+
+When the hydrogen bomb from the failed global political system decided to crash and blow up just above the head of the baby, mid cough.
+
+The energy from the babies respiratory system and the energy of the devastating bomb merged into their body, for the nanosecond it needed, there was a balance of power that yes, made the baby, the most powerful being, to ever exist, in the universe.
+
+If the powers behind the Wormhole had agenda, then picking this baby meant something.
+What does the baby know now? Well they are just a baby… but they are alone… like most of the others… but not all of them. At least with power, it will be unbiased use, unless this newformed hyper awareness from this power state doesn’t have anything to say about it… ah, that is you.
+
+__
+
+<strong>You are a Member of the Town.</strong> (Town Killing)
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Pure Irradiated Cough x3
+
+Three times each game, on a Day, you may send a message that has the word **cough**, with the appropriate ** around it, in a reply to a players message. If you do this multiple times, only the first cough will register. 
+
+The following night, they will be hit with a Powerful irradiated after effect attack. If they die, the Town will be told they died “by an irradiated cough.” If they survive, they will be told “You survived a cough filled with radiation!”</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Return to Momma
+
+If you have used up all of your Pure Irradiated Coughs, each night, you may choose to explode. You will instantly kill all visitors and yourself.</code>
+
+<strong>You win when all threats to the Town have been eliminated.</strong></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1362258093735542880 class=chatlog__message-container data-message-id=1362258093735542880><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Wednesday, April 16, 2025 10:47 p.m."><a href=#chatlog__message-container-1362258093735542880>2025-04-16 10:47 p.m.</a></span></div><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1362258093316116541/rainbow.gif?ex=68975f76&amp;is=68960df6&amp;hm=6207e899fd4d6ceaf2d96e07318d5914786b8d52753cc37f0e86649428c73a53&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1362258093316116541/rainbow.gif?ex=68975f76&amp;is=68960df6&amp;hm=6207e899fd4d6ceaf2d96e07318d5914786b8d52753cc37f0e86649428c73a53&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1362258105580392490 class=chatlog__message-container data-message-id=1362258105580392490><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 10:47 p.m.">10:47 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>You are a fish.
+
+You have no memories of growing up. Why would you? You are just a fish. But when the curse of undying took its price on you, things like memory came second nature to you.
+
+It defied all logic. Some mysterious power or being gave you no way of dying. You remember trying everything, leaving the water, going down massive waterfalls, but you never got tired, never saw any awareness from the other fish you saw…
+
+Then you stopped seeing fish… Then you stopped seeing life… Then there was no water left.
+
+The Undying curse was on you. And the years of thinking gave you awareness of everything, you could feel everything around you. Just a fish flopping around on a planet that was dying.
+
+When you are undying in the universe, there is an inevitable fate. One you met slowly but surely. Your planet was destroyed by the nearby star, and the star’s death sent you flying into the vast emptiness of space… adrift alone, with any other form of matter from your homeworld, from your river… disintegrated and leaving your undying body and mind floating through space.
+
+The only thing there was to do was to put your mind into a coma… resting…
+
+…
+
+<strong>The Wormhole was instant. You were mentally ready for anything, with all of the entities that you could interact with.</strong>
+
+The power of a perfectly honed fish body… The awareness nigh comparable to any living being that has ever existed…
+
+But you feel your curse getting weaker. Your body and mind is ready, but you feel vulnerable. You can… die? At least for now you can…
+
+—</span></div></div></div></div><div id=chatlog__message-container-1362258155634950235 class=chatlog__message-container data-message-id=1362258155634950235><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 10:47 p.m.">10:47 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>You are Town.</strong>  (Town JOAT)
+
+Your objective is to solve the mystery of the Wormhole, by finding the evil presence your ancient fish awareness feels. Eliminate the Mafia and any evil being.
+
+<strong>Passive - Fish Spirit</strong>
+
+If you die, you have the ability to affect the living with your Fish Spirit, gained through millennia of meditation with divine powers. 
+
+Dying at night, if the target was an evil player, will Mark them to die the following night, with a divine retribution.
+
+Dying to a lynch will grant the Town a 2nd lynch the following day. You will be able to vote here, with +1 Votepower.
+
+No matter how you die, with Fish Spirit, you will be able to send 3 messages to the Town, at any phase and time.
+
+<strong>You will gain 1 charge of an ability for the first 3 nights.</strong>
+
+<strong>Night 1 - Intellectual distraction</strong>
+
+Your social skills are so refined from the unimaginable time to yourself and thinking about how society would work, that you have the power to prevent entities from doing anything when the Star is down.
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Once on either N1, N2 or N3, you can roleblock a player at night, preventing them from doing any actions.</code>
+
+
+<strong>Night 2 - Age-gained Awareness)</strong>
+
+You see and hear everything, as you can feel the soundwaves hitting your fish body, due to the perfect tune with your nerves. However, you have never experienced these loud entities before, and focusing onto them takes all your thinking to do it. But you can find out who is genuine, and who is under this mysterious influence caused by the Wormhole.
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Once on either N2 or N3, you can check a target. You will know if they are Mafia or not.</code></span></div></div></div></div><div id=chatlog__message-container-1362258208307150961 class=chatlog__message-container data-message-id=1362258208307150961><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 10:47 p.m.">10:47 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Night 3 - The Final Flap</strong>
+
+You have squirmed for as long as you can remember. Your movement was perfect, and you can manipulate your body to break rocks, boulders, bedrock. But you can feel your body stiffening up, getting old. The curse is about to lock your body! Your body is about to stop moving for good… but if you can help the entities around you, you have a very powerful flap.
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">For this night only, you can target a player with an Unstoppable attack. This cannot be redirected.</code><ul><li>*you can holster your abilities to use n2 or n3, alongside the newly unlocked ability, but you lose the ability to do all night actions after n3</li></ul>
+<strong>Day 4, your body will die.</strong>
+
+<strong>You lose all abilities and Fish Spirit, and your passive is replaced with this:</strong>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">You can only talk, and if you are attacked/lynched, you lose the ability to vote, but stay in the chat</code>
+
+<strong>You win when all threats to the Town have been eliminated.</strong></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1362261189794730236 class=chatlog__message-container data-message-id=1362261189794730236><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Wednesday, April 16, 2025 10:59 p.m."><a href=#chatlog__message-container-1362261189794730236>2025-04-16 10:59 p.m.</a></span></div><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1362261189656186990/rainbow.gif?ex=68976259&amp;is=689610d9&amp;hm=9c36596a518d87fbbc1a1497542aeaa003fb4cfcab2a40047bdba82ff2def6df&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1362261189656186990/rainbow.gif?ex=68976259&amp;is=689610d9&amp;hm=9c36596a518d87fbbc1a1497542aeaa003fb4cfcab2a40047bdba82ff2def6df&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1362261458578051082 class=chatlog__message-container data-message-id=1362261458578051082><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:00 p.m.">11:00 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title=".jennifer21">@Jen</span>&#39;s role - <strong>Forsaken</strong>
+
+<strong>Alone.</strong>
+
+You are a race, very long limbed and thin, and don themselves in draped clothing to give themselves identity. 
+
+But you did not need to be identified in this way. You were a weaponsmith, with skills handed down your generation. Your race was a hunting race, mainly dealing with the harsh ecosystem of your world… monsters thrice as big as the tallest person in your clan. All folk travelling in and out of the town had to be trained and equipped with weapons, and your weapons were perfectly designed… 
+
+Light, sharp and small swords, easily carried by the thin arms but moved around with the speed of a whip with your species physiology, dealing barrages of slashes which would break down the thickest of carcasses. 
+
+Shields, tall and thin, to block the lanky and frail body of the user… but with the shock absorption to protect the same body, masterfully crafted.
+
+And blowdarts, made with poisons and acids gained from the clan’s Hunter Guild. With the vast array of wildlife that led to such a hostile world to live on, many substances could be made from the fluids of these animals. These blowdarts were amazing ways of dealing with the more threatening part of the ecosystem, but were always in short supply…
+
+You had a fulfilling life, not fully alone, but most of your time was spent in the lonely depths of your blacksmith dungeon, surrounded by hot furnaces and devices to help make as many weapons as possible.</span> <span class=chatlog__edited-timestamp title="Wednesday, April 16, 2025 11:00 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1362261551041482975 class=chatlog__message-container data-message-id=1362261551041482975><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:01 p.m.">11:01 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>You didn’t think, the place that would be the best place to survive a raid from a neighbouring clan, would be such an unknown place… You certainly didn’t think that when that happened.
+
+It was screaming that you thought was the local kids messing around again, until you could hear the truth. The slaughter of your clan, as you equipped yourself with the best gear you had, prepared for the worst.
+
+As you headed towards the only exit to the dungeon, a spiral staircase, a group of angry people you didnt recognise, with poorly equipped gear, came yelling and running down the stairs at you. At first you were fine, you took them down with the basic training you had growing up, from the clan leaders. If you got out and found the survivors, you could equip them to fight them off…
+But too soon after the first group was taken down, another came in response. And another. And another. And with your sword arm getting weaker and weaker, taking down bodies that were pulled out of the way, by soldiers ready to replace them, to gain access to the Armoury below, when the fight kept going on and on, with you against the world, you knew… there was no more Clan leaders… this was not a clan… but something bigger…
+
+Their determination was unwavering. Hours later, with your sword arm, the arm that had mastered the craft of weaponsmithing, was lying limp at your side, the muscles destroyed from overuse… and your blowdart storage getting lower and lower, the crowds stopped coming. One final group appeared… donned in fancy drapes and long swords, running down with trumpets. All felled to the darts.</span></div></div></div></div><div id=chatlog__message-container-1362261610491678883 class=chatlog__message-container data-message-id=1362261610491678883><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:01 p.m.">11:01 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>After a few moments of silence, only the deep regulated breathing of your race, you walked over the most recent bodies up the spiral staircase finally. The more open space you got to on the way out, the more filled it was with bodies of the nameless soldiers you slayed. By the time you made it outside, the smell was… revolting. But what was worse was the destruction of your town.
+
+What was worse was all of the bodies of your clan, clearly distinguishable with their varying cloths, all piled up in a huge heap in the town center. As a massive bonfire.
+
+What happened to your clan was clear to you… and it was hard to narrow down the emotions, when it also became clear that there was no survivors on any side. Happy that these rampaging, mass murderers have been wiped out? Or sad it was at the cost of my clan?
+
+<strong>Alone. And Forsaken. As no one would be coming for you.</strong></span></div></div></div></div><div id=chatlog__message-container-1362261677491490836 class=chatlog__message-container data-message-id=1362261677491490836><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:01 p.m.">11:01 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>You always wore black cloth. It did not matter before, as even with your cloth being as bland as possible, you were always known as the Weaponsmith anyways.
+
+But now there was no one to know that, no more respect on your name, no one to see the cloth as anything but a mysterious cloak over your battered thin body… 
+
+There were stories of other beings seeing people like you as Reapers of Death, which would be fitting with the fate of the war fanatics you exterminated, but… as you retreated back into your hole to escape from the smell, to escape from the sight of the identities of your clan burning away… you sat down in the chair you spent most of your life in, wondering if there was anything to do now.
+
+Flexing your weak secondary arm, the one you used for the blowdarts… you know you cannot use this much more. The arms of your race are matured over use, but any excess use and strain to them can destroy the muscles, and share the fate of your sword arm, now unusable for the rest of your life.
+
+… so you have all of these weapons, these masterfully crafted tools, and now they are useless. <strong>As you are Forsaken…</strong></span></div></div></div></div><div id=chatlog__message-container-1362261741190512660 class=chatlog__message-container data-message-id=1362261741190512660><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:01 p.m.">11:01 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>.</strong>
+
+
+<strong>As soon as that thought came to your head, A bright Wormhole enveloped the room.</strong>
+
+Suddenly, you were not in your town anymore. The silence being replaced by the eerie noises of your distorted environment you were moved to. And the far off noises of other races… and other things… what happened?
+
+You go to find out what the noises are, but as you get up, you realise your chair came with you? That is nice. You go to walk off and you see something glitter at your feet.
+
+<strong>... it seems the Wormhole brought some things it shouldn’t have.</strong>
+
+__
+
+<strong>You are a member of the Town.</strong> (Town Killing)
+
+<strong>You can give tools to players you deem worthy of receiving weapons from the peak of the Prodian Civilisation, as the Forsaken Weaponsmith.</strong>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">The targets will be informed “You have received something from a legendary weaponsmith.”, alongside a description of their gained ability. You cannot multitask.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Prodial Shields 
+
+Each night, you may target a player. This will give them one of your shields. They have the ability to choose to Block or not Block. Protecting roleblocks themselves but grants Basic Defense. The shield cannot be used to Block if they successfully blocked an attack the previous night.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Prodial Blades x3
+
+Three times per game, at night, you may target a player. This will give them a single use Basic attack to use at night.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Prodial Blowdart x2
+
+Twice per game, at night, you may target a player. This will give them a single use Basic attack to use in the day. They will message in their playerchat who to use it on, and the kill will have no kill credit, only the message that they “suddenly dropped dead!”.</code></span></div></div></div></div><div id=chatlog__message-container-1362261793069600812 class=chatlog__message-container data-message-id=1362261793069600812><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:02 p.m.">11:02 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>(i forgot her wincon)</span></div></div></div></div><div id=chatlog__message-container-1362262186096988210 class=chatlog__message-container data-message-id=1362262186096988210><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:03 p.m.">11:03 p.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1362262185765507194/rainbow.gif?ex=68976346&amp;is=689611c6&amp;hm=b88241df1dddd5b06dc37ccdd10d8ef145f965e2f282a513ec4600e3a5c118aa&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1362262185765507194/rainbow.gif?ex=68976346&amp;is=689611c6&amp;hm=b88241df1dddd5b06dc37ccdd10d8ef145f965e2f282a513ec4600e3a5c118aa&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1362262367496572938 class=chatlog__message-container data-message-id=1362262367496572938><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:04 p.m.">11:04 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="miaa_006">@Scary Boy (Mia)</span>&#39;s role - <strong>Mia</strong>
+
+You are yourself, sucked through a Wormhole.
+
+I would add more, but, you know yourself, and what you want to do isn’t clear…
+
+<strong>but with all of these fresh faces, and your deducing power now in the palm of your hand, what&#39;s the harm of causing a little <em>chaos?</em></strong>
+
+__
+
+<strong>You are a Neutral Chaos</strong>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Passive - Unwavering Will
+
+You have Powerful Defense.</code>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Weaponised Contribution
+
+Every day, you may select a player, and write a message to send them, that can be up to 500 characters long. At night, they will receive your message. 
+
+They are able to send 1 message back, up to 1500 characters long, by the end of the night. If they fail to reply, they will be roleblocked for that night and the night after. </code>
+
+<strong>You win if the amount of players you have received the sufficient Contribution from is equal to or greater than the amount of alive players whilst you are alive.</strong>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Contribution is when the 1500 character message you receive passes this criteria, judged by the host: 
+
+The message must include at least 3 reads on 3 other players, and they have to give any reason for the read.</code></span> <span class=chatlog__edited-timestamp title="Wednesday, April 16, 2025 11:04 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1362262430578769990 class=chatlog__message-container data-message-id=1362262430578769990><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:04 p.m.">11:04 p.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1362262430222385282/rainbow.gif?ex=68976380&amp;is=68961200&amp;hm=3290cac4196e39a4a06ebb765a39e0cd8a15cb3623ab01b63acbfec29f77b169&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1362262430222385282/rainbow.gif?ex=68976380&amp;is=68961200&amp;hm=3290cac4196e39a4a06ebb765a39e0cd8a15cb3623ab01b63acbfec29f77b169&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1362262573080121395 class=chatlog__message-container data-message-id=1362262573080121395><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:05 p.m.">11:05 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="li_yuanfang">@Yuanfang</span>&#39;s role - <strong>Jia Xu</strong>
+
+199
+
+And again, I shift powers, to Cao Cao, and again my prospects rise higher and higher. Others see me as submissive… as weak. They do not know what it takes to be one of the higher ups of this regime.
+
+The one who worked to this position, not through family or blade, but through the mind, the tactician mind that saved my countless battles, who has not only shown the value of my strategic view to my masters, but to the conquerors of my masters. That is why I am still here, of course, as my mind is invaluable.
+
+Maybe that is why I was taken at this time, the moment when Cao Cao took me graciously just a few minutes ago… taken again but with this mysterious glowing hole under my feet.
+
+I am now surrounded by… things not my own, not from my world. But a voice in my head, that something around me implored me to stop… and listen.
+
+<strong>”I took you for your strength of mind, as someone like you will know, surrounding yourself with the right people is how you achieve greatness. I have always strived for that goal. This power of the Wormholes I wield is just here to bring us together, to rule over all life with a steady hand and an iron fist. You will be one of my executives, and we will all succeed if the other powers here are taken out of the way.”</strong>
+
+This is nothing new. A new power taking control of my world. But there has always been a constant.
+
+I have always been on the winning side.
+
+__</span> <span class=chatlog__edited-timestamp title="Wednesday, April 16, 2025 11:05 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1362262715145650408 class=chatlog__message-container data-message-id=1362262715145650408><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:05 p.m.">11:05 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Taken here from your height of power, you are here to act towards the path of victory for this new power, as a member of the Mafia.</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Strategic Lord
+
+Each night, using the Team&#39;s resources to move rocks and pathways around the other entities&#39; temporary residences, you may swap a target with another target. You cannot target your own Mafia or yourself, and if a Mafia ability attempts to interact with any of your targets, your ability collapses. After all, you just want to see what is happening… 
+
+You learn if any TI checks, disruptive abilities, or “unknown” abilities targeted either of your targets that night.</code>
+
+<strong>You win if the Mafia reach parity with the rest of the players.</strong></span></div></div></div></div><div id=chatlog__message-container-1362263072990826638 class=chatlog__message-container data-message-id=1362263072990826638><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:07 p.m.">11:07 p.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1362263072776913137/rainbow.gif?ex=6897641a&amp;is=6896129a&amp;hm=b4ba6474b4f3053749071c552c5012f5189688c27b32ac9404b42b695d117dd9&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1362263072776913137/rainbow.gif?ex=6897641a&amp;is=6896129a&amp;hm=b4ba6474b4f3053749071c552c5012f5189688c27b32ac9404b42b695d117dd9&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1362263135624368309 class=chatlog__message-container data-message-id=1362263135624368309><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:07 p.m.">11:07 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="Deleted User">@Deleted User</span>&#39;s role - <strong>Schr&#246;dinger&#39;s Cat</strong>
+
+No. You are not a cat. Sorry.
+
+The idea of this cat is the cruel version of it, but in reality, you are just the entity created by the idea of the Tempting Unknown, when the answer to everything is right there, but your decision to never learn and find out what it is, gives you the power. What power? Well, it is nothing like anyone else… Something you feel when you are suddenly thrust into a dark and distorted place, a physical being… somehow.
+
+But no one is like you, you are not with anyone, as your power is so alien. Who wouldn’t open the box? Would the people who didn’t all be scared of the answer? You are not scared. You thrive on the Unknown.
+
+__
+
+<strong>You are a Neutral Benign.</strong>
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Passive: Forced Deception
+
+With the power radiating from you, you have Powerful Defense. If anyone dies whilst visiting you, their role is cleaned. 
+
+Also, if you die in any way, your flip is also cleaned.</code></span> <span class=chatlog__edited-timestamp title="Wednesday, April 16, 2025 11:08 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1362263307121066164 class=chatlog__message-container data-message-id=1362263307121066164><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:08 p.m.">11:08 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">The Schr&#246;dinger Legacy
+
+Each Night, you may give a target a box. The target will be told “You have received a box! You may open it anytime.” You will be informed if anyone opens the box, or if the player has specifically stated they will not open it. Whilst the box is closed, either with the lack of decision regarding it, or by choice, the player will secretly protect the target from being redirected. 
+
+If the player states they will not open it, at the Night end after this they will receive buffs from the special power you radiate, as they get closer to tapping into it:
+
+1st night: roleblock immunity for the next 2 nights
+2nd night: +1 VP for the rest of the game
+3rd night: You gain a private chat with the player, whilst the target is told “Your possession of the unopened box has opened this neighbourhood!” You also gain their wincon alongside your original one. 
+
+If the player chooses to open the box, they will be told the box is full of something they cannot understand, but they will know you sent the box. You will also be told if a box is opened, but not who&#39;s box, with the message &quot;You felt a great sadness, a box must have been opened.&quot;</code>
+
+<strong>You win if you live until the end of the game, or if you win from one of your gained win conditions if you die.</strong>
+
+<strong>Your role will be revealed at the end of the game. Please do not copy paste this RC in the dead chat to get around this.</strong></span></div></div></div></div><div id=chatlog__message-container-1362263399060345005 class=chatlog__message-container data-message-id=1362263399060345005><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:08 p.m.">11:08 p.m.</div></div><div class=chatlog__message-primary><div class=chatlog__attachment><a href="https://cdn.discordapp.com/attachments/1356501194834444429/1362263398779322450/rainbow.gif?ex=68976467&amp;is=689612e7&amp;hm=5267e268ec5a02235b51d01d0a21c9cd1c5351470995fc6c72b5c19964fe0174&amp;"> <img class=chatlog__attachment-media src="https://cdn.discordapp.com/attachments/1356501194834444429/1362263398779322450/rainbow.gif?ex=68976467&amp;is=689612e7&amp;hm=5267e268ec5a02235b51d01d0a21c9cd1c5351470995fc6c72b5c19964fe0174&amp;" alt="Image attachment" title="Image: rainbow.gif (2.45 KB)" loading=lazy> </a></div></div></div></div><div id=chatlog__message-container-1362263540702118049 class=chatlog__message-container data-message-id=1362263540702118049><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, April 16, 2025 11:08 p.m.">11:08 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>(last in graveyard: the fallen canned Wormhole&#39;d games over the last 5 years since the 1st one)</span> <span class=chatlog__edited-timestamp title="Wednesday, April 16, 2025 11:09 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1362266352756326523 class=chatlog__message-container data-message-id=1362266352756326523><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__reply-symbol></div><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__reply><img class=chatlog__reply-avatar src="https://cdn.discordapp.com/avatars/631165004783288351/96fab735b21102f47ed71cddb73e36f2.png?size=512" alt=Avatar loading=lazy><div class=chatlog__reply-author style=color:rgb(0,214,10) title=inikyne>inikyne</div><div class=chatlog__reply-content><span class=chatlog__reply-link onclick="scrollToMessage(event,'1360059640490102966')"> <h2>Gigantimax Lapras</h2>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Each night, you can choose to release Lapras out of it’s Pokeball. The game will reveal at the start of the next day the presence of a “Peaceful monster the size of a skyscraper, with a chilling aurora circling it’s body.”
+
+The information of what Gigantimax Lapras does will be redacted in your rolecard if you die.</code>
+
+<strong>&quot;I will not let you see everything. Executives will never fail! I will see to it...&quot;</strong>
+
+<h2>Fishvish</h2>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Dracovish and Arctovish, the failed halves of the Ancient Mythical Fishvish, finally made whole, giving the power of the ancient seas. Twice per game, you can attack a player with a Basic attack at night, done from afar with the ancient water summoned by the Monster Fish. You cannot use any other Pokemon alongside this attack, but this attack is separate from the Factional Kill.</code>
+
+<strong>You win if the Mafia reach parity with the rest of the players.</strong> </span></div></div><div class=chatlog__header><span class=chatlog__author style=color:rgb(0,214,10) title=inikyne data-user-id=631165004783288351>inikyne</span> <span class=chatlog__timestamp title="Wednesday, April 16, 2025 11:20 p.m."><a href=#chatlog__message-container-1362266352756326523>2025-04-16 11:20 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>this was the redacted part of Allans role
+
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline nohighlight">Each night, you can choose to release Lapras out of it’s Pokeball. The game will reveal at the start of the next day the presence of a “Peaceful monster the size of a skyscraper, with a chilling aurora circling it’s body.”
+
+No Day shots or checks will work, as everyone is protected. This comes with the information that Town and Neutrals have Day abilities, so this only benefits the Mafia.
+
+The information of what Gigantimax Lapras does will be redacted in your rolecard if you die.</code></span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 64 message(s)</div><div class=postamble__entry>Timezone: UTC-5</div></div>

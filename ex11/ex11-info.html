@@ -1,0 +1,668 @@
+<!DOCTYPE html><html lang=en><head><title>Discord Mafia - ex10-info</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-twitch{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/648663810772697089/a_dcbb31569260a2daffa627b0efab76e0.gif?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>Discord Mafia</div><div class=preamble__entry>temp archive 19 / ex10-info</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1376969506018296019 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=1376969506018296019><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Tuesday, May 27, 2025 1:05 p.m."><a href=#chatlog__message-container-1376969506018296019>2025-05-27 1:05 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><h1>EX10 - Testing the Masterlist</h1>
+This game will test <span class="chatlog__markdown-mention">#gim-master-list</span>, an alternative GIM thread which means to compile the best entries in all of <span class="chatlog__markdown-mention">#gim-anarchy</span>, <span class="chatlog__markdown-mention">#gim-season-1</span> and <span class="chatlog__markdown-mention">#gim-season-2</span>. Currently only <span class="chatlog__markdown-mention">#gim-anarchy</span> and the beginnings of <span class="chatlog__markdown-mention">#gim-season-1</span> have been added, so the list will be a bit restrictive. Future games running this list will have a lot more chaos to offer.
+<ul><li>The master list only has town, mafia, coven and neutral roles.</li></ul><h3>Testing Purpose</h3>The main purpose of this test is to see if the idea actually works in the sense that the game feels &quot;more balanced&quot; than your usual GIM experience, now that the list will be somewhat curated.
+Technically speaking this would also open the door for set slot lists (like a semi open)? God knows <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="nosleep"
+    title="nosleep"
+    src="https://cdn.discordapp.com/emojis/1354058435326509057.png"> 
+I&#39;d like to hear some feedback about this after the game. :)
+<h3>Special Game Mechanics</h3><ul><li>Flipless effects (Clean/Stone/etc) will simply go by &quot;role unknown&quot; and the killer/faction will not be revealed.</li><li>There will be a mandatory Dead Chat, you have to be on it after death until the game ends, participating in it however is optional.</li><li>Mafia Espionage will let the mafia know that there is a Mafia Espionage role per Mafia Espionage rolled (unless the rolecard says otherwise).
+<ul><li>I don&#39;t think any exist at the moment so w/e</li></ul></li><li>Mafia &amp; Coven will be limited to 4 members, 5 if 25+ players, 6 if 40+, espionage roles are excluded.</li><li>There may only be 1 of Mafia Head and Coven Head.</li><li>There may only be 2 Town Power.</li><li>Town is <strong>not</strong> guaranteed to have the majority of players at game start.</li><li>The role list will be <strong>entirely random</strong> except if one role of a faction (except Neutral) rolls, I guarantee there to be at least one more of that faction.
+<ul><li>Coven has very little roles and may not appear at all in this first masterlist game!</li></ul></li></ul><h3>Role List</h3>Any amount of players.
+Everyone gets a random role from <span class="chatlog__markdown-mention">#gim-master-list</span>.
+<h3>Phase Rules</h3><a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/Day_(Keyword">Day</a>&gt;) = 48h or ???
+<a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/Night_(Keyword">Night</a>&gt;) = 24h or ???
+Starting Phase = Day / Pregame (or ???)
+Starting Time = 18 UTC
+<h3>Voting Rules</h3><a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/Plurality_(Keyword">Plurality</a>&gt;) or ???
+<a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/Majority_(Keyword">Majority</a>&gt;) or ???
+<a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/Skipping_(Keyword">Skipping</a>&gt;) or ???
+<a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/Tie_(Keyword">RNG Ties</a>&gt;) or ???
+<a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/Abstaining_(Keyword">RNG Abstains</a>&gt;) or ???
+<h3>Feedback Mechanics</h3><a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/Feedback_(Keyword">Rich Feedback</a>&gt;)
+GIM Kill Credit (Mafia/Coven get faction credit, neutral/town get role credit) or none if the players role wasnt revealed or ???
+<a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/Flipping_(Keyword">Full Flips</a>&gt;) or &quot;unknown&quot; if the role wasnt revealed to a mechanic or ???
+<h3>Evil  Mechanics</h3><a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/Daytalk&gt;">Daytalk</a> or ???
+<a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/Factional_Kill_(Keyword">Factional Kills</a>&gt;) for Mafia or ???
+Coven gets the necronomicon on night 3 or ???
+Multitasking disabled.
+<h3>Activity Rules</h3><a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/Activity_(Keyword">Message Requirement</a>&gt;) = 25 messages / 24h
+<a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/Activity_(Keyword">Warnings</a>&gt;) = 3
+NO BACKUPS ONLY MODKILLS (if i run out of backups), like, i will NOT hesitate :)
+<h3>Links</h3><ul><li>Read the <a href="&lt;https://discord.com/channels/648663810772697089/649058728498429983/1108679787851034656&gt;">Game Rules</a></li><li>Required Server = <a href="https://discord.gg/4ygmH7b">https://discord.gg/4ygmH7b</a><ul><li>Join this or you can&#39;t play.</li></ul><ul><li>Please make sure you can join additional servers if needed.</li></ul></li></ul></span></div></div></div></div><div id=chatlog__message-container-1376969518844215417 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=1376969518844215417><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, May 27, 2025 1:05 p.m.">1:05 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><h3>Playerlist</h3><span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="just_zade">@Zade</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="dr_stoner">@Dr. Stoner</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="howism">@how</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="inikyne">@inikyne</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <s><span class="chatlog__markdown-mention" title=".pepperoni._">@cannoli</span></s> <span class="chatlog__markdown-mention" title="goldenhim">@goldenhim</span>  
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="toast2.014">@toastarame</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span>  <span class="chatlog__markdown-mention" title="lunarifish">@Lunarifish</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(241, 196, 15); background-color: rgba(241, 196, 15, 0.1);">@Alive</span> <span class="chatlog__markdown-mention" title="abunchofatoms">@Mommy Atoms</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="nominomu727">@nominomu</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="gamelover6669">@Gamelover (Meredith)</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <s><span class="chatlog__markdown-mention" title="mobiletaskforce">@Hero (feat. @Friend, @Enemy)</span></s> <span class="chatlog__markdown-mention" title="dangerous_luka">@Danger!? Luka!</span>  
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="ray_695">@Free</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="sinisfuel">@sunny</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="dexcatchemall">@Pokedex</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="fish_in_soup">@Charybdis [soup can]</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="code.an">@code</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title=".kahaan">@Kahaan</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="hypocrisy_">@Psychosis</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="guille9994">@Guille</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="bobbeb">@Bobbeb</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="notkochi">@Kochi</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="_mementomorii.">@Lune is the best (Kaz)</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="blone_">@Blone</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="speak22">@speak22</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="fusionbolt.">@FusionBolt</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="freefeed">@FreeFeed</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <s><span class="chatlog__markdown-mention" title="Unknown">@Unknown</span></s> <span class="chatlog__markdown-mention" title="53r0">@53R0 (Zero)</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="jesse_jasse">@&#129373; | Jasse</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title=".r.ui.">@Rui</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="celes_1906">@Celes</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="flamesss_">@flames</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="lordgalamt">@LordGalamt</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="gummybeartjebeertjeenhuub">@gummybeartje (beertjeenhuub)</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="yika">@Yika</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="2sleepybees">@Currently Sleep</span>
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <s><span class="chatlog__markdown-mention" title="kirinyang">@kirin yang</span></s> <span class="chatlog__markdown-mention" title="that_amnesiac">@Amnesiac, the Kleptomaniac</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="darkvee513">@Vee</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="rickiboi">@shark in a pool</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <span class="chatlog__markdown-mention" title="spectre_333">@Spectre</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <s><span class="chatlog__markdown-mention" title="pikachu4567_4">@Killua</span></s> <s><span class="chatlog__markdown-mention" title="susshushsushi">@Han</span></s> <span class="chatlog__markdown-mention" title="greenparrot">@⏰⏰⏰⏰⏰⏰ (green parrot)</span> 
+<span class="chatlog__markdown-mention" style="color: rgb(153, 45, 34); background-color: rgba(153, 45, 34, 0.1);">@Dead</span> <s><span class="chatlog__markdown-mention" title="psycho_">@Pedro</span></s> <s><span class="chatlog__markdown-mention" title="pixelpirate0050">@Yuanfang 2.0 (PixelPirate)</span></s> <span class="chatlog__markdown-mention" title="ck._.__">@CK</span></span> <span class=chatlog__edited-timestamp title="Monday, June 16, 2025 4:33 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1376969819479343266 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=1376969819479343266><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, May 27, 2025 1:06 p.m.">1:06 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><strong>Graveyard Legend</strong>
+<code class="chatlog__markdown-pre chatlog__markdown-pre--multiline language-diff">+ means town
+- means evil factional
+= means neutral
+? means you dont know</code>
+<span class="chatlog__markdown-mention">#ex10-graveyard</span> for roles.</span> <span class=chatlog__edited-timestamp title="Tuesday, May 27, 2025 1:08 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1376970377749729392 class="chatlog__message-container chatlog__message-container--pinned" data-message-id=1376970377749729392><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, May 27, 2025 1:08 p.m.">1:08 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><h3>Graveyard Summary</h3><code class="chatlog__markdown-pre chatlog__markdown-pre--multiline language-diff">- Day 1   - Spectre - 4) Synethesia - Coven Evil
++ Night 1 - Stoner - 182) Town Power Slot -&gt; Monarc - Town Power
++ Night 1 - Kyne - 158) Lucian - Town Killing
++ Night 1 - Free - 1) @Quack - Town Citizen
++ Night 1 - Sunny - 34) TOS Tracker - Town Investigative
+? Night 1 - Dex - Unknown
+- Day 2   - Kochi - 169) Consort - Mafia Support
+- Night 2 - Lunari - 220) Morgana - Mafia Support
++ Night 2 - Code - 23) Timewarping Photographer - Town Support
+- Night 2 - Kahaan - 234) Evan Cultist - Neutral Chaos (Vampires)
+= Night 2 - Blone - 15) Scapegoat - Neutral Benign
++ Day 3   - Freefeed - 176) Paranoid Gun Owner [...] - Town Killing
++ Night 3 - Dec - 113) Normal Student - Town Citizen
+= Night 3 - Celes - 222) Say Sike Rn. - Neutral Evil
+= Night 3 - Glamt - 203) Mafia Trap - Neutral Benign
+= Night 3 - Fusionbolt - 97) Pirate - Neutral Chaos
+# Night 3 - Fusionbolt leaves the town in victory.
+= Day 4   - Bobbeb - 86) Arsonist Mayor - Neutral Killing
++ Night 4 - Flames - 224) Breaum, heart of the Freljord - Town Protective
+- Night 4 - Rui - 162) Medusa - Coven Evil
+= Day 5   - Amne - 82) Burger - Neutral Benign
++ Night 5 - Zade - 112) Science Student - Town Protetive
++ Night 5 - Speak - 7) @pyromancerdragon - Town Citizen
++ Night 5 - Gummybear - 56) Vigilanter - Town Killing
+- Day 6   - Sleep - 99) The True Trickster - Mafia Deception
+= Night 6 - Psychosis - 287) Duncan - Neutral Evil
+= Night 6 - Guille - 101) Kill Concealer - Neutral Chaos
+- Night 6 - Zero - 125) Random Forum Role -&gt; Ritualist - Coven Evil
+- Day 7   - Luka - 105) Reverse Ambusher - Mafia Tactical
+- Night 7 - Golden - 177) Goon - Mafia Goon
++ Night 7 - Nomi - 159) Senna - Town Protective
++ Night 7 - Meredith - 83) Necromancer - Town Support
+# Night 7 - Dex reflips but his role remains unknown
+# Night 7 - Inikyne lost his ability to talk during the day.
+= Day 8   - How - 98) Bartender - Neutral Evil
++ Night 8 - Toast - 128) Instigator - Town Investigative
+- Night 8 - CK - 24) M-63 Plamen Artillery Piece - Coven Evil
++ Day 9   - Kazuma - 14) The Man in the Wall - Town Protective
++ Night 9 - Jasse - 247) Boomerang Master - Town Killing
+- Night 9 - Shark - 232) Vampire - Neutral Chaos (Vampires)
+= Day 10  - Yika - 190) Executioner 2.0 - Neutral Evil
++ Night 10 - Vee - 199) Boris Johnson - Town Power
+- Day 11   - Parrot - 200) Equivocator - Mafia Deception
+= Endgamed - Soup - 278) Wildling - Neutral Chaos</code></span> <span class=chatlog__edited-timestamp title="Monday, June 16, 2025 4:33 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1376973126893830305 class=chatlog__message-container data-message-id=1376973126893830305><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Tuesday, May 27, 2025 1:19 p.m."><a href=#chatlog__message-container-1376973126893830305>2025-05-27 1:19 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+Hey there!
+Everything is pretty much set up.
+
+Roles will go out in 40~ish minutes.
+From there i need you to <strong>confirm</strong> your participation by explaining your role to us hosts in your own words, this lets us know you&#39;re still with us as well as that you understand how your role works. Not doing so will end with you getting yeeted from the game.
+You have 24h~ish for this.
+
+The game will start tomorrow</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1377004858778849361 class=chatlog__message-container data-message-id=1377004858778849361><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Tuesday, May 27, 2025 3:25 p.m."><a href=#chatlog__message-container-1377004858778849361>2025-05-27 3:25 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> all roles have been given out, please go to your playerchat channel and check it out. :)
+
+Please also make sure to join any server(s) i have linked for you.
+
+The game will start tomorrow <span class="chatlog__markdown-timestamp" title="Wednesday, May 28, 2025 2:00 p.m.">Wednesday, May 28, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Wednesday, May 28, 2025 2:00 p.m.">2025-05-28 2:00 p.m.</span>!</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1377345833455976528 class=chatlog__message-container data-message-id=1377345833455976528><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Wednesday, May 28, 2025 2:00 p.m."><a href=#chatlog__message-container-1377345833455976528>2025-05-28 2:00 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h3>Day 1 Starts</h3>Day 1 ends at <span class="chatlog__markdown-timestamp" title="Friday, May 30, 2025 2:00 p.m.">Friday, May 30, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Friday, May 30, 2025 2:00 p.m.">2025-05-30 2:00 p.m.</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1377601612734009435 class=chatlog__message-container data-message-id=1377601612734009435><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Thursday, May 29, 2025 6:56 a.m."><a href=#chatlog__message-container-1377601612734009435>2025-05-29 6:56 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+Please read <span class="chatlog__markdown-mention">#&#128220;rules</span> 
+Please read <span class="chatlog__markdown-mention">#&#128220;rules</span> 
+Please read <span class="chatlog__markdown-mention">#&#128220;rules</span> 
+No you cannot use ai generated texts. This is against the rules, if I see that shit again I will modkill.
+No you cannot edit your messages. If it happens out of habbit once or twice that&#39;s fine if it was just a typo but if people already told you not to, don&#39;t. If you keep doing it I will modkill you.</span></div></div></div></div><div id=chatlog__message-container-1377601661517697136 class=chatlog__message-container data-message-id=1377601661517697136><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, May 29, 2025 6:57 a.m.">6:57 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Also read <span class="chatlog__markdown-mention">#&#128220;rules</span></span></div></div></div></div><div id=chatlog__message-container-1377601715037012051 class=chatlog__message-container data-message-id=1377601715037012051><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, May 29, 2025 6:57 a.m.">6:57 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Additionally, read <span class="chatlog__markdown-mention">#&#128220;rules</span></span></div></div></div></div><div id=chatlog__message-container-1377601739167109161 class=chatlog__message-container data-message-id=1377601739167109161><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, May 29, 2025 6:57 a.m.">6:57 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Thanks</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1377642696574894201 class=chatlog__message-container data-message-id=1377642696574894201><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Thursday, May 29, 2025 9:40 a.m."><a href=#chatlog__message-container-1377642696574894201>2025-05-29 9:40 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> just to make sure since i saw it being mentioned.
+
+<strong>Whispering is not a thing in this server</strong>.
+
+<h3>What are the game channels?</h3><ul><li>Your playerchat.</li><li>Any server we will invite you to join from <strong>this</strong> chat or <strong>your playerchat</strong>.</li><li>Any chat channel tagged with <strong>EX10</strong> on our <a href="&lt;https://discord.gg/social-deduction&gt;">Main Server&#39;s</a> &quot;Mafia Game&quot; channel category. This currently only includes <span class="chatlog__markdown-mention">#ex10-chat</span> <span class="chatlog__markdown-mention">#ex10-vote</span> <span class="chatlog__markdown-mention">#ex10-info</span> <span class="chatlog__markdown-mention">#ex10-graveyard</span>.</li></ul>-# Please do not ever ever ever talk about this game outside of the above places.
+-# If you are caught doing so you <strong>will</strong> be banned from all future games.</span> <span class=chatlog__edited-timestamp title="Thursday, May 29, 2025 9:40 a.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1377713988917526574 class=chatlog__message-container data-message-id=1377713988917526574><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Thursday, May 29, 2025 2:23 p.m."><a href=#chatlog__message-container-1377713988917526574>2025-05-29 2:23 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Activity warnings (prods)
+The following players are getting warned due to lack of activity or due to lack of contentful posts while they are active (most if not all of their posts are fluff and not game related).
+<span class="chatlog__markdown-mention" title=".pepperoni._">@cannoli</span> 1/3
+<span class="chatlog__markdown-mention" title="mobiletaskforce">@Hero (feat. @Friend, @Enemy)</span> 1/3 if you still have 0 posts at EOD im yeeting you
+<span class="chatlog__markdown-mention" title="guille9994">@Guille</span> 1/3
+<span class="chatlog__markdown-mention" title="notkochi">@Kochi</span> 1/3
+<span class="chatlog__markdown-mention" title="_mementomorii.">@Lune is the best (Kaz)</span> 1/3
+<span class="chatlog__markdown-mention" title="fusionbolt.">@FusionBolt</span> 1/3
+<span class="chatlog__markdown-mention" title="yika">@Yika</span> 1/3
+<span class="chatlog__markdown-mention" title="2sleepybees">@Currently Sleep</span> 1/3
+<span class="chatlog__markdown-mention" title="kirinyang">@kirin yang</span> 1/3
+<span class="chatlog__markdown-mention" title="pikachu4567_4">@Killua</span> 1/3
+
+If you think anyone should have been prodded, please let me know.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1378074351433289768 class=chatlog__message-container data-message-id=1378074351433289768><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Friday, May 30, 2025 2:15 p.m."><a href=#chatlog__message-container-1378074351433289768>2025-05-30 2:15 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Activity Warnings / Prods
+If you are at 2/3 then this is your final warning. If you get another prod you&#39;re out and will get signup banned. Get talking.
+
+<span class="chatlog__markdown-mention" title="mobiletaskforce">@Hero (feat. @Friend, @Enemy)</span> 2/3
+<span class="chatlog__markdown-mention" title="ray_695">@Free</span> 1/3
+<span class="chatlog__markdown-mention" title="notkochi">@Kochi</span> 2/3
+<span class="chatlog__markdown-mention" title="_mementomorii.">@Lune is the best (Kaz)</span> 2/3
+<span class="chatlog__markdown-mention" title="Unknown">@Unknown</span> 1/3
+<span class="chatlog__markdown-mention" title=".r.ui.">@Rui</span> 1/3
+<span class="chatlog__markdown-mention" title="celes_1906">@Celes</span> 1/3
+<span class="chatlog__markdown-mention" title="lordgalamt">@LordGalamt</span> 1/3
+<span class="chatlog__markdown-mention" title="2sleepybees">@Currently Sleep</span> 2/3
+<span class="chatlog__markdown-mention" title="pikachu4567_4">@Killua</span> 2/3</span></div></div></div></div><div id=chatlog__message-container-1378076011001942209 class=chatlog__message-container data-message-id=1378076011001942209><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, May 30, 2025 2:22 p.m.">2:22 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<span class="chatlog__markdown-mention" title="spectre_333">@Spectre</span> was voted out.
+He was <strong>4) Synethesia</strong> - <strong>Coven Evil</strong>.
+
+Night 1 Starts
+EON (End of Night): <span class="chatlog__markdown-timestamp" title="Saturday, May 31, 2025 2:00 p.m.">Saturday, May 31, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Saturday, May 31, 2025 2:00 p.m.">2025-05-31 2:00 p.m.</span>
+EOS (End of Submissions): <span class="chatlog__markdown-timestamp" title="Saturday, May 31, 2025 12:00 p.m.">Saturday, May 31, 2025 12:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Saturday, May 31, 2025 12:00 p.m.">2025-05-31 12:00 p.m.</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1378383921326067772 class=chatlog__message-container data-message-id=1378383921326067772><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Saturday, May 31, 2025 10:45 a.m."><a href=#chatlog__message-container-1378383921326067772>2025-05-31 10:45 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> I&#39;d like to let you know that for this game I will be using wiki ver.2 of attack feedback. Meaning if you hit immune, it will say your attack failed. If you hit protected, it will say your attack failed.
+
+Essentially: An attack failing will receive the exact same feedback, regardless of what actually happened.
+
+Further, if you were attacked and protected you will only receive a singular protection message per attack.
+
+Say you were attacked once, and two people protect you, you get ONE message which says &quot;You were attacked but somebody protected you&quot;.
+
+I hope that makes sense, ok bye.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1378422984162803822 class=chatlog__message-container data-message-id=1378422984162803822><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Saturday, May 31, 2025 1:20 p.m."><a href=#chatlog__message-container-1378422984162803822>2025-05-31 1:20 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+Furthermore, you won&#39;t get &quot;success&quot; feedback except for attacks.
+Meaning you won&#39;t get &quot;You roleblocked someone&quot;, &quot;You transported someone&quot;, &quot;You redirected someone&quot;, &quot;You stalked someone&quot;.
+
+The RECIPIENT may receive something though such as &quot;You were roleblocked&quot;, &quot;You were redirected&quot;, etc, if it should be announced (For example stalking would not be announced.
+
+If you have any particular question about this ask me in your playerchat :D</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1378425370394624202 class=chatlog__message-container data-message-id=1378425370394624202><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Saturday, May 31, 2025 1:30 p.m."><a href=#chatlog__message-container-1378425370394624202>2025-05-31 1:30 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>N1 Deaths <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="GhostCatStab"
+    title="GhostCatStab"
+    src="https://cdn.discordapp.com/emojis/1365495848678719499.png"> </h2><span class="chatlog__markdown-mention" title="dr_stoner">@Dr. Stoner</span> died.
+He was <strong>182) Town Power Slot</strong> -&gt; <strong>Monarch</strong> - <strong>Town Power</strong>.
+He was killed by a member of the <strong>Coven</strong>.
+
+<span class="chatlog__markdown-mention" title="ray_695">@Free</span> died.
+He was <strong>1) @quack</strong> - <strong>Town Citizen</strong>.
+He was killed by <strong>158) Lucian</strong> and a member of the <strong>Mafia</strong>.
+
+<span class="chatlog__markdown-mention" title="sinisfuel">@sunny</span> died.
+He was <strong>34) TOS Tracker</strong> - <strong>Town Investigative</strong>.
+He was killed by a <strong>247) Boomerang Master</strong>.
+
+<span class="chatlog__markdown-mention" title="inikyne">@inikyne</span> died.
+He was <strong>158) Lucian</strong> - <strong>Town Killing</strong>.
+He was killed by a member of the <strong>Vampires</strong>.
+(See announcements for more notes)
+
+<span class="chatlog__markdown-mention" title="dexcatchemall">@Pokedex</span> died.
+His role is <strong>unknown</strong>.
+His killer(s) are <strong>unknown</strong>.
+
+<h2>Announcements</h2>1. <span class="chatlog__markdown-mention" title="2sleepybees">@Currently Sleep</span> is an <strong>Innocent Child</strong>!
+2. <span class="chatlog__markdown-mention" title="inikyne">@inikyne</span> may continue talking during the day, but counts as <strong>deceased</strong> for all other aspects of the game. He is exempt from prods.
+3. <span class="chatlog__markdown-mention" title="dexcatchemall">@Pokedex</span> may continue talking during the day, but counts as <strong>deceased</strong> for all other aspects of the game. He is exempt from prods.
+
+<h2>Day 2 </h2>SoD: <span class="chatlog__markdown-timestamp" title="Saturday, May 31, 2025 2:00 p.m.">Saturday, May 31, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Saturday, May 31, 2025 2:00 p.m.">2025-05-31 2:00 p.m.</span>
+Action Deadline: <span class="chatlog__markdown-timestamp" title="Monday, June 2, 2025 1:00 p.m.">Monday, June 2, 2025 1:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Monday, June 2, 2025 1:00 p.m.">2025-06-02 1:00 p.m.</span>
+EOD: <span class="chatlog__markdown-timestamp" title="Monday, June 2, 2025 2:00 p.m.">Monday, June 2, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Monday, June 2, 2025 2:00 p.m.">2025-06-02 2:00 p.m.</span>
+
+Praying for no moderrors
+Praying for no moderrors
+Praying for no moderrors
+Praying for no moderrors
+Praying for no moderrors</span> <span class=chatlog__edited-timestamp title="Saturday, May 31, 2025 1:33 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1378443640283598960 class=chatlog__message-container data-message-id=1378443640283598960><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Saturday, May 31, 2025 2:42 p.m."><a href=#chatlog__message-container-1378443640283598960>2025-05-31 2:42 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> day start</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1378655303347736676 class=chatlog__message-container data-message-id=1378655303347736676><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Sunday, June 1, 2025 4:43 a.m."><a href=#chatlog__message-container-1378655303347736676>2025-06-01 4:43 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> ig its needed
+read our <span class="chatlog__markdown-mention">#&#128220;rules</span> 
+read our <span class="chatlog__markdown-mention">#&#128220;rules</span> 
+read our <span class="chatlog__markdown-mention">#&#128220;rules</span> 
+
+No, you can&#39;t just spam 25 messages to &quot;dodge prods&quot;.
+<strong>Game Rule 1.4</strong>: Don&#39;t spam.
+
+First of all, you are <strong>Breaking our game rules</strong>, which on its own is reason enough to just kick you from the game.
+Besides that though, I am not even going to count any of your spam messages for prods anyway, so its entirely pointless to do so in the first place.
+
+Shame on you (if you&#39;re doing this).</span> <span class=chatlog__edited-timestamp title="Sunday, June 1, 2025 4:44 a.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1378814248414875860 class=chatlog__message-container data-message-id=1378814248414875860><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Sunday, June 1, 2025 3:15 p.m."><a href=#chatlog__message-container-1378814248414875860>2025-06-01 3:15 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Prods
+
+<span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> 1/3
+<span class="chatlog__markdown-mention" title="lunarifish">@Lunarifish</span> 1/3
+<span class="chatlog__markdown-mention" title="abunchofatoms">@Mommy Atoms</span> 1/3
+<span class="chatlog__markdown-mention" title="mobiletaskforce">@Hero (feat. @Friend, @Enemy)</span> 3/3, will be force replaced.
+<span class="chatlog__markdown-mention" title="celes_1906">@Celes</span> 2/3
+<span class="chatlog__markdown-mention" title="flamesss_">@flames</span> 2/3, you get two at once for spamming 25 nonsense messages which were only posted to prodge, shame on you.
+<span class="chatlog__markdown-mention" title="kirinyang">@kirin yang</span> 2/3
+<span class="chatlog__markdown-mention" title="pikachu4567_4">@Killua</span> 3/3, will be force replaced.
+<span class="chatlog__markdown-mention" title="psycho_">@Pedro</span> 1/3
+
+Get more activity going plox <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="3c"
+    title="3c"
+    src="https://cdn.discordapp.com/emojis/1076043822351532042.png"></span></div></div></div></div><div id=chatlog__message-container-1378814391918788618 class=chatlog__message-container data-message-id=1378814391918788618><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, June 1, 2025 3:16 p.m.">3:16 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="bobbeb">@Bobbeb</span> if your messages keep being only fluff you&#39;re next
+<span class="chatlog__markdown-mention" title="rickiboi">@shark in a pool</span> is excused for this round of prods :)</span> <span class=chatlog__edited-timestamp title="Sunday, June 1, 2025 3:16 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1378834122486714476 class=chatlog__message-container data-message-id=1378834122486714476><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Sunday, June 1, 2025 4:34 p.m."><a href=#chatlog__message-container-1378834122486714476>2025-06-01 4:34 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<span class="chatlog__markdown-mention" title="dangerous_luka">@Danger!? Luka!</span> replaces <span class="chatlog__markdown-mention" title="mobiletaskforce">@Hero (feat. @Friend, @Enemy)</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1378843258330943579 class=chatlog__message-container data-message-id=1378843258330943579><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Sunday, June 1, 2025 5:10 p.m."><a href=#chatlog__message-container-1378843258330943579>2025-06-01 5:10 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<span class="chatlog__markdown-mention" title="susshushsushi">@Han</span> replaces <span class="chatlog__markdown-mention" title="pikachu4567_4">@Killua</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1379157748884967434 class=chatlog__message-container data-message-id=1379157748884967434><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Monday, June 2, 2025 2:00 p.m."><a href=#chatlog__message-container-1379157748884967434>2025-06-02 2:00 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<span class="chatlog__markdown-mention" title="darkvee513">@Vee</span> reveals himself to be the Mayor! His bote counts as 3.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1379162806993031188 class=chatlog__message-container data-message-id=1379162806993031188><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Monday, June 2, 2025 2:20 p.m."><a href=#chatlog__message-container-1379162806993031188>2025-06-02 2:20 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+Talked to my cohosts and we have deemed the day action usage by <span class="chatlog__markdown-mention" title="darkvee513">@Vee</span> to be incorrect and will therefor void it.
+
+The fact that we did at first count the reveal and therefor confirmed the mechanic to a degree remains, apologies for that, however, the reveal will not be counted.
+
+I will now recount the votes.</span></div></div></div></div><div id=chatlog__message-container-1379162930855018536 class=chatlog__message-container data-message-id=1379162930855018536><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, June 2, 2025 2:21 p.m.">2:21 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>We&#39;re at a tie with this, and by game rules this means that I will now RNG who dies!</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1379167007118987365 class=chatlog__message-container data-message-id=1379167007118987365><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Monday, June 2, 2025 2:37 p.m."><a href=#chatlog__message-container-1379167007118987365>2025-06-02 2:37 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Prods
+<span class="chatlog__markdown-mention" title="howism">@how</span> 1/3
+<span class="chatlog__markdown-mention" title=".pepperoni._">@cannoli</span> 2/3
+<span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> 2/3
+<span class="chatlog__markdown-mention" title="abunchofatoms">@Mommy Atoms</span> 2/3
+<span class="chatlog__markdown-mention" title="hypocrisy_">@Psychosis</span> 1/3
+<span class="chatlog__markdown-mention" title="speak22">@speak22</span> 1/3
+<span class="chatlog__markdown-mention" title="Unknown">@Unknown</span> 2/3
+<span class="chatlog__markdown-mention" title="lordgalamt">@LordGalamt</span> 2/3
+<span class="chatlog__markdown-mention" title="yika">@Yika</span> 2/3
+<span class="chatlog__markdown-mention" title="kirinyang">@kirin yang</span> 3/3, will be replaced, if nobody is found, modkill at night end
+
+<span class="chatlog__markdown-mention" title="susshushsushi">@Han</span> I won&#39;t prod you since you just replaced in, but make sure to be a lot more active so I won&#39;t have to remind you about your activity going forward, thanks. :)</span></div></div></div></div><div id=chatlog__message-container-1379167991790309376 class=chatlog__message-container data-message-id=1379167991790309376><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, June 2, 2025 2:41 p.m.">2:41 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h3>Day 2 Deaths</h3><span class="chatlog__markdown-mention" title="notkochi">@Kochi</span> was voted out.
+He was <strong>169) Consort</strong> - <strong>Mafia Support</strong>
+
+<h3>Night 2 Starts</h3>EON: <span class="chatlog__markdown-timestamp" title="Tuesday, June 3, 2025 2:00 p.m.">Tuesday, June 3, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Tuesday, June 3, 2025 2:00 p.m.">2025-06-03 2:00 p.m.</span>
+Deadline: <span class="chatlog__markdown-timestamp" title="Tuesday, June 3, 2025 12:00 p.m.">Tuesday, June 3, 2025 12:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Tuesday, June 3, 2025 12:00 p.m.">2025-06-03 12:00 p.m.</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1379370584667848804 class=chatlog__message-container data-message-id=1379370584667848804><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Tuesday, June 3, 2025 4:06 a.m."><a href=#chatlog__message-container-1379370584667848804>2025-06-03 4:06 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<span class="chatlog__markdown-mention" title="that_amnesiac">@Amnesiac, the Kleptomaniac</span> replaces <span class="chatlog__markdown-mention" title="kirinyang">@kirin yang</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1379511641053462589 class=chatlog__message-container data-message-id=1379511641053462589><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Tuesday, June 3, 2025 1:26 p.m."><a href=#chatlog__message-container-1379511641053462589>2025-06-03 1:26 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>Night 2 Deaths <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="lilySpooky"
+    title="lilySpooky"
+    src="https://cdn.discordapp.com/emojis/585537985483767819.png"> </h2><span class="chatlog__markdown-mention" title="lunarifish">@Lunarifish</span> died.
+She was <strong>220) Morgana</strong> - <strong>Mafia Support</strong>.
+She was killed by a member of the <strong>Vampires</strong>.
+
+<span class="chatlog__markdown-mention" title="code.an">@code</span> died.
+She was a <strong>23) Timewarping Photographer</strong> - <strong>Town Support</strong>.
+She was killed by a member of the <strong>Coven</strong>.
+
+<span class="chatlog__markdown-mention" title=".kahaan">@Kahaan</span> died.
+He was <strong>234) Evan Cultist</strong> - <strong>Neutral Chaos</strong> (Vampires).
+He was killed by <strong>56) Vigilanter</strong>.
+
+<span class="chatlog__markdown-mention" title="blone_">@Blone</span> died.
+He was <strong>15) Scapegoat</strong> - <strong>Neutral Benign</strong>.
+He was killed by <strong>97) Pirate</strong>.
+<h2>Day 2</h2>SoD: <span class="chatlog__markdown-timestamp" title="Tuesday, June 3, 2025 2:00 p.m.">Tuesday, June 3, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Tuesday, June 3, 2025 2:00 p.m.">2025-06-03 2:00 p.m.</span>
+Action Deadline: <span class="chatlog__markdown-timestamp" title="Thursday, June 5, 2025 1:00 p.m.">Thursday, June 5, 2025 1:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Thursday, June 5, 2025 1:00 p.m.">2025-06-05 1:00 p.m.</span>
+EoD: <span class="chatlog__markdown-timestamp" title="Thursday, June 5, 2025 2:00 p.m.">Thursday, June 5, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Thursday, June 5, 2025 2:00 p.m.">2025-06-05 2:00 p.m.</span>
+
+Praying for no moderrors
+Praying for no moderrors
+Praying for no moderrors</span> <span class=chatlog__edited-timestamp title="Tuesday, June 3, 2025 1:44 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1379524720768061630 class=chatlog__message-container data-message-id=1379524720768061630><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Tuesday, June 3, 2025 2:18 p.m."><a href=#chatlog__message-container-1379524720768061630>2025-06-03 2:18 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<span class="chatlog__markdown-mention" title="darkvee513">@Vee</span> is in fact still the mayor, and he did in fact reveal, this time for real.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1380249027484057731 class=chatlog__message-container data-message-id=1380249027484057731><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/286565458826625024/f9c26b1fa8cb27a72dd9fc14f17f828c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(237,255,160) title=konkonfairydragon data-user-id=286565458826625024>Kon</span> <span class=chatlog__timestamp title="Thursday, June 5, 2025 2:16 p.m."><a href=#chatlog__message-container-1380249027484057731>2025-06-05 2:16 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>looks like <span class="chatlog__markdown-mention" title="freefeed">@FreeFeed</span> was voted out
+They were brutally massacered by thousands of papercuts
+They were
+<strong>176) Paranoid Gun Owner but you have 3 alerts no you aren&#39;t veteran but you technically are - Town Killing</strong></span></div></div></div></div><div id=chatlog__message-container-1380250261871656971 class=chatlog__message-container data-message-id=1380250261871656971><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, June 5, 2025 2:21 p.m.">2:21 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>SoD: <span class="chatlog__markdown-timestamp" title="Friday, June 6, 2025 2:00 p.m.">Friday, June 6, 2025 2:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Friday, June 6, 2025 2:00 p.m.">2025-06-06 2:00 p.m.</span>
+Action Dealine:<span class="chatlog__markdown-timestamp" title="Friday, June 6, 2025 1:00 p.m.">Friday, June 6, 2025 1:00 p.m.</span> , <span class="chatlog__markdown-timestamp" title="Friday, June 6, 2025 1:00 p.m.">2025-06-06 1:00 p.m.</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1380253074693558272 class=chatlog__message-container data-message-id=1380253074693558272><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/286565458826625024/f9c26b1fa8cb27a72dd9fc14f17f828c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(237,255,160) title=konkonfairydragon data-user-id=286565458826625024>Kon</span> <span class=chatlog__timestamp title="Thursday, June 5, 2025 2:32 p.m."><a href=#chatlog__message-container-1380253074693558272>2025-06-05 2:32 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="greenparrot">@⏰⏰⏰⏰⏰⏰ (green parrot)</span> replaces <span class="chatlog__markdown-mention" title="susshushsushi">@Han</span> 
+<span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+As always dont ask behind why they were replaced unless Han wishes to explain such after the game ends</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1380558506511302666 class=chatlog__message-container data-message-id=1380558506511302666><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Friday, June 6, 2025 10:46 a.m."><a href=#chatlog__message-container-1380558506511302666>2025-06-06 10:46 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Prods for yesterday
+
+<span class="chatlog__markdown-mention" title=".pepperoni._">@cannoli</span> 3/3 will be replaced yea
+<span class="chatlog__markdown-mention" title="psycho_">@Pedro</span> 2/3
+<span class="chatlog__markdown-mention" title="guille9994">@Guille</span> 2/3
+<span class="chatlog__markdown-mention" title="hypocrisy_">@Psychosis</span> 2/3
+<span class="chatlog__markdown-mention" title="Unknown">@Unknown</span> 3/3 will be replaced
+<span class="chatlog__markdown-mention" title="howism">@how</span> 2/3</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1380589204710625452 class=chatlog__message-container data-message-id=1380589204710625452><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Friday, June 6, 2025 12:48 p.m."><a href=#chatlog__message-container-1380589204710625452>2025-06-06 12:48 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>Night 3 Deaths <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="allah"
+    title="allah"
+    src="https://cdn.discordapp.com/emojis/912564572328722442.png"> </h2><span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> died.
+He was <strong>113) Normal Student</strong> - <strong>Town Citizen</strong>.
+His killer is <strong>unknown</strong>.
+
+<span class="chatlog__markdown-mention" title="fusionbolt.">@FusionBolt</span> died.
+He was <strong>97) Pirate</strong> - <strong>Neutral Chaos</strong>.
+His killer is <strong>unknown</strong>.
+
+<span class="chatlog__markdown-mention" title="celes_1906">@Celes</span> died.
+They were <strong>222) Say Sike Rn.</strong> - <strong>Neutral Evil</strong>.
+Their killer is <strong>unknown</strong>.
+
+<span class="chatlog__markdown-mention" title="lordgalamt">@LordGalamt</span> died.
+He was <strong>203) Mafia Trap</strong> - <strong>Neutral Benign</strong>.
+His killer is <strong>unknown</strong>.
+<h2>Announcements</h2><span class="chatlog__markdown-mention" title="fusionbolt.">@FusionBolt</span>, the <strong>97) Pirate</strong>, has plundered two landrats and has left the game in victory.
+<h2>Day 4</h2>SoD: <span class="chatlog__markdown-timestamp" title="Friday, June 6, 2025 2:00 p.m.">Friday, June 6, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Friday, June 6, 2025 2:00 p.m.">2025-06-06 2:00 p.m.</span>
+Submission Deadline: <span class="chatlog__markdown-timestamp" title="Sunday, June 8, 2025 1:00 p.m.">Sunday, June 8, 2025 1:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Sunday, June 8, 2025 1:00 p.m.">2025-06-08 1:00 p.m.</span>
+EoD: <span class="chatlog__markdown-timestamp" title="Sunday, June 8, 2025 2:00 p.m.">Sunday, June 8, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Sunday, June 8, 2025 2:00 p.m.">2025-06-08 2:00 p.m.</span></span> <span class=chatlog__edited-timestamp title="Friday, June 6, 2025 9:44 p.m.">(edited)</span></div></div></div></div><div id=chatlog__message-container-1380589946041143481 class=chatlog__message-container data-message-id=1380589946041143481><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, June 6, 2025 12:51 p.m.">12:51 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<span class="chatlog__markdown-mention" title="goldenhim">@goldenhim</span> replaces <span class="chatlog__markdown-mention" title=".pepperoni._">@cannoli</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1380599401201930291 class=chatlog__message-container data-message-id=1380599401201930291><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Friday, June 6, 2025 1:29 p.m."><a href=#chatlog__message-container-1380599401201930291>2025-06-06 1:29 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<span class="chatlog__markdown-mention" title="53r0">@53R0 (Zero)</span> replaces <span class="chatlog__markdown-mention" title="Unknown">@Unknown</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1380609568467325059 class=chatlog__message-container data-message-id=1380609568467325059><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/286565458826625024/f9c26b1fa8cb27a72dd9fc14f17f828c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(237,255,160) title=konkonfairydragon data-user-id=286565458826625024>Kon</span> <span class=chatlog__timestamp title="Friday, June 6, 2025 2:09 p.m."><a href=#chatlog__message-container-1380609568467325059>2025-06-06 2:09 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="bobbeb">@Bobbeb</span> reveals themselves to be the Mayor! Their vote counts as 3.
+
+<span class="chatlog__markdown-mention" style="">@Alive Line EX</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1380965081461817444 class=chatlog__message-container data-message-id=1380965081461817444><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Saturday, June 7, 2025 1:42 p.m."><a href=#chatlog__message-container-1380965081461817444>2025-06-07 1:42 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>Day 4 Deaths</h2><span class="chatlog__markdown-mention" title="bobbeb">@Bobbeb</span> was voted out.
+He was <strong>86) Arsonist Mayor</strong> - <strong>Neutral Killing</strong>.
+<h2>Night 4 Starts</h2>EoN: <span class="chatlog__markdown-timestamp" title="Sunday, June 8, 2025 2:00 p.m.">Sunday, June 8, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Sunday, June 8, 2025 2:00 p.m.">2025-06-08 2:00 p.m.</span>
+Action Deadline: <span class="chatlog__markdown-timestamp" title="Sunday, June 8, 2025 12:00 p.m.">Sunday, June 8, 2025 12:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Sunday, June 8, 2025 12:00 p.m.">2025-06-08 12:00 p.m.</span></span></div></div></div></div><div id=chatlog__message-container-1380966641067888720 class=chatlog__message-container data-message-id=1380966641067888720><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, June 7, 2025 1:48 p.m.">1:48 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Prods ig
+
+<span class="chatlog__markdown-mention" title="goldenhim">@goldenhim</span> 1/3, cmon you just replaced in, actually play the game please
+<span class="chatlog__markdown-mention" title="greenparrot">@⏰⏰⏰⏰⏰⏰ (green parrot)</span> 1/3, cmon you just replaced in, actually play the game please
+<span class="chatlog__markdown-mention" title="psycho_">@Pedro</span> 3/3, bro hasnt said shit in like, 100 hours, gg, replacing.
+<span class="chatlog__markdown-mention" title="fish_in_soup">@Charybdis [soup can]</span> 1/3
+<span class="chatlog__markdown-mention" title="speak22">@speak22</span> 2/3</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1380983482800410706 class=chatlog__message-container data-message-id=1380983482800410706><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Saturday, June 7, 2025 2:55 p.m."><a href=#chatlog__message-container-1380983482800410706>2025-06-07 2:55 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<span class="chatlog__markdown-mention" title="pixelpirate0050">@Yuanfang 2.0 (PixelPirate)</span> replaces <span class="chatlog__markdown-mention" title="psycho_">@Pedro</span></span> <span class=chatlog__edited-timestamp title="Saturday, June 7, 2025 2:55 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1381320748290801974 class=chatlog__message-container data-message-id=1381320748290801974><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Sunday, June 8, 2025 1:15 p.m."><a href=#chatlog__message-container-1381320748290801974>2025-06-08 1:15 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>Night 4 Deaths</h2><span class="chatlog__markdown-mention" title="flamesss_">@flames</span> died.
+They were <strong>224) Breaum, heart of the Freljord</strong> - <strong>Town Protective</strong>.
+They were killed by a member of the <strong>Mafia</strong> and a member of the <strong>Coven</strong>.
+
+<span class="chatlog__markdown-mention" title=".r.ui.">@Rui</span> died.
+He was <strong>162) Medusa</strong> - <strong>Coven Evil</strong>.
+He was killed by <strong>247) Boomerang Master</strong>.
+<h2>Day 5</h2>SoD: <span class="chatlog__markdown-timestamp" title="Sunday, June 8, 2025 2:00 p.m.">Sunday, June 8, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Sunday, June 8, 2025 2:00 p.m.">2025-06-08 2:00 p.m.</span>
+Action Deadline: <span class="chatlog__markdown-timestamp" title="Tuesday, June 10, 2025 1:00 p.m.">Tuesday, June 10, 2025 1:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Tuesday, June 10, 2025 1:00 p.m.">2025-06-10 1:00 p.m.</span>
+EoD: <span class="chatlog__markdown-timestamp" title="Tuesday, June 10, 2025 2:00 p.m.">Tuesday, June 10, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Tuesday, June 10, 2025 2:00 p.m.">2025-06-10 2:00 p.m.</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1381608982895923352 class=chatlog__message-container data-message-id=1381608982895923352><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Monday, June 9, 2025 8:20 a.m."><a href=#chatlog__message-container-1381608982895923352>2025-06-09 8:20 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>Day 4 Deaths</h2><span class="chatlog__markdown-mention" title="that_amnesiac">@Amnesiac, the Kleptomaniac</span> was voted out.
+He was <strong>82) Burger</strong> - <strong>Neutral Benign</strong>
+<h2>Night 4 Starts</h2>EoN: <span class="chatlog__markdown-timestamp" title="Tuesday, June 10, 2025 2:00 p.m.">Tuesday, June 10, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Tuesday, June 10, 2025 2:00 p.m.">2025-06-10 2:00 p.m.</span>
+Submission Deadline: <span class="chatlog__markdown-timestamp" title="Tuesday, June 10, 2025 12:00 p.m.">Tuesday, June 10, 2025 12:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Tuesday, June 10, 2025 12:00 p.m.">2025-06-10 12:00 p.m.</span></span> <span class=chatlog__edited-timestamp title="Monday, June 9, 2025 8:23 a.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1381670200440520887 class=chatlog__message-container data-message-id=1381670200440520887><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Monday, June 9, 2025 12:24 p.m."><a href=#chatlog__message-container-1381670200440520887>2025-06-09 12:24 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<span class="chatlog__markdown-mention" title="ck._.__">@CK</span> replaces <span class="chatlog__markdown-mention" title="pixelpirate0050">@Yuanfang 2.0 (PixelPirate)</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1382042129601265666 class=chatlog__message-container data-message-id=1382042129601265666><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Tuesday, June 10, 2025 1:02 p.m."><a href=#chatlog__message-container-1382042129601265666>2025-06-10 1:02 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>Night 5 Deaths <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="NOOO"
+    title="NOOO"
+    src="https://cdn.discordapp.com/emojis/930102377472753684.png"> </h2><span class="chatlog__markdown-mention" title="just_zade">@Zade</span> died.
+She was <strong>112) Science Student</strong> - <strong>Town Protective</strong>.
+She was killed by a member of the <strong>Mafia</strong> and a member of the <strong>Coven</strong>.
+
+<span class="chatlog__markdown-mention" title="speak22">@speak22</span> died.
+He was <strong>7) <span class="chatlog__markdown-mention" title="pyromancerdragon">@Pyro, Dragon of Lobotomy</span></strong> - <strong>Town Citizen</strong>.
+He was killed by <strong>56) Vigilanter</strong>.
+
+<span class="chatlog__markdown-mention" title="gummybeartjebeertjeenhuub">@gummybeartje (beertjeenhuub)</span> died.
+He was <strong>56) Vigilanter</strong> - <strong>Town Killing</strong>.
+He died over the guilt of murdering a member of the Town.
+<h2>Day 6 </h2>SoD: <span class="chatlog__markdown-timestamp" title="Tuesday, June 10, 2025 2:00 p.m.">Tuesday, June 10, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Tuesday, June 10, 2025 2:00 p.m.">2025-06-10 2:00 p.m.</span>
+Action Deadline: <span class="chatlog__markdown-timestamp" title="Thursday, June 12, 2025 1:00 p.m.">Thursday, June 12, 2025 1:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Thursday, June 12, 2025 1:00 p.m.">2025-06-12 1:00 p.m.</span>
+EoD: <span class="chatlog__markdown-timestamp" title="Thursday, June 12, 2025 2:00 p.m.">Thursday, June 12, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Thursday, June 12, 2025 2:00 p.m.">2025-06-12 2:00 p.m.</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1382118989735399464 class=chatlog__message-container data-message-id=1382118989735399464><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Tuesday, June 10, 2025 6:07 p.m."><a href=#chatlog__message-container-1382118989735399464>2025-06-10 6:07 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> Welp
+
+<h2>Day 6 Deaths</h2><span class="chatlog__markdown-mention" title="2sleepybees">@Currently Sleep</span> was voted out.
+He was a <strong>99) The True Trickster</strong> - <strong>Mafia Deception</strong>
+<h2>Night 6 Starts</h2>EoN: <span class="chatlog__markdown-timestamp" title="Wednesday, June 11, 2025 2:00 p.m.">Wednesday, June 11, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Wednesday, June 11, 2025 2:00 p.m.">2025-06-11 2:00 p.m.</span>
+Submission deadline: <span class="chatlog__markdown-timestamp" title="Wednesday, June 11, 2025 1:00 p.m.">Wednesday, June 11, 2025 1:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Wednesday, June 11, 2025 1:00 p.m.">2025-06-11 1:00 p.m.</span>
+20 hour night, but ill move the deadline back an hour so you got 19 hours to submit actions.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1382416840768360582 class=chatlog__message-container data-message-id=1382416840768360582><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Wednesday, June 11, 2025 1:50 p.m."><a href=#chatlog__message-container-1382416840768360582>2025-06-11 1:50 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>Night 6 deaths <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="deadge"
+    title="deadge"
+    src="https://cdn.discordapp.com/emojis/1156196499441594378.png"> </h2><span class="chatlog__markdown-mention" title="hypocrisy_">@Psychosis</span> died.
+He was <strong>287) Duncan</strong> - <strong>Neutral Evil</strong>.
+He was killed by a member of the <strong>Mafia</strong>.
+
+<span class="chatlog__markdown-mention" title="guille9994">@Guille</span> died.
+He was <strong>101) Kill Concealer</strong> - <strong>Neutral Chaos</strong>.
+His killer is <strong>Unknown</strong>.
+
+<span class="chatlog__markdown-mention" title="53r0">@53R0 (Zero)</span> died.
+He was <strong>125) Random Forum Role</strong> -&gt; <strong>Ritualist</strong> - <strong>Coven Evil</strong>.
+He was killed by a member of the <strong>Vampires</strong>.
+<h2>Day 7</h2>SoD: <span class="chatlog__markdown-timestamp" title="Wednesday, June 11, 2025 2:00 p.m.">Wednesday, June 11, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Wednesday, June 11, 2025 2:00 p.m.">2025-06-11 2:00 p.m.</span>
+Submission Deadline: <span class="chatlog__markdown-timestamp" title="Friday, June 13, 2025 1:00 p.m.">Friday, June 13, 2025 1:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Friday, June 13, 2025 1:00 p.m.">2025-06-13 1:00 p.m.</span>
+EoD: <span class="chatlog__markdown-timestamp" title="Friday, June 13, 2025 2:00 p.m.">Friday, June 13, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Friday, June 13, 2025 2:00 p.m.">2025-06-13 2:00 p.m.</span></span> <span class=chatlog__edited-timestamp title="Wednesday, June 11, 2025 2:21 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1382424845664518345 class=chatlog__message-container data-message-id=1382424845664518345><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Wednesday, June 11, 2025 2:22 p.m."><a href=#chatlog__message-container-1382424845664518345>2025-06-11 2:22 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+I forgot.
+
+<h3>Night 3</h3><span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span> was killed by a member of the <strong>Coven</strong>.
+<span class="chatlog__markdown-mention" title="fusionbolt.">@FusionBolt</span> was killed by a member of the <strong>Coven</strong>.
+<span class="chatlog__markdown-mention" title="celes_1906">@Celes</span> was killed by a <strong>Pirate</strong>.
+<span class="chatlog__markdown-mention" title="lordgalamt">@LordGalamt</span> was killed by a member of the <strong>Mafia</strong>.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1382794949585539215 class=chatlog__message-container data-message-id=1382794949585539215><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Thursday, June 12, 2025 2:53 p.m."><a href=#chatlog__message-container-1382794949585539215>2025-06-12 2:53 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="gamelover6669">@Gamelover (Meredith)</span> be more active uwu</span></div></div></div></div><div id=chatlog__message-container-1382795013179838617 class=chatlog__message-container data-message-id=1382795013179838617><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, June 12, 2025 2:53 p.m.">2:53 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="howism">@how</span> <span class="chatlog__markdown-mention" title="_mementomorii.">@Lune is the best (Kaz)</span> <span class="chatlog__markdown-mention" title="toast2.014">@toastarame</span> <span class="chatlog__markdown-mention" title="ck._.__">@CK</span> <span class="chatlog__markdown-mention" title="howism">@how</span> too</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1382812857728761906 class=chatlog__message-container data-message-id=1382812857728761906><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Thursday, June 12, 2025 4:04 p.m."><a href=#chatlog__message-container-1382812857728761906>2025-06-12 4:04 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>Day 7 Deaths</h2><span class="chatlog__markdown-mention" title="dangerous_luka">@Danger!? Luka!</span> was voted out.
+He was <strong>105) Reverse Ambusher</strong> - <strong>Mafia Tactical</strong>.
+<h2>Night 7 Starts</h2>EoN: <span class="chatlog__markdown-timestamp" title="Friday, June 13, 2025 2:00 p.m.">Friday, June 13, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Friday, June 13, 2025 2:00 p.m.">2025-06-13 2:00 p.m.</span>
+Deadline: <span class="chatlog__markdown-timestamp" title="Friday, June 13, 2025 1:00 p.m.">Friday, June 13, 2025 1:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Friday, June 13, 2025 1:00 p.m.">2025-06-13 1:00 p.m.</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1383151213138284685 class=chatlog__message-container data-message-id=1383151213138284685><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Friday, June 13, 2025 2:29 p.m."><a href=#chatlog__message-container-1383151213138284685>2025-06-13 2:29 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>Night 7 Deaths</h2>Oh boy, here we go.
+
+<span class="chatlog__markdown-mention" title="goldenhim">@goldenhim</span> died.
+He was <strong>177) Goon</strong> - <strong>Mafia Goon</strong>.
+He was killed by <strong>247) Boomerang Master</strong>.
+
+<span class="chatlog__markdown-mention" title="nominomu727">@nominomu</span> died.
+She was <strong>159) Senna</strong> - <strong>Town Protective</strong>.
+She was killed by a member of the <strong>Mafia</strong> and a member of the <strong>Vampires</strong>.
+
+<span class="chatlog__markdown-mention" title="gamelover6669">@Gamelover (Meredith)</span> died.
+She was a <strong>83) Necromancer</strong> - <strong>Town Support</strong>.
+She was killed by a member of the <strong>Coven</strong>.
+<h2>Announcements</h2>1. As a result of nomi dying, <span class="chatlog__markdown-mention" title="inikyne">@inikyne</span> may no longer talk during the day.
+2. As a result of <span class="chatlog__markdown-mention" title="gamelover6669">@Gamelover (Meredith)</span> dying, <span class="chatlog__markdown-mention" title="dexcatchemall">@Pokedex</span> may no longer talk during the day.
+3. <span class="chatlog__markdown-mention" title="dexcatchemall">@Pokedex</span> died on <strong>night 1</strong>, his role was <strong>unknown</strong>, he was killed by a <strong>Wildling</strong>.
+<h2>Day 8</h2>SoD: ASAP <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="😭"
+    title="sob"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f62d.svg"> gimme a hot minute
+EoD: <span class="chatlog__markdown-timestamp" title="Sunday, June 15, 2025 2:00 p.m.">Sunday, June 15, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Sunday, June 15, 2025 2:00 p.m.">2025-06-15 2:00 p.m.</span>
+Action Deadline: <span class="chatlog__markdown-timestamp" title="Sunday, June 15, 2025 1:00 p.m.">Sunday, June 15, 2025 1:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Sunday, June 15, 2025 1:00 p.m.">2025-06-15 1:00 p.m.</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1383506844084867266 class=chatlog__message-container data-message-id=1383506844084867266><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/286565458826625024/f9c26b1fa8cb27a72dd9fc14f17f828c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(237,255,160) title=konkonfairydragon data-user-id=286565458826625024>Kon</span> <span class=chatlog__timestamp title="Saturday, June 14, 2025 2:02 p.m."><a href=#chatlog__message-container-1383506844084867266>2025-06-14 2:02 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<span class="chatlog__markdown-mention" title="howism">@how</span> was voted out.
+They were <strong>98) Bartender - Neutral Evil</strong>
+
+<h1>Night 8 starts</h1>
+EoN: <span class="chatlog__markdown-timestamp" title="Sunday, June 15, 2025 2:00 p.m.">Sunday, June 15, 2025 2:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Sunday, June 15, 2025 2:00 p.m.">2025-06-15 2:00 p.m.</span>
+Action Deadline: <span class="chatlog__markdown-timestamp" title="Sunday, June 15, 2025 1:00 p.m.">Sunday, June 15, 2025 1:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Sunday, June 15, 2025 1:00 p.m.">2025-06-15 1:00 p.m.</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1383864058067030016 class=chatlog__message-container data-message-id=1383864058067030016><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Sunday, June 15, 2025 1:41 p.m."><a href=#chatlog__message-container-1383864058067030016>2025-06-15 1:41 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>Night 8 Deaths <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="dead"
+    title="dead"
+    src="https://cdn.discordapp.com/emojis/1109573088795963535.gif"> </h2><span class="chatlog__markdown-mention" title="toast2.014">@toastarame</span> died.
+He was <strong>128) Instigator</strong> - <strong>Town Investigative</strong>.
+He was killed by a member of the <strong>Mafia</strong>.
+
+<span class="chatlog__markdown-mention" title="ck._.__">@CK</span> died.
+He was <strong>24) M-63 Plamen Artillery Piece</strong> - <strong>Coven Evil</strong>.
+He was killed by a member of the <strong>Vampires</strong>.
+<h2>Day 9</h2>SoD: <span class="chatlog__markdown-timestamp" title="Sunday, June 15, 2025 2:00 p.m.">Sunday, June 15, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Sunday, June 15, 2025 2:00 p.m.">2025-06-15 2:00 p.m.</span>
+Action Deadline: <span class="chatlog__markdown-timestamp" title="Tuesday, June 17, 2025 1:00 p.m.">Tuesday, June 17, 2025 1:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Tuesday, June 17, 2025 1:00 p.m.">2025-06-17 1:00 p.m.</span>
+EoD: <span class="chatlog__markdown-timestamp" title="Tuesday, June 17, 2025 2:00 p.m.">Tuesday, June 17, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Tuesday, June 17, 2025 2:00 p.m.">2025-06-17 2:00 p.m.</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1383874829404344422 class=chatlog__message-container data-message-id=1383874829404344422><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Sunday, June 15, 2025 2:24 p.m."><a href=#chatlog__message-container-1383874829404344422>2025-06-15 2:24 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>Day 9 Ends</h2><span class="chatlog__markdown-mention" title="_mementomorii.">@Lune is the best (Kaz)</span> was voted out.
+He was <strong>14) The Man in the Wall</strong> - <strong>Town protective</strong>.
+<h2>Announcements</h2><strong>A plague has consumed the Town summoning Pestilence, Horseman of the Apocalypse!</strong>
+<h2>Night 9 Starts</h2>EoN: <span class="chatlog__markdown-timestamp" title="Monday, June 16, 2025 2:00 p.m.">Monday, June 16, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Monday, June 16, 2025 2:00 p.m.">2025-06-16 2:00 p.m.</span>
+Deadline 1h before.</span> <span class=chatlog__edited-timestamp title="Monday, June 16, 2025 2:30 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1384223189873463426 class=chatlog__message-container data-message-id=1384223189873463426><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Monday, June 16, 2025 1:28 p.m."><a href=#chatlog__message-container-1384223189873463426>2025-06-16 1:28 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>Night 9 Deaths</h2><span class="chatlog__markdown-mention" title="jesse_jasse">@&#129373; | Jasse</span> died.
+He was <strong>247) Boomerang Master</strong> - <strong>Town Killing</strong>.
+He was killed by <strong>Pestilence, Horseman of the Apocalypse</strong> and a member of the <strong>Vampires</strong>.
+
+<span class="chatlog__markdown-mention" title="rickiboi">@shark in a pool</span> died.
+He was <strong>232) Vampire</strong> - <strong>Neutral Chaos</strong>.
+He was killed by <strong>Pestilence, Horseman of the Apocalypse</strong>.
+<h2>Day 10</h2>SoD: <span class="chatlog__markdown-timestamp" title="Monday, June 16, 2025 2:00 p.m.">Monday, June 16, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Monday, June 16, 2025 2:00 p.m.">2025-06-16 2:00 p.m.</span>
+Action Deadline: <span class="chatlog__markdown-timestamp" title="Wednesday, June 18, 2025 1:00 p.m.">Wednesday, June 18, 2025 1:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Wednesday, June 18, 2025 1:00 p.m.">2025-06-18 1:00 p.m.</span>
+EoD: <span class="chatlog__markdown-timestamp" title="Wednesday, June 18, 2025 2:00 p.m.">Wednesday, June 18, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Wednesday, June 18, 2025 2:00 p.m.">2025-06-18 2:00 p.m.</span></span> <span class=chatlog__edited-timestamp title="Monday, June 16, 2025 2:30 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1384239134490492938 class=chatlog__message-container data-message-id=1384239134490492938><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Monday, June 16, 2025 2:32 p.m."><a href=#chatlog__message-container-1384239134490492938>2025-06-16 2:32 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>Day 10 Deaths</h2><span class="chatlog__markdown-mention" title="yika">@Yika</span> was voted out.
+He was <strong>190) Executioner 2.0</strong> -  <strong>Neutral Evil</strong>.
+<h2>Night 10 Starts</h2>EoN: <span class="chatlog__markdown-timestamp" title="Tuesday, June 17, 2025 2:00 p.m.">Tuesday, June 17, 2025 2:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Tuesday, June 17, 2025 2:00 p.m.">2025-06-17 2:00 p.m.</span>.
+
+And for once, I am accepting night skips.
+Everyone has to skip for the night to end early.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1384248926454157356 class=chatlog__message-container data-message-id=1384248926454157356><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Monday, June 16, 2025 3:11 p.m."><a href=#chatlog__message-container-1384248926454157356>2025-06-16 3:11 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<h2>Night 10 Deaths</h2><span class="chatlog__markdown-mention" title="darkvee513">@Vee</span> died.
+He was <strong>199) Boris Johnson</strong> - <strong>Town Power</strong>.
+He was killed by <strong>Pestilence, Horseman of the Apocalypse</strong>.
+<h2>Day 11</h2>SoD: ASAP
+EoD: Whenever you guys hammer <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="xD"
+    title="xD"
+    src="https://cdn.discordapp.com/emojis/479866981789597696.png"> (or <span class="chatlog__markdown-timestamp" title="Wednesday, June 18, 2025 3:00 p.m.">Wednesday, June 18, 2025 3:00:00 p.m.</span>, <span class="chatlog__markdown-timestamp" title="Wednesday, June 18, 2025 3:00 p.m.">2025-06-18 3:00 p.m.</span>)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1384269924331032678 class=chatlog__message-container data-message-id=1384269924331032678><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Monday, June 16, 2025 4:34 p.m."><a href=#chatlog__message-container-1384269924331032678>2025-06-16 4:34 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+<span class="chatlog__markdown-mention" title="greenparrot">@⏰⏰⏰⏰⏰⏰ (green parrot)</span> has been voted out.
+He was <strong>200) Equivocator</strong> - <strong>Mafia Deception</strong>.</span></div></div></div></div><div id=chatlog__message-container-1384270717255811215 class=chatlog__message-container data-message-id=1384270717255811215><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, June 16, 2025 4:37 p.m.">4:37 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+Time to reveal <span class="chatlog__markdown-mention" title="fish_in_soup">@Charybdis [soup can]</span>&#39;s win conditions!
+
+1. <strong>You win if the town wins the game!</strong>
+That&#39;s it.
+
+<span class="chatlog__markdown-mention" title="fish_in_soup">@Charybdis [soup can]</span> has lost and will be endgamed.
+He was <strong>278) Wildling</strong> - <strong>Neutral Chaos</strong>.</span></div></div></div></div><div id=chatlog__message-container-1384271771980660847 class=chatlog__message-container data-message-id=1384271771980660847><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, June 16, 2025 4:41 p.m.">4:41 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Alive Line EX</span> 
+
+We have <strong>ONE PLAYER LEFT STANDING!</strong>
+
+<h2><span class="chatlog__markdown-mention" title="abunchofatoms">@Mommy Atoms</span>, <strong>Pestilence, Horseman of the Apocalypse</strong> survives!</h2>You have eliminated all other foes and win.
+
+<span class="chatlog__markdown-mention" title="howism">@how</span> wins due to the town losing the game.
+<span class="chatlog__markdown-mention" title="fusionbolt.">@FusionBolt</span> wins due to achieving his win condition of plundering two players.
+
+<h1>The Game Is Over!</h1>gg
+
+<h3>Winners</h3><span class="chatlog__markdown-mention" title="abunchofatoms">@Mommy Atoms</span> as  <strong>58) Plaguebearer - Neutral Chaos</strong> -&gt; <strong>Pestilence, Horseman of the Apocalypse</strong> - <strong>Neutral Chaos</strong>
+<span class="chatlog__markdown-mention" title="howism">@how</span> as <strong>98) Bartender</strong> - <strong>Neutral Evil</strong>
+<span class="chatlog__markdown-mention" title="fusionbolt.">@FusionBolt</span> as <strong>*97) Pirate</strong> - <strong>Neutral Chaos</strong>
+
+If you voted in dead chat and voted for <strong>only neutrals win</strong>, you were <strong>Correct!</strong>
+A <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍪"
+    title="cookie"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f36a.svg"> goes out to:
+1. <span class="chatlog__markdown-mention" title="bobbeb">@Bobbeb</span> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍪"
+    title="cookie"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f36a.svg"> 
+2. <span class="chatlog__markdown-mention" title="fusionbolt.">@FusionBolt</span> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍪"
+    title="cookie"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f36a.svg"> 
+3. <span class="chatlog__markdown-mention" title="that_amnesiac">@Amnesiac, the Kleptomaniac</span> <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="🍪"
+    title="cookie"
+    src="https://cdn.jsdelivr.net/gh/twitter/twemoji@latest/assets/svg/1f36a.svg">  
+for guessing correctly :&gt;
+
+Thanks for playing everyone!
+I&#39;ll ask you all a few questions in your playerchat in a bit <img
+    loading="lazy"
+    class="chatlog__emoji "
+    alt="shy_hide"
+    title="shy_hide"
+    src="https://cdn.discordapp.com/emojis/809861272036311100.png"> Please answer them!</span></div></div></div></div><div id=chatlog__message-container-1384272174285717525 class=chatlog__message-container data-message-id=1384272174285717525><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, June 16, 2025 4:43 p.m.">4:43 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><a href="https://discord.gg/DEg6YEHZ">https://discord.gg/DEg6YEHZ</a>
+<a href="https://discord.gg/YDXKEntA">https://discord.gg/YDXKEntA</a>
+<a href="https://discord.gg/4SBW45Va">https://discord.gg/4SBW45Va</a>
+<a href="https://discord.gg/4StY2hN2">https://discord.gg/4StY2hN2</a>
+<a href="https://discord.gg/J598m7d6">https://discord.gg/J598m7d6</a></span></div></div></div></div><div id=chatlog__message-container-1384272274051432571 class=chatlog__message-container data-message-id=1384272274051432571><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, June 16, 2025 4:43 p.m.">4:43 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><a href="https://docs.google.com/spreadsheets/d/1f2gHwl1-iHKmqCfjpOxdYxfpSE823fP3uj6sBehtYOU/edit?usp=sharing">https://docs.google.com/spreadsheets/d/1f2gHwl1-iHKmqCfjpOxdYxfpSE823fP3uj6sBehtYOU/edit?usp=sharing</a></span></div><div class=chatlog__embed><div class="chatlog__embed-color-pill chatlog__embed-color-pill--default"></div><div class=chatlog__embed-content-container><div class=chatlog__embed-content><div class=chatlog__embed-text><div class=chatlog__embed-title><a class=chatlog__embed-title-link href="https://docs.google.com/spreadsheets/d/1f2gHwl1-iHKmqCfjpOxdYxfpSE823fP3uj6sBehtYOU/edit?usp=sharing"><div class="chatlog__markdown chatlog__markdown-preserve">EX10 | Testing the Masterlist</div></a></div></div><div class=chatlog__embed-thumbnail-container><a class=chatlog__embed-thumbnail-link href=https://images-ext-1.discordapp.net/external/uj9O2U0EXy6zpT0bYnrpKq7zQlc4se6R4_kA48sSGCk/https/lh7-us.googleusercontent.com/docs/AHkbwyKzBpHUyLVjZpHYNMJCSfiuQAqoQvh5DpeA2brj6xd0CwQqApSmN9HYMBKBX_r99CNyPGfUMJhMC5ckw3h5RNl6Wpkgx9zFownSl88WRlW9q27hpJqI%3Dw1200-h630-p> <img class=chatlog__embed-thumbnail src=https://images-ext-1.discordapp.net/external/uj9O2U0EXy6zpT0bYnrpKq7zQlc4se6R4_kA48sSGCk/https/lh7-us.googleusercontent.com/docs/AHkbwyKzBpHUyLVjZpHYNMJCSfiuQAqoQvh5DpeA2brj6xd0CwQqApSmN9HYMBKBX_r99CNyPGfUMJhMC5ckw3h5RNl6Wpkgx9zFownSl88WRlW9q27hpJqI%3Dw1200-h630-p alt=Thumbnail loading=lazy> </a></div></div></div></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1384275132125548678 class=chatlog__message-container data-message-id=1384275132125548678><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Monday, June 16, 2025 4:55 p.m."><a href=#chatlog__message-container-1384275132125548678>2025-06-16 4:55 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" style="">@Archivist</span></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1384275227797749812 class=chatlog__message-container data-message-id=1384275227797749812><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/771127917169868801/e86155decfc9b7a8ef4009415e0e8c4e.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(134,115,161) title=char._.coal data-user-id=771127917169868801>timmy’s bbg (coal)</span> <span class=chatlog__timestamp title="Monday, June 16, 2025 4:55 p.m."><a href=#chatlog__message-container-1384275227797749812>2025-06-16 4:55 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><img
+    loading="lazy"
+    class="chatlog__emoji chatlog__emoji--large"
+    alt="yippee"
+    title="yippee"
+    src="https://cdn.discordapp.com/emojis/1300468136276918394.png"></span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 67 message(s)</div><div class=postamble__entry>Timezone: UTC-5</div></div>

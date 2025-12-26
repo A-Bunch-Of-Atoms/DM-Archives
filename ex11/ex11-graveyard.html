@@ -1,0 +1,448 @@
+<!DOCTYPE html><html lang=en><head><title>Discord Mafia - ex10-graveyard</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-twitch{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/648663810772697089/a_dcbb31569260a2daffa627b0efab76e0.gif?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>Discord Mafia</div><div class=preamble__entry>temp archive 19 / ex10-graveyard</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1378076056267001957 class=chatlog__message-container data-message-id=1378076056267001957><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Friday, May 30, 2025 2:22 p.m."><a href=#chatlog__message-container-1378076056267001957>2025-05-30 2:22 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="spectre_333">@Spectre</span>&#39;s Role
+
+4) <a href="https://discord.com/channels/648663810772697089/1015288371066699826/1015294883222798488" onclick="scrollToMessage(event, '1015294883222798488')">https://discord.com/channels/648663810772697089/1015288371066699826/1015294883222798488</a> Synesthesia - Coven Evil
+
+<strong>Synesthesia</strong> (Coven Evil)
+<code class="chatlog__markdown-pre chatlog__markdown-pre--inline">I see, smell, feel, hear, and taste dead people. All at once.</code>
+No (Basic) Attack | No Defense
+
+<strong>Abilities</strong>: 
+<ul><li>Choose a player and a sense to perceive them with.
+
+<strong>Attributes</strong>:</li></ul>You will perform an action on your target based on the sense that you chose. Starting night 2, you will also always apply the sense you chose the previous night again on your current arget, should you choose a different sense than the previous night.
+With the necronomicon, you may now choose to perform <strong>sixth sense</strong> and one other sense ability and you may do so on different targets. You may only use <strong>sixth</strong> sense in this configuration.
+<ul><li><strong>Sight</strong>: reveal your target&#39;s faction.</li><li><strong>Smell</strong>: reveal if your target has any limited use abilities.</li><li><strong>Touch</strong>: will reveal your target&#39;s attack and defense values.</li><li><strong>Hearing</strong>: will reveal if your target has any night chats.</li><li><strong>Taste</strong>: will reveal if your target has any non-death immunities, such as roleblock or redirection immunity.</li><li><strong>Sixth Sense</strong>: With the necronomicon, you may perform an astral basic attack.
+
+Goal: Kill anyone who will not submit to the Coven.</li></ul></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1378426728673706184 class=chatlog__message-container data-message-id=1378426728673706184><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Saturday, May 31, 2025 1:35 p.m."><a href=#chatlog__message-container-1378426728673706184>2025-05-31 1:35 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="inikyne">@inikyne</span>&#39;s role
+
+158) <a href="https://discord.com/channels/648663810772697089/650854572473974784/656379967642533898" onclick="scrollToMessage(event, '656379967642533898')">https://discord.com/channels/648663810772697089/650854572473974784/656379967642533898</a> Lucian - Town Killing
+
+Lucian - Town Killing
+
+If you roll so does 159) Senna.
+You have a private chat with Senna.
+If you die, you will stay alive unless Senna is also dead, however, you will be announced as dead, revealed as this role and lose your ability to vote and to use the following action:
+
+Each night you may blast another player with your relic pistols, attacking your target twice with a basic attack.
+<ul><li>You may do so 3 times.</li></ul></span></div></div></div></div><div id=chatlog__message-container-1378426798110412809 class=chatlog__message-container data-message-id=1378426798110412809><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, May 31, 2025 1:35 p.m.">1:35 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="ray_695">@Free</span>&#39;s role
+
+1) <a href="https://discord.com/channels/648663810772697089/1015288371066699826/1015290246579097692" onclick="scrollToMessage(event, '1015290246579097692')">https://discord.com/channels/648663810772697089/1015288371066699826/1015290246579097692</a> <span class="chatlog__markdown-mention" title="quack.attack">@Quack</span> - Town Citizen
+
+<span class="chatlog__markdown-mention" title="quack.attack">@Quack</span> - Town Citizen
+
+You&#39;re a citizen named Quack, previously known as the <strong>GIM Overlord</strong>.
+You have retired long ago, and simply bide your time in this town.
+Once per game you may heal another player protecting them from death that night, and the first time you would die from any source you will not die.</span></div></div></div></div><div id=chatlog__message-container-1378426857841627239 class=chatlog__message-container data-message-id=1378426857841627239><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, May 31, 2025 1:36 p.m.">1:36 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="sinisfuel">@sunny</span>&#39;s role
+
+34) <a href="https://discord.com/channels/648663810772697089/1015288371066699826/1016054367712981095" onclick="scrollToMessage(event, '1016054367712981095')">https://discord.com/channels/648663810772697089/1015288371066699826/1016054367712981095</a> TOS Tracker - Town Investigative
+
+TOS Tracker - Town Investigative
+
+Each night choose another player to track, you will learn who your target visits, or learn that your target did not visit.</span></div></div></div></div><div id=chatlog__message-container-1378426917254070343 class=chatlog__message-container data-message-id=1378426917254070343><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, May 31, 2025 1:36 p.m.">1:36 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="dr_stoner">@Dr. Stoner</span>&#39;s role
+
+You are 182) <a href="https://discord.com/channels/648663810772697089/650854572473974784/656825689009422347" onclick="scrollToMessage(event, '656825689009422347')">https://discord.com/channels/648663810772697089/650854572473974784/656825689009422347</a> Town Power Slot - Town Power
+
+A random <strong>official</strong> or <strong>experimental</strong> role from <a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/Town_Power&gt;">this list</a>.
+
+You rolled the following role:
+
+Monarch - Town Power
+
+Each night you may choose to knight a player. A knighted player receives a permanent votepower increase of 1.
+<ul><li>You may do this two times. You don&#39;t lose a charge if you are unsuccessful.</li><li>You will be unsuccessful when attempting to knight an already knighted player.</li><li>If a knighted player is alive at the start of a night then you gain basic defense for that night.</li><li>The knighting of a player is publicly announced.</li></ul></span></div></div></div></div><div id=chatlog__message-container-1378427041904328918 class=chatlog__message-container data-message-id=1378427041904328918><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, May 31, 2025 1:36 p.m.">1:36 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>## <span class="chatlog__markdown-mention" title="dexcatchemall">@Pokedex</span>&#39;s role is unknown</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1379190052042571777 class=chatlog__message-container data-message-id=1379190052042571777><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Monday, June 2, 2025 4:08 p.m."><a href=#chatlog__message-container-1379190052042571777>2025-06-02 4:08 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="notkochi">@Kochi</span>&#39;s role
+
+169) <a href="https://discord.com/channels/648663810772697089/650854572473974784/656437010839371782" onclick="scrollToMessage(event, '656437010839371782')">https://discord.com/channels/648663810772697089/650854572473974784/656437010839371782</a> Consort - Mafia Support
+
+Consort - Mafia Support
+
+Each night target a player and roleblock them.
+<ul><li>You are roleblock immune while performing this ability.</li></ul></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1379511780954607796 class=chatlog__message-container data-message-id=1379511780954607796><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Tuesday, June 3, 2025 1:27 p.m."><a href=#chatlog__message-container-1379511780954607796>2025-06-03 1:27 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="lunarifish">@Lunarifish</span>&#39;s role
+
+220) <a href="https://discord.com/channels/648663810772697089/650854572473974784/661988011336269831" onclick="scrollToMessage(event, '661988011336269831')">https://discord.com/channels/648663810772697089/650854572473974784/661988011336269831</a> Morgana - Mafia Support
+
+Morgana - Mafia Support
+
+<em>Conflicted between her celestial and mortal natures, Morgana bound her wings to embrace humanity, and inflicts her pain and bitterness upon the dishonest, and the corrupt. She rejects laws and traditions she believes are unjust, and fights for truth from the shadows of Demacia--even as others seek to repress it--by casting shields and chains of dark fire. More than anything else, Morgana truly believes that even the banished and outcast may one day rise again. She soon finds hope to the mafia, a group that believes in her cause, and persuades her this is the way.</em>
+
+<strong>Dark Binding</strong> - Target another player and roleblock them, this ability has 1 night cooldown.
+<strong>Black Shield</strong> - Errect a protective barrier around a player of your choice, it will remain for this and the following night or until it prevents a roleblock, redirection or a non-mafia attack. 2 nights cooldown.
+<strong>Soul Shackles</strong> - Morgana unleashes the full force of her celestial power as she unbinds her wings and will cause any of her visitors that night to be roleblocked. 3 nights cooldown.</span></div></div></div></div><div id=chatlog__message-container-1379511845789896796 class=chatlog__message-container data-message-id=1379511845789896796><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, June 3, 2025 1:27 p.m.">1:27 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="code.an">@code</span>&#39;s role
+
+23) <a href="https://discord.com/channels/648663810772697089/1015288371066699826/1015433355820535849" onclick="scrollToMessage(event, '1015433355820535849')">https://discord.com/channels/648663810772697089/1015288371066699826/1015433355820535849</a> Timewarping Photographer - Town Support
+
+<strong><u>Timewarping Photographer</u></strong>
+Town (Support)
+Unique
+
+Attack: None
+Defense: None
+
+Abilities (Night): 
+<ul><li>Take a photograph of someone at night. Their current state will be preserved. You may do this 3 times.</li><li>Turn back time for the person in your photograph. They will be reverted to how they were when you used your first ability. If you do this during a night their state would change, prevent that (including stopping their death, which does not count as reverting death).
+
+Attributes:</li><li>You may only have one photograph at any time, so if you use your first ability again, your first photograph is discarded.</li><li>Turning back time can revert death once.</li><li>Affects status effects such as poison, and anything else that would happen when reverting someone to a previous state. Once you use this ability, your current photograph is discarded.
+
+Goal: Lynch all criminals and evildoers.</li></ul></span></div></div></div></div><div id=chatlog__message-container-1379511898562625647 class=chatlog__message-container data-message-id=1379511898562625647><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, June 3, 2025 1:27 p.m.">1:27 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title=".kahaan">@Kahaan</span>&#39;s role
+
+234) <a href="https://discord.com/channels/648663810772697089/650854572473974784/651807115152982028" onclick="scrollToMessage(event, '651807115152982028')">https://discord.com/channels/648663810772697089/650854572473974784/651807115152982028</a> Evan Cultist - Neutral Chaos
+
+You are a vampire and if there are other vampires you will join their chat.
+At the start of the game, a random one of the starting vampires will become the youngest, however, this can never be you unless there are no other vampires, or all other vampires have a similar passive like this, in which case it is random.
+Each night, the youngest vampire may attack another player, if that player is a member of the town and dies, instead convert that player to become a Vampire, if a conversion occurs, the converted player will become the youngest.
+<ul><li>If the youngest dies the previous youngest will become the new youngest.
+<ul><li>If nobody is applicable, a random vampire will become the new youngest.</li></ul></li><li>If the vampires successfully convert a player then their youngest may not attack anyone during the following night.</li><li>If there are already 4 living vampires, then conversions will always fail and kill instead.
+
+Each night, if you are not performing the attack, you may choose a player and watch over them, learning the names of all their visitors.</li><li>This ability is not inherited to anyone you or other vampires convert.
+
+You win if anyone who oppose the vampires have died.</li></ul></span></div></div></div></div><div id=chatlog__message-container-1379511958805680129 class=chatlog__message-container data-message-id=1379511958805680129><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, June 3, 2025 1:28 p.m.">1:28 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="blone_">@Blone</span>&#39;s role
+
+15) <a href="https://discord.com/channels/648663810772697089/1015288371066699826/1015314291089477714" onclick="scrollToMessage(event, '1015314291089477714')">https://discord.com/channels/648663810772697089/1015288371066699826/1015314291089477714</a> Scapegoat - Neutral Benign
+
+<strong>Scapegoat</strong> <em>Neutral Benign</em>
+<strong>Attack:</strong> none | <strong>Defense:</strong> none (basic)
+
+<strong><u>Passive</u></strong>
+<strong>Thems to Blame!</strong> If a player which has additional votepower (their vote counts as more than 1) votes another player you will receive a Blame counter at the end of the day.
+<ul><li>Anyone giving you a Blame counter cannot be protected during the following night.</li><li>If you have any blame counters then you can expend one each night to gain basic defense during that night, this does not count as an active ability.</li><li>If you are voted out, then you may expend 5 Blame counters, if you have them, in order to survive.
+
+<strong>Wincon:</strong> survive.</li></ul></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1380250713778819314 class=chatlog__message-container data-message-id=1380250713778819314><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/286565458826625024/f9c26b1fa8cb27a72dd9fc14f17f828c.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(237,255,160) title=konkonfairydragon data-user-id=286565458826625024>Kon</span> <span class=chatlog__timestamp title="Thursday, June 5, 2025 2:23 p.m."><a href=#chatlog__message-container-1380250713778819314>2025-06-05 2:23 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="freefeed">@FreeFeed</span> &#39;s role
+
+176) <a href="https://discord.com/channels/648663810772697089/650854572473974784/656606584536956939" onclick="scrollToMessage(event, '656606584536956939')">https://discord.com/channels/648663810772697089/650854572473974784/656606584536956939</a> Paranoid Gun Owner but you have 3 alerts no you aren&#39;t veteran but you technically are - Town Killing
+
+Paranoid Gun Owner but you have 3 alerts no you aren&#39;t veteran but you technically are - Town Killing
+
+Thrice, you may be on alert for the duration of a night, which will make you attack all your visitors with a basic attack that night.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1380589629631365269 class=chatlog__message-container data-message-id=1380589629631365269><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Friday, June 6, 2025 12:50 p.m."><a href=#chatlog__message-container-1380589629631365269>2025-06-06 12:50 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span>&#39;s role
+
+113) <a href="https://discord.com/channels/648663810772697089/650854572473974784/651808688549396482" onclick="scrollToMessage(event, '651808688549396482')">https://discord.com/channels/648663810772697089/650854572473974784/651808688549396482</a> Normal Student - Town Citizen
+
+Normal Student - Town Citizen
+
+Once, you may hide at another players house, causing you to be missing to any of your visitors.
+If the player you chose for your ability is attacked that night, so are you.</span></div></div></div></div><div id=chatlog__message-container-1380589696744165480 class=chatlog__message-container data-message-id=1380589696744165480><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, June 6, 2025 12:50 p.m.">12:50 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="fusionbolt.">@FusionBolt</span>&#39;s role
+
+97) <a href="https://discord.com/channels/648663810772697089/650854572473974784/651807493210636289" onclick="scrollToMessage(event, '651807493210636289')">https://discord.com/channels/648663810772697089/650854572473974784/651807493210636289</a> Pirate - Neutral Chaos
+
+Pirate - Neutral Chaos
+
+You are roleblock, control and detection immune.
+
+Each day choose a player to plunder during the following night. You cannot choose the same player during consecutive days.
+
+At night, your target is informed of being challenged to a duel by the pirate and their night action(s) are replaced with choosing one of the following:
+<ul><li><strong>Sidestep</strong> which beats <strong>Rapier</strong> and <strong>Pistol</strong>.</li><li><strong>Chainmail</strong> which beats <strong>Scimitar</strong> and <strong>Pistol</strong>.</li><li><strong>Backpedal</strong> which beats <strong>Rapier</strong> and <strong>Scimitar</strong>.</li></ul>-# Not choosing one will choose a random option.
+
+If you are dueling a player you must choose one of the following options:
+<ul><li><strong>Pistol</strong> which beats <strong>Backpedal</strong>.</li><li><strong>Scimitar</strong> which beats <strong>Sidestep</strong>.</li><li><strong>Rapier</strong> which beats <strong>Chainmail</strong>.</li></ul>-# Not choosing an option will choose a random one.**
+
+If you win the duel you will deal a powerful attack to your target and regardless of whether you kill your target, they will be plundered.
+
+You win if you successfully plunder 2 players, upon which you leave the town in victory (you are flipped and removed from the game).</span></div></div></div></div><div id=chatlog__message-container-1380589778113794242 class=chatlog__message-container data-message-id=1380589778113794242><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, June 6, 2025 12:50 p.m.">12:50 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="celes_1906">@Celes</span>&#39; role
+
+222) <a href="https://discord.com/channels/648663810772697089/650854572473974784/662334655969755186" onclick="scrollToMessage(event, '662334655969755186')">https://discord.com/channels/648663810772697089/650854572473974784/662334655969755186</a> Say Sike Rn. - Neutral Evil
+
+Say Sike Rn. - Neutral Evil
+
+If you are voting for another player, your vote actually secretly also counts as a vote you placed on yourself.
+If the day ends without a majority hammer and if you do not have a vote placed at the end of the day, you will attack yourself with a basic attack at night.
+If you have a vote placed at the end of the day, you will have basic defense at night.
+
+You win if you survive until the end and the town loses the game.</span></div></div></div></div><div id=chatlog__message-container-1380589848812978266 class=chatlog__message-container data-message-id=1380589848812978266><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, June 6, 2025 12:51 p.m.">12:51 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="lordgalamt">@LordGalamt</span>&#39;s role
+
+203) <a href="https://discord.com/channels/648663810772697089/650854572473974784/658381679894855699" onclick="scrollToMessage(event, '658381679894855699')">https://discord.com/channels/648663810772697089/650854572473974784/658381679894855699</a> Mafia Trap - Neutral Evil
+
+Mafia Trap - Neutral Evil
+
+If a member of the mafia visits you with any ability besides an attack, roleblock them.
+Each night target another player, roleblock them if they&#39;re a member of the mafia who is not performing the factional kill.
+You will not learn that you roleblocked someone if you do, and if you roleblock a member of the mafia they will learn that they were roleblocked by 203) Mafia Trap.
+
+You have basic defense towards any attack besides the mafia factional kill.
+
+You win if the mafia doesn&#39;t win and you are alive at the end of the game.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1380965152270188676 class=chatlog__message-container data-message-id=1380965152270188676><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Saturday, June 7, 2025 1:42 p.m."><a href=#chatlog__message-container-1380965152270188676>2025-06-07 1:42 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="bobbeb">@Bobbeb</span>&#39;s role
+
+86) <a href="https://discord.com/channels/648663810772697089/650854572473974784/651807193493930013" onclick="scrollToMessage(event, '651807193493930013')">https://discord.com/channels/648663810772697089/650854572473974784/651807193493930013</a> Arsonist Mayor - Neutral Killing
+
+Arsonist Mayor - Neutral Killing
+
+Defense: Basic
+Attack: Unstoppable
+
+Each night you may douse a player in gasoline.
+Each night, if you don&#39;t visit anyone, you will clean all gasoline from yourself.
+Each night, you may ignite all players you have doused in gasoline, attacking them. The killer will be an &quot;Arsonist&quot;.
+Once, you may type /reveal @host into the voting channel. The host will reveal you as the Mayor, your vote power is now 3.
+
+You win by eliminating anyone who opposes you.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1381320827626197034 class=chatlog__message-container data-message-id=1381320827626197034><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Sunday, June 8, 2025 1:15 p.m."><a href=#chatlog__message-container-1381320827626197034>2025-06-08 1:15 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="flamesss_">@flames</span>&#39;s role
+
+224) <a href="https://discord.com/channels/648663810772697089/650854572473974784/662789166383235145" onclick="scrollToMessage(event, '662789166383235145')">https://discord.com/channels/648663810772697089/650854572473974784/662789166383235145</a> Braum, the heart of the Freljord - Town Protective
+
+Braum, the heart of the Freljord - Town Protective
+
+You are the heart of the Freljord, ready to lend a hand, or shield.
+
+<strong>Unbreakable</strong>: Each night, Braum raises his shield to protect another player for the night, intercepting all attacks causing them to hit him instead. When using this ability, Braum will protect himself from one of the interacepted attacks.
+<ul><li>Braum can only protect himself from basic and powerful attacks.</li><li>Braum will prioritize a random interacepted attack of the highest attack level.</li></ul></span></div></div></div></div><div id=chatlog__message-container-1381320909880688751 class=chatlog__message-container data-message-id=1381320909880688751><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, June 8, 2025 1:16 p.m.">1:16 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title=".r.ui.">@Rui</span>&#39;s role
+
+162) <a href="https://discord.com/channels/648663810772697089/650854572473974784/656433094232113163" onclick="scrollToMessage(event, '656433094232113163')">https://discord.com/channels/648663810772697089/650854572473974784/656433094232113163</a> Medusa - Coven Evil
+
+Medusa - Coven Evil
+
+Each night you may attack all of your visitors with a powerful attack, anyone killed by this ability will be turned to stone, causing their role not to be revealed in their death announcement.
+<ul><li>You may do this 3 times.
+
+### Necronomicon</li><li>You gain detection immunity.</li><li>You may now visit another player to deal a basic attack to them, if you have any of your charges for your original ability remaining, you may use one in an attempt to also turn the player you attack to stone if you manage to kill them.</li></ul></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1381609654156525670 class=chatlog__message-container data-message-id=1381609654156525670><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Monday, June 9, 2025 8:23 a.m."><a href=#chatlog__message-container-1381609654156525670>2025-06-09 8:23 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="that_amnesiac">@Amnesiac, the Kleptomaniac</span>&#39;s role
+
+82) <a href="https://discord.com/channels/648663810772697089/650854572473974784/651807138183643147" onclick="scrollToMessage(event, '651807138183643147')">https://discord.com/channels/648663810772697089/650854572473974784/651807138183643147</a> Burger - Neutral Benign
+
+Burger - Neutral Benign
+
+Every time you are visited, your visitors take a bite out of you, dealing a basic attack.
+Visitors attacking you will instead take a bite out of you and attack with their intended attack level.
+
+You have invincible defense at the start, after each night where at least one player took a bite out of you, your defense will decrease by one level.
+Invincible: No bites taken
+Powerful: At least 1 person took a bite during one night.
+Basic: At least 1 person took a bite during a second night.
+None: At least 1 person took a bite during a third night.
+After this if someone takes a bite out of you again, you will die.
+
+Anyone taking a bite out of you will be protected at night.
+
+Win Condition: Survive until the end.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1382043326684987512 class=chatlog__message-container data-message-id=1382043326684987512><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Tuesday, June 10, 2025 1:06 p.m."><a href=#chatlog__message-container-1382043326684987512>2025-06-10 1:06 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="gummybeartjebeertjeenhuub">@gummybeartje (beertjeenhuub)</span>&#39;s role
+
+56) <a href="https://discord.com/channels/648663810772697089/1015288371066699826/1030095066183782542" onclick="scrollToMessage(event, '1030095066183782542')">https://discord.com/channels/648663810772697089/1015288371066699826/1030095066183782542</a> Vigilanter - Town killing
+
+<strong>Vigilanter</strong> (Town Killing)
+Attack: Basic
+Defense: None
+
+Abilities:
+<ul><li>Choose to take justice into your own hands and shoot someone. (4 uses)
+
+Attributes:</li><li>If you shoot another Town member you will commit suicide over the guilt.</li><li>You can&#39;t shoot night 1, unless controlled to do so.
+
+Goal: Town goal</li></ul></span></div></div></div></div><div id=chatlog__message-container-1382043377222291518 class=chatlog__message-container data-message-id=1382043377222291518><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, June 10, 2025 1:06 p.m.">1:06 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="speak22">@speak22</span>&#39;s role
+
+7) <a href="https://discord.com/channels/648663810772697089/1015288371066699826/1015295161946874006" onclick="scrollToMessage(event, '1015295161946874006')">https://discord.com/channels/648663810772697089/1015288371066699826/1015295161946874006</a> <span class="chatlog__markdown-mention" title="pyromancerdragon">@Pyro, Dragon of Lobotomy</span> - Town Citizen
+
+<span class="chatlog__markdown-mention" title="pyromancerdragon">@Pyro, Dragon of Lobotomy</span> - Town Citizen
+
+You may talk and vote during the day.</span></div></div></div></div><div id=chatlog__message-container-1382043446059073546 class=chatlog__message-container data-message-id=1382043446059073546><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Tuesday, June 10, 2025 1:07 p.m.">1:07 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="just_zade">@Zade</span>&#39;s role
+
+112) <a href="https://discord.com/channels/648663810772697089/650854572473974784/651808666923827210" onclick="scrollToMessage(event, '651808666923827210')">https://discord.com/channels/648663810772697089/650854572473974784/651808666923827210</a> Science Student - Town Protective
+
+Science student - Town Protection
+
+You adore science love it and hope to one day be a proffesional doctor. But for now you are stuck in the middle of your second semestar hoping to leave this prison called College.
+
+Everynight you study Science and get 1 SP for each study time.
+Getting roleblocked canceles study time.
+
+Once you have 3SP you have graduated and became a doctor of the highest order who has developped a healing potion that noone can penetrate.
+
+After 3SP you become a doctor but with a bonus. You can heal unstoppable attacks.
+
+Goal: Kill all evildoers</span> <span class=chatlog__edited-timestamp title="Tuesday, June 10, 2025 1:07 p.m.">(edited)</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1382416943654371549 class=chatlog__message-container data-message-id=1382416943654371549><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Wednesday, June 11, 2025 1:51 p.m."><a href=#chatlog__message-container-1382416943654371549>2025-06-11 1:51 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="2sleepybees">@Currently Sleep</span>&#39;s role
+
+99) <a href="https://discord.com/channels/648663810772697089/650854572473974784/651807786631692328" onclick="scrollToMessage(event, '651807786631692328')">https://discord.com/channels/648663810772697089/650854572473974784/651807786631692328</a> The True Trickster - Mafia Deception
+
+The True Trickster - Mafia Deception
+
+Twice per game you may submit a prompt which the game moderator will announce as if it was an official announcement.
+If you submit it during the night, the prompt will be listed alongside the start-of-day announcements.
+If you submit it during the day, it will be posted mid day and as soon as it gets processed.</span></div></div></div></div><div id=chatlog__message-container-1382417028370927688 class=chatlog__message-container data-message-id=1382417028370927688><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, June 11, 2025 1:51 p.m.">1:51 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="hypocrisy_">@Psychosis</span>&#39; role
+
+287) <a href="https://discord.com/channels/648663810772697089/650854572473974784/690911851529240596" onclick="scrollToMessage(event, '690911851529240596')">https://discord.com/channels/648663810772697089/650854572473974784/690911851529240596</a> Duncan - Neutral Evil
+
+Duncan - Neutral Evil
+
+<em>You once were a consig untill the godfather tried to kill you. You escaped luckily and will now help town to kill the mafia</em>
+
+Abilities:
+Each night visit a player and learn their role name if they are a member of the mafia, or that they are not a member of the mafia.
+The mafia learns of your existence at game start.
+You have basic defense to anything except for attacks by the mafia.
+
+You win if you survive and the mafia doesn&#39;t win the game.</span></div></div></div></div><div id=chatlog__message-container-1382417149582245979 class=chatlog__message-container data-message-id=1382417149582245979><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, June 11, 2025 1:52 p.m.">1:52 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="53r0">@53R0 (Zero)</span>&#39;s role
+
+125) <a href="https://discord.com/channels/648663810772697089/650854572473974784/651808871983218708" onclick="scrollToMessage(event, '651808871983218708')">https://discord.com/channels/648663810772697089/650854572473974784/651808871983218708</a> <a href="&lt;https://discord-mafia-role-cards.fandom.com/wiki/List_of_roles&gt;">Random Forum Role</a> (Except apocalypse) (CL = Coven Head)
+
+Ritualist - Coven Evil
+
+<h3>Abilities</h3><ul><li>Once, at night, you may choose to guess another players role. When guessing correctly, you will attack your target ignoring protection.
+<ul><li>You may only guess Town roles.</li></ul><ul><li>If you guess wrong, then you will be revealed as the Ritualist at the start of the next day.</li></ul></li><li>Each night, instead of guessing, you may prepare a Ritual on a target. This is a visit that does nothing.
+<ul><li>You always know who you visited when preparing a Ritual.</li></ul></li><li>You may also choose to conduct a previously prepared Ritual. This will attack your target and remove the preparation.
+<ul><li>Conducting a Ritual is not a visit.</li></ul></li></ul><h3>Necronomicon Abilities</h3><ul><li>You gain detection immunity.</li><li>You may now also guess non-town roles.</li><li>You may guess every night now.</li><li>You will no longer be revealed when guessing.</li></ul></span></div></div></div></div><div id=chatlog__message-container-1382417225507541023 class=chatlog__message-container data-message-id=1382417225507541023><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, June 11, 2025 1:52 p.m.">1:52 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="guille9994">@Guille</span>&#39;s role
+
+101) <a href="https://discord.com/channels/648663810772697089/650854572473974784/651807908966694963" onclick="scrollToMessage(event, '651807908966694963')">https://discord.com/channels/648663810772697089/650854572473974784/651807908966694963</a> Kill Concealer - Neutral Chaos
+
+Kill Concealer - Neutral Chaos
+
+You have 4 vests which grant you basic defense when used at night for that night only.
+If you use a vest and are not attacked then any deaths that night will not have their killer revealed. [Player died, they were Role]
+If you are killed at night, your killers&#39; role will not be revealed, however the killer of all other players who had their killer concealed by you will be revealed.
+
+You win by surviving until the end.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1382812945905487924 class=chatlog__message-container data-message-id=1382812945905487924><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Thursday, June 12, 2025 4:04 p.m."><a href=#chatlog__message-container-1382812945905487924>2025-06-12 4:04 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="dangerous_luka">@Danger!? Luka!</span>&#39;s role
+
+105) <a href="https://discord.com/channels/648663810772697089/650854572473974784/651808534903914512" onclick="scrollToMessage(event, '651808534903914512')">https://discord.com/channels/648663810772697089/650854572473974784/651808534903914512</a> Reverse Ambusher - Mafia Tactical
+
+Reverse Ambusher - Mafia Tactical
+
+Before the game starts, choose one of two negative perks:
+1. the following ability has 3 nights cooldown.
+2. the following ability has 1 night cooldown, and any visitors of your target learn that you visited your target.
+
+<strong>Ability: Ambush</strong>
+At night you may stalk another player, and if they visit another player, attack them.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1383151890040225823 class=chatlog__message-container data-message-id=1383151890040225823><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Friday, June 13, 2025 2:31 p.m."><a href=#chatlog__message-container-1383151890040225823>2025-06-13 2:31 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="gamelover6669">@Gamelover (Meredith)</span>&#39;s role
+
+83) <a href="https://discord.com/channels/648663810772697089/650854572473974784/651807139399991300" onclick="scrollToMessage(event, '651807139399991300')">https://discord.com/channels/648663810772697089/650854572473974784/651807139399991300</a> Necromancer - Town Support
+
+Necromancer - Town Support
+<ul><li>Choose a living player, if that player dies that night, they will die, but their flip will be hidden, they may continue talking in the day chat.</li></ul><ul><li>Players &quot;surviving&quot; this way are exempt from prods and will be told this, alongside that they have died but may continue talking if they want.</li></ul><ul><li>These players lose access to any other chat besides the day chat and count as dead (they are dead).</li></ul><ul><li>These players do not gain access to the dead chat.</li><li>If you die, then anyone you kept alive will die and their roles will be flipped.</li></ul></span></div></div></div></div><div id=chatlog__message-container-1383151947783078048 class=chatlog__message-container data-message-id=1383151947783078048><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, June 13, 2025 2:32 p.m.">2:32 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="nominomu727">@nominomu</span>&#39;s role
+
+159) <a href="https://discord.com/channels/648663810772697089/650854572473974784/656379967642533898" onclick="scrollToMessage(event, '656379967642533898')">https://discord.com/channels/648663810772697089/650854572473974784/656379967642533898</a> Senna - Town Protective
+
+Senna - Town Protective 
+
+If you roll so does 158) Lucian.
+You have a private chat with Lucian.
+If you die, you will stay alive unless Lucian is also dead, however, you will be announced as dead, revealed as this role and lose your ability to vote and to use the following action:
+
+Each night you may blast another player with your relic cannon, emitting a beam of light which will protect your target, Lucian if he visited your target, and once, all visitors besides yourself.</span></div></div></div></div><div id=chatlog__message-container-1383152004972679258 class=chatlog__message-container data-message-id=1383152004972679258><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Friday, June 13, 2025 2:32 p.m.">2:32 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="goldenhim">@goldenhim</span>&#39;s role
+
+177) <a href="https://discord.com/channels/648663810772697089/650854572473974784/656606914599321610" onclick="scrollToMessage(event, '656606914599321610')">https://discord.com/channels/648663810772697089/650854572473974784/656606914599321610</a> Goon - Mafia Goon
+
+Goon - Mafia Goon
+
+If you would be executed during day 1, instead the player with the second most votes is, if this is tied, a random player is.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1383846129778823179 class=chatlog__message-container data-message-id=1383846129778823179><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Sunday, June 15, 2025 12:30 p.m."><a href=#chatlog__message-container-1383846129778823179>2025-06-15 12:30 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="howism">@how</span>&#39;s role
+
+98) <a href="https://discord.com/channels/648663810772697089/650854572473974784/651807540556070945" onclick="scrollToMessage(event, '651807540556070945')">https://discord.com/channels/648663810772697089/650854572473974784/651807540556070945</a> Bartender - Neutral Evil
+
+Bartender - Neutral Evil
+
+<em>You&#39;re a Bartender that has a grudge against the town&#39;s ways.</em>
+
+Each night you may serve wine to another player, making them <strong>drunk</strong>.
+Twice, you may serve concentrated wine to all of your visitors instead, making them <strong>drunk</strong> and roleblocking them.
+
+<strong>Drunk</strong>: Your target will not receive any feedback, instead they will receive &quot;You got drunk last night. You must have visited the Bartender!&quot;
+<ul><li>This is the case even if you were the one visiting them.
+
+You win if the town loses.</li></ul></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1383864147036602481 class=chatlog__message-container data-message-id=1383864147036602481><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Sunday, June 15, 2025 1:42 p.m."><a href=#chatlog__message-container-1383864147036602481>2025-06-15 1:42 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="ck._.__">@CK</span>&#39;s role
+
+24) <a href="https://discord.com/channels/648663810772697089/1015288371066699826/1015433581767700560" onclick="scrollToMessage(event, '1015433581767700560')">https://discord.com/channels/648663810772697089/1015288371066699826/1015433581767700560</a> M-63 Plamen Artillery Piece - Coven Evil
+
+<strong>M-63 Plamen Artillery Piece</strong>
+<em>You notice an M-63 Plamen Artillery piece aimed at you, dealing 80 scorch damage x10 and killing you instantly.</em>
+Coven Evil
+Attack: 80x10 (Basic)
+Defense: None
+
+Abilities: 
+M-63 Plamen Artillery Piece can attack a player at night. M-63 Plamen Artillery Piece cannot target its direct living neighbours.
+Each time M-63 Plamen Artillery Piece is shot, it has to reload during the following night, regadless of whether the ability was used successfully.
+
+Attributes:
+M-63 Plamen Artillery Piece attacks 10 times, however these 10 attacks can only target the same person. These attack messages will flood the target&#39;s chat log, causing them to be unable to receive any other messages that night. The attack message can be different if the target was protected or had sufficient defense.
+With the Necronomicon, you can either remove the need to reload or make the attack powerful.
+
+Goal: Coven wincon</span></div></div></div></div><div id=chatlog__message-container-1383864221711863979 class=chatlog__message-container data-message-id=1383864221711863979><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Sunday, June 15, 2025 1:42 p.m.">1:42 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="toast2.014">@toastarame</span>&#39;s role
+
+128) <a href="https://discord.com/channels/648663810772697089/650854572473974784/651808922423787531" onclick="scrollToMessage(event, '651808922423787531')">https://discord.com/channels/648663810772697089/650854572473974784/651808922423787531</a> Instigator - Town Investigative
+
+Instigator - Town Investigative
+
+Each night you may learn another players&#39; sub-alignment.
+Detection Immunity makes your target have the Citizen sub-alignment.
+Framing makes your target look like the framer, or like the role/sub-alignment the framer framed your target as, if a specific one is mentioned.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1384239306582790206 class=chatlog__message-container data-message-id=1384239306582790206><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Monday, June 16, 2025 2:32 p.m."><a href=#chatlog__message-container-1384239306582790206>2025-06-16 2:32 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="_mementomorii.">@Lune is the best (Kaz)</span>&#39;s role
+
+14) <a href="https://discord.com/channels/648663810772697089/1015288371066699826/1015311572828160083" onclick="scrollToMessage(event, '1015311572828160083')">https://discord.com/channels/648663810772697089/1015288371066699826/1015311572828160083</a> The Man in the Wall - Town Protective
+
+<u><strong>The Man in the Wall</strong></u>
+Town (Protective)
+Unique
+
+Attack: None
+Defense: None
+Control Immune
+
+Abilities:
+<ul><li>Mark a target for collapse during the day.</li><li>Collapse a marked target&#39;s house during the night.
+
+Attributes:</li><li>If you collapse someone&#39;s house then your target will be seen as missing to anyone trying to visit your target that night.</li><li>If you collapse someones house then you will need to mark that player again before you can collapse their house again.</li><li>You must collapse someone&#39;s house after death each night, but you may not mark.
+<ul><li>You will be announced as dead but may continue talking during the day, you will retain this ability to talk until you have no marks remaining.</li></ul><ul><li>You are exempt from activity checks while this ability is active.</li></ul><ul><li>You do not join the dead chat until you have used all of your marks.</li></ul>
+Goal: Lynch all criminals and evildoers.</li></ul></span></div></div></div></div><div id=chatlog__message-container-1384239360643436544 class=chatlog__message-container data-message-id=1384239360643436544><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, June 16, 2025 2:33 p.m.">2:33 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="rickiboi">@shark in a pool</span>&#39;s role
+
+232) <a href="https://discord.com/channels/648663810772697089/650854572473974784/658046858295509042" onclick="scrollToMessage(event, '658046858295509042')">https://discord.com/channels/648663810772697089/650854572473974784/658046858295509042</a> Vampire - Neutral Chaos
+
+Vampire - Neutral Chaos
+
+You have a private chat with all other vampires.
+At the start of the game, a random one of the starting vampires will become the youngest.
+Each night, the youngest vampire may attack another player, if that player is a member of the town and dies, instead convert that player to become a <strong>Vampire</strong>, if a conversion occurs, the converted player will become the youngest.
+<ul><li>If the youngest dies the previous youngest will become the new youngest.
+<ul><li>If nobody is applicable, a random vampire will become the new youngest.</li></ul></li><li>If the vampires successfully convert a player then their youngest may not attack anyone during the following night.</li><li>If there are already 4 living vampires, then conversions will always fail and kill instead.
+
+You win if anyone who oppose the vampires have died.</li></ul></span></div></div></div></div><div id=chatlog__message-container-1384239406038384791 class=chatlog__message-container data-message-id=1384239406038384791><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, June 16, 2025 2:33 p.m.">2:33 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="jesse_jasse">@&#129373; | Jasse</span>&#39;s role
+
+247) <a href="https://discord.com/channels/648663810772697089/650854572473974784/665196398890975233" onclick="scrollToMessage(event, '665196398890975233')">https://discord.com/channels/648663810772697089/650854572473974784/665196398890975233</a> Boomerang Master - Town Killing
+
+Boomerang Master - Town Killing
+
+Each night you may throw your boomerang to attack another player. This ability has no cooldown on its own.
+If you kill someone with your boomerang then for each player that visited you or the player you killed, this ability will go on cooldown for one additional night.</span></div></div></div></div><div id=chatlog__message-container-1384239487504224277 class=chatlog__message-container data-message-id=1384239487504224277><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, June 16, 2025 2:33 p.m.">2:33 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="yika">@Yika</span>&#39;s role
+
+190) <a href="https://discord.com/channels/648663810772697089/650854572473974784/657567555774316544" onclick="scrollToMessage(event, '657567555774316544')">https://discord.com/channels/648663810772697089/650854572473974784/657567555774316544</a> Executioner 2.0 - Neutral Evil
+
+Executioner 2.0 - Neutral Evil
+
+You have basic defense.
+Each night you are given a target faction, you have to ensure one of its members is executed during the following day, you must be one of the voters for this to occur.
+Possible targets are:
+<ul><li>A member of the Town.</li><li>A member of the Mafia.</li><li>A member of the Coven.</li><li>Yourself.</li></ul>Yourself will be the target for day 1.
+If you have yourself as your target and if you have not voted out any of your targets previously, survive the execution and make the game skip to the night with no execution.
+
+You win once you have voted out one of your targets twice and you will leave the town once you do (flip and be removed from the game).</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1384270132364447795 class=chatlog__message-container data-message-id=1384270132364447795><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/135784580077715458/d64a0470dd4452ebd3770f59edc1cbb4.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(244,127,255) title=lunex data-user-id=135784580077715458>Lunexia</span> <span class=chatlog__timestamp title="Monday, June 16, 2025 4:35 p.m."><a href=#chatlog__message-container-1384270132364447795>2025-06-16 4:35 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="darkvee513">@Vee</span>&#39;s role
+
+199) <a href="https://discord.com/channels/648663810772697089/650854572473974784/658051933566664735" onclick="scrollToMessage(event, '658051933566664735')">https://discord.com/channels/648663810772697089/650854572473974784/658051933566664735</a> Boris Johnson - Town Power
+
+Boris Johnson - Town Power
+
+You may reveal yourself as the Mayor during the day by typing &quot;/reveal [@host]&quot; into the voting channel. If you do, your votepower will become 3 for the remainder of the game.
+Each night you may visit another player and convince them that Brexit is a good idea, they will learn that Brexit is a good idea at the end of the night.</span></div></div></div></div><div id=chatlog__message-container-1384270147988095146 class=chatlog__message-container data-message-id=1384270147988095146><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, June 16, 2025 4:35 p.m.">4:35 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="greenparrot">@⏰⏰⏰⏰⏰⏰ (green parrot)</span>&#39;s role
+
+200) <a href="https://discord.com/channels/648663810772697089/650854572473974784/658247394965848084" onclick="scrollToMessage(event, '658247394965848084')">https://discord.com/channels/648663810772697089/650854572473974784/658247394965848084</a> Equivocator - Mafia Deception
+
+Equivocator - Mafia Deception
+
+Each day you may choose one player who if they were to die due to being voted out that day will not have their role revealed.
+You may not choose a player with 1 hour or less time remaining until the day would naturally end.
+You may not change your mind once you have chosen a player.
+You may do this 2 times.
+You may not choose yourself.</span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 40 message(s)</div><div class=postamble__entry>Timezone: UTC-5</div></div>

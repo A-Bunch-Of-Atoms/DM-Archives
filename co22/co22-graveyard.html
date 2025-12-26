@@ -1,0 +1,480 @@
+<!DOCTYPE html><html lang=en><head><title>Discord Mafia - co22-graveyard</title><meta charset=utf-8><meta name=viewport content="width=device-width"><style>@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-400.woff2");font-family:gg sans;font-weight:400;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-500.woff2");font-family:gg sans;font-weight:500;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-600.woff2");font-family:gg sans;font-weight:600;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-700.woff2");font-family:gg sans;font-weight:700;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-normal-800.woff2");font-family:gg sans;font-weight:800;font-style:normal}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-400.woff2");font-family:gg sans;font-weight:400;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-500.woff2");font-family:gg sans;font-weight:500;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-600.woff2");font-family:gg sans;font-weight:600;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-700.woff2");font-family:gg sans;font-weight:700;font-style:italic}@font-face{src:url("https://cdn.jsdelivr.net/gh/Tyrrrz/DiscordFonts@master/ggsans-italic-800.woff2");font-family:gg sans;font-weight:800;font-style:italic}html,body{margin:0;padding:0;background-color:#36393e;color:#dcddde;font-family:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:17px;font-weight:400;scroll-behavior:smooth}a{color:#00aff4;text-decoration:none}a:hover{text-decoration:underline}img{object-fit:contain;image-rendering:high-quality;image-rendering:-webkit-optimize-contrast}.preamble{display:grid;grid-template-columns:auto 1fr;max-width:100%;padding:1rem}.preamble__guild-icon-container{grid-column:1}.preamble__guild-icon{max-width:88px;max-height:88px}.preamble__entries-container{grid-column:2;margin-left:1rem}.preamble__entry{margin-bottom:0.15rem;color:#ffffff;font-size:1.4rem}.preamble__entry--small{font-size:1rem}.chatlog{padding:1rem 0;width:100%;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1)}.chatlog__message-group{margin-bottom:1rem}.chatlog__message-container{background-color:transparent;transition:background-color 1s ease}.chatlog__message-container--highlighted{background-color:rgba(114,137,218,0.2)}.chatlog__message-container--pinned{background-color:rgba(249,168,37,0.05)}.chatlog__message{display:grid;grid-template-columns:auto 1fr;padding:0.15rem 0;direction:ltr;unicode-bidi:bidi-override}.chatlog__message:hover{background-color:#32353b}.chatlog__message:hover .chatlog__short-timestamp{display:block}.chatlog__message-aside{grid-column:1;width:72px;padding:0.15rem 0.15rem 0 0.15rem;text-align:center}.chatlog__reply-symbol{height:10px;margin:6px 4px 4px 36px;border-left:2px solid #4f545c;border-top:2px solid #4f545c;border-radius:8px 0 0 0}.chatlog__avatar{width:40px;height:40px;border-radius:50%}.chatlog__short-timestamp{display:none;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__message-primary{grid-column:2;min-width:0}.chatlog__reply{display:flex;margin-bottom:0.15rem;align-items:center;color:#b5b6b8;font-size:0.875rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.chatlog__reply-avatar{width:16px;height:16px;margin-right:0.25rem;border-radius:50%}.chatlog__reply-author{margin-right:0.3rem;font-weight:600}.chatlog__reply-content{overflow:hidden;text-overflow:ellipsis}.chatlog__reply-link{cursor:pointer}.chatlog__reply-link *{display:inline;pointer-events:none}.chatlog__reply-link .chatlog__markdown-quote{display:inline}.chatlog__reply-link .chatlog__markdown-pre{display:inline}.chatlog__reply-link:hover{color:#ffffff}.chatlog__reply-link:hover *:not(.chatlog__markdown-spoiler){color:inherit}.chatlog__reply-edited-timestamp{margin-left:0.25rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-icon{width:18px;height:18px}.chatlog__system-notification-author{font-weight:500;color:#ffffff}.chatlog__system-notification-content{color:#96989d}.chatlog__system-notification-link{font-weight:500;color:#ffffff}.chatlog__system-notification-timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__system-notification-timestamp a{color:inherit}.chatlog__header{margin-bottom:0.1rem}.chatlog__author{font-weight:500;color:#ffffff}.chatlog__author-tag{position:relative;top:-0.1rem;margin-left:0.3rem;padding:0.05rem 0.3rem;border-radius:3px;background-color:#5865F2;color:#ffffff;font-size:0.625rem;font-weight:500;line-height:1.3}.chatlog__timestamp{margin-left:0.3rem;color:#a3a6aa;font-size:0.75rem;font-weight:500;direction:ltr;unicode-bidi:bidi-override}.chatlog__timestamp a{color:inherit}.chatlog__content{padding-right:1rem;font-size:0.95rem;word-wrap:break-word}.chatlog__edited-timestamp{margin-left:0.15rem;color:#a3a6aa;font-size:0.75rem;font-weight:500}.chatlog__attachment{position:relative;width:fit-content;margin-top:0.3rem;border-radius:3px;overflow:hidden}.chatlog__attachment--hidden{cursor:pointer;box-shadow:0 0 1px 1px rgba(0,0,0,0.1)}.chatlog__attachment--hidden *{pointer-events:none}.chatlog__attachment-spoiler-caption{display:none;position:absolute;left:50%;top:50%;z-index:999;padding:0.4rem 0.8rem;border-radius:20px;transform:translate(-50%,-50%);background-color:rgba(0,0,0,0.9);color:#dcddde;font-size:0.9rem;font-weight:600;letter-spacing:0.05rem}.chatlog__attachment--hidden .chatlog__attachment-spoiler-caption{display:block}.chatlog__attachment--hidden:hover .chatlog__attachment-spoiler-caption{color:#fff}.chatlog__attachment-media{max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__attachment--hidden .chatlog__attachment-media{filter:blur(44px)}.chatlog__attachment-generic{max-width:520px;width:100%;height:40px;padding:10px;border:1px solid #292b2f;border-radius:3px;background-color:#2f3136;overflow:hidden}.chatlog__attachment--hidden .chatlog__attachment-generic{filter:blur(44px)}.chatlog__attachment-generic-icon{float:left;width:30px;height:100%;margin-right:10px}.chatlog__attachment-generic-size{color:#72767d;font-size:12px}.chatlog__attachment-generic-name{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.chatlog__embed{display:flex;margin-top:0.3rem;max-width:520px}.chatlog__embed-color-pill{flex-shrink:0;width:0.25rem;border-top-left-radius:3px;border-bottom-left-radius:3px}.chatlog__embed-color-pill--default{background-color:#202225}.chatlog__embed-content-container{display:flex;flex-direction:column;padding:0.5rem 0.6rem;border:1px solid rgba(46,48,54,0.6);border-top-right-radius:3px;border-bottom-right-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-content{display:flex;width:100%}.chatlog__embed-text{flex:1}.chatlog__embed-author-container{display:flex;margin-bottom:0.5rem;align-items:center}.chatlog__embed-author-icon{width:20px;height:20px;margin-right:0.5rem;border-radius:50%}.chatlog__embed-author{color:#ffffff;font-size:0.875rem;font-weight:600;direction:ltr;unicode-bidi:bidi-override}.chatlog__embed-author-link{color:#ffffff}.chatlog__embed-title{margin-bottom:0.5rem;color:#ffffff;font-size:0.875rem;font-weight:600}.chatlog__embed-description{color:#dcddde;font-weight:500;font-size:0.85rem}.chatlog__embed-fields{display:flex;flex-wrap:wrap;gap:0 0.5rem}.chatlog__embed-field{flex:0;min-width:100%;max-width:506px;padding-top:0.6rem;font-size:0.875rem}.chatlog__embed-field--inline{flex:1;flex-basis:auto;min-width:50px}.chatlog__embed-field-name{margin-bottom:0.2rem;color:#ffffff;font-weight:600}.chatlog__embed-field-value{color:#dcddde;font-weight:500}.chatlog__embed-thumbnail{flex:0;max-width:80px;max-height:80px;margin-left:1.2rem;border-radius:3px}.chatlog__embed-images{display:grid;margin-top:0.6rem;grid-template-columns:repeat(2,1fr);gap:0.25rem}.chatlog__embed-images--single{display:block}.chatlog__embed-image{object-fit:cover;object-position:center;max-width:500px;max-height:400px;width:100%;height:100%;border-radius:3px}.chatlog__embed-footer{margin-top:0.6rem;color:#dcddde}.chatlog__embed-footer-icon{width:20px;height:20px;margin-right:0.2rem;border-radius:50%;vertical-align:middle}.chatlog__embed-footer-text{vertical-align:middle;font-size:0.75rem;font-weight:500}.chatlog__embed-invite-container{min-width:320px;padding:0.6rem 0.7rem;border:1px solid rgba(46,48,54,0.6);border-radius:3px;background-color:rgba(46,48,54,0.3)}.chatlog__embed-invite-title{margin:0 0 0.8rem 0;color:#b9bbbe;font-size:0.75rem;font-weight:700;text-transform:uppercase}.chatlog__embed-invite{display:flex}.chatlog__embed-invite-guild-icon{width:50px;height:50px;border-radius:0.85rem}.chatlog__embed-invite-info{margin-left:1rem}.chatlog__embed-invite-guild-name{color:#ffffff;font-weight:600}.chatlog__embed-invite-guild-name a{color:inherit}.chatlog__embed-invite-channel-icon{width:18px;height:18px;vertical-align:bottom}.chatlog__embed-invite-channel-name{font-size:0.9rem;font-weight:600}.chatlog__embed-generic-image{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-video{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-generic-gifv{object-fit:contain;object-position:left;max-width:45vw;max-height:500px;vertical-align:top;border-radius:3px}.chatlog__embed-spotify{border:0}.chatlog__embed-twitch{border:0}.chatlog__embed-youtube-container{margin-top:0.6rem}.chatlog__embed-youtube{border:0;border-radius:3px}.chatlog__sticker{width:180px;height:180px}.chatlog__sticker--media{max-width:100%;max-height:100%}.chatlog__reactions{display:flex}.chatlog__reaction{display:flex;margin:0.35rem 0.1rem 0.1rem 0;padding:0.125rem 0.375rem;border:1px solid transparent;border-radius:8px;background-color:#2f3136;align-items:center}.chatlog__reaction:hover{border:1px solid hsla(0,0%,100%,.2);background-color:transparent}.chatlog__reaction-count{min-width:9px;margin-left:0.35rem;color:#b9bbbe;font-size:0.875rem}.chatlog__reaction:hover .chatlog__reaction-count{color:#dcddde}.chatlog__markdown{max-width:100%;line-height:1.3;overflow-wrap:break-word}.chatlog__markdown h1{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.5rem;line-height:1}.chatlog__markdown h2{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1.25rem;line-height:1}.chatlog__markdown h3{margin:1rem 0 0.5rem;color:#f2f3f5;font-size:1rem;line-height:1}.chatlog__markdown h1:first-child,h2:first-child,h3:first-child{margin-top:0.5rem}.chatlog__markdown ul,ol{margin:0 0 0 1rem;padding:0}.chatlog__markdown-preserve{white-space:pre-wrap}.chatlog__markdown-spoiler{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__markdown-spoiler--hidden{cursor:pointer;background-color:#202225;color:rgba(0,0,0,0)}.chatlog__markdown-spoiler--hidden:hover{background-color:rgba(32,34,37,0.8)}.chatlog__markdown-spoiler--hidden::selection{color:rgba(0,0,0,0)}.chatlog__markdown-quote{display:flex;margin:0.05rem 0}.chatlog__markdown-quote-border{margin-right:0.5rem;border:2px solid #4f545c;border-radius:3px}.chatlog__markdown-pre{background-color:#2f3136;font-family:"Consolas","Courier New",Courier,monospace;font-size:0.85rem;text-decoration:inherit}.chatlog__markdown-pre--multiline{display:block;margin-top:0.25rem;padding:0.5rem;border:2px solid #282b30;border-radius:5px;color:#b9bbbe}.chatlog__markdown-pre--multiline.hljs{background-color:#2f3136;color:#b9bbbe}.chatlog__markdown-pre--inline{display:inline-block;padding:2px;border-radius:3px}.chatlog__markdown-mention{border-radius:3px;padding:0 2px;background-color:rgba(88,101,242,.3);color:#dee0fc;font-weight:500}.chatlog__markdown-mention:hover{background-color:#5865f2;color:#ffffff}.chatlog__markdown-timestamp{background-color:rgba(255,255,255,0.1);padding:0 2px;border-radius:3px}.chatlog__emoji{width:1.325rem;height:1.325rem;margin:0 0.06rem;vertical-align:-0.4rem}.chatlog__emoji--small{width:1rem;height:1rem}.chatlog__emoji--large{width:2.8rem;height:2.8rem}.postamble{padding:1.25rem}.postamble__entry{color:#ffffff}</style><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/solarized-dark.min.css><script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__markdown-pre--multiline').forEach(e=>hljs.highlightBlock(e));});</script><script src=https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.8.1/lottie.min.js></script><script>document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.chatlog__sticker--media[data-source]').forEach(e=>{const anim=lottie.loadAnimation({container:e,renderer:'svg',loop:true,autoplay:true,path:e.getAttribute('data-source')});anim.addEventListener('data_failed',()=>e.innerHTML='<strong>[Sticker cannot be rendered]</strong>');});});</script><script>function scrollToMessage(event,id){const element=document.getElementById('chatlog__message-container-'+id);if(!element)
+return;event.preventDefault();element.classList.add('chatlog__message-container--highlighted');window.scrollTo({top:element.getBoundingClientRect().top-document.body.getBoundingClientRect().top-(window.innerHeight/2),behavior:'smooth'});window.setTimeout(()=>element.classList.remove('chatlog__message-container--highlighted'),2000);}
+function showSpoiler(event,element){if(!element)
+return;if(element.classList.contains('chatlog__attachment--hidden')){event.preventDefault();element.classList.remove('chatlog__attachment--hidden');}
+if(element.classList.contains('chatlog__markdown-spoiler--hidden')){event.preventDefault();element.classList.remove('chatlog__markdown-spoiler--hidden');}}</script><svg style=display:none xmlns=http://www.w3.org/2000/svg><defs><symbol id=attachment-icon viewBox="0 0 720 960"><path fill=#f4f5fb d=M50,935a25,25,0,0,1-25-25V50A25,25,0,0,1,50,25H519.6L695,201.32V910a25,25,0,0,1-25,25Z /><path fill=#7789c4 d=M509.21,50,670,211.63V910H50V50H509.21M530,0H50A50,50,0,0,0,0,50V910a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50h0V191Z /><path fill=#f4f5fb d=M530,215a25,25,0,0,1-25-25V50a25,25,0,0,1,16.23-23.41L693.41,198.77A25,25,0,0,1,670,215Z /><path fill=#7789c4 d=M530,70.71,649.29,190H530V70.71M530,0a50,50,0,0,0-50,50V190a50,50,0,0,0,50,50H670a50,50,0,0,0,50-50Z /></symbol><symbol id=join-icon viewBox="0 0 18 18"><path fill=#3ba55c d="m0 8h14.2l-3.6-3.6 1.4-1.4 6 6-6 6-1.4-1.4 3.6-3.6h-14.2" /></symbol><symbol id=leave-icon viewBox="0 0 18 18"><path fill=#ed4245 d="m3.8 8 3.6-3.6-1.4-1.4-6 6 6 6 1.4-1.4-3.6-3.6h14.2v-2" /></symbol><symbol id=call-icon viewBox="0 0 18 18"><path fill=#3ba55c fill-rule=evenodd d="M17.7163041 15.36645368c-.0190957.02699568-1.9039523 2.6680735-2.9957762 2.63320406-3.0676659-.09785935-6.6733809-3.07188394-9.15694343-5.548738C3.08002193 9.9740657.09772497 6.3791404 0 3.3061316v-.024746C0 2.2060575 2.61386252.3152347 2.64082114.2972376c.7110335-.4971705 1.4917101-.3149497 1.80959713.1372281.19320342.2744561 2.19712724 3.2811005 2.42290565 3.6489167.09884826.1608492.14714912.3554431.14714912.5702838 0 .2744561-.07975258.5770327-.23701117.8751101-.1527655.2902036-.65262318 1.1664385-.89862055 1.594995.2673396.3768148.94804468 1.26429792 2.351016 2.66357424 1.39173858 1.39027775 2.28923588 2.07641807 2.67002628 2.34187563.4302146-.2452108 1.3086162-.74238132 1.5972981-.89423205.5447887-.28682915 1.0907006-.31944893 1.4568885-.08661115.3459689.2182151 3.3383754 2.21027167 3.6225641 2.41611376.2695862.19234426.4144887.5399137.4144887.91672846 0 .2969525-.089862.61190215-.2808189.88523346" /></symbol><symbol id=pencil-icon viewBox="0 0 18 18"><path fill=#99aab5 d="m0 14.25v3.75h3.75l11.06-11.06-3.75-3.75zm17.71-10.21c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75z" /></symbol><symbol id=pin-icon viewBox="0 0 18 18"><path fill=#b9bbbe d="m16.908 8.39684-8.29587-8.295827-1.18584 1.184157 1.18584 1.18584-4.14834 4.1475v.00167l-1.18583-1.18583-1.185 1.18583 3.55583 3.55502-4.740831 4.74 1.185001 1.185 4.74083-4.74 3.55581 3.555 1.185-1.185-1.185-1.185 4.1475-4.14836h.0009l1.185 1.185z" /></symbol><symbol id=channel-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.88657 21C5.57547 21 5.3399 20.7189 5.39427 20.4126L6.00001 17H2.59511C2.28449 17 2.04905 16.7198 2.10259 16.4138L2.27759 15.4138C2.31946 15.1746 2.52722 15 2.77011 15H6.35001L7.41001 9H4.00511C3.69449 9 3.45905 8.71977 3.51259 8.41381L3.68759 7.41381C3.72946 7.17456 3.93722 7 4.18011 7H7.76001L8.39677 3.41262C8.43914 3.17391 8.64664 3 8.88907 3H9.87344C10.1845 3 10.4201 3.28107 10.3657 3.58738L9.76001 7H15.76L16.3968 3.41262C16.4391 3.17391 16.6466 3 16.8891 3H17.8734C18.1845 3 18.4201 3.28107 18.3657 3.58738L17.76 7H21.1649C21.4755 7 21.711 7.28023 21.6574 7.58619L21.4824 8.58619C21.4406 8.82544 21.2328 9 20.9899 9H17.41L16.35 15H19.7549C20.0655 15 20.301 15.2802 20.2474 15.5862L20.0724 16.5862C20.0306 16.8254 19.8228 17 19.5799 17H16L15.3632 20.5874C15.3209 20.8261 15.1134 21 14.8709 21H13.8866C13.5755 21 13.3399 20.7189 13.3943 20.4126L14 17H8.00001L7.36325 20.5874C7.32088 20.8261 7.11337 21 6.87094 21H5.88657ZM9.41045 9L8.35045 15H14.3504L15.4104 9H9.41045Z" /></symbol><symbol id=thread-icon viewBox="0 0 24 24"><path fill=#b9bbbe d="M5.43309 21C5.35842 21 5.30189 20.9325 5.31494 20.859L5.99991 17H2.14274C2.06819 17 2.01168 16.9327 2.02453 16.8593L2.33253 15.0993C2.34258 15.0419 2.39244 15 2.45074 15H6.34991L7.40991 9H3.55274C3.47819 9 3.42168 8.93274 3.43453 8.85931L3.74253 7.09931C3.75258 7.04189 3.80244 7 3.86074 7H7.75991L8.45234 3.09903C8.46251 3.04174 8.51231 3 8.57049 3H10.3267C10.4014 3 10.4579 3.06746 10.4449 3.14097L9.75991 7H15.7599L16.4523 3.09903C16.4625 3.04174 16.5123 3 16.5705 3H18.3267C18.4014 3 18.4579 3.06746 18.4449 3.14097L17.7599 7H21.6171C21.6916 7 21.7481 7.06725 21.7353 7.14069L21.4273 8.90069C21.4172 8.95811 21.3674 9 21.3091 9H17.4099L17.0495 11.04H15.05L15.4104 9H9.41035L8.35035 15H10.5599V17H7.99991L7.30749 20.901C7.29732 20.9583 7.24752 21 7.18934 21H5.43309Z" /><path fill=#b9bbbe d="M13.4399 12.96C12.9097 12.96 12.4799 13.3898 12.4799 13.92V20.2213C12.4799 20.7515 12.9097 21.1813 13.4399 21.1813H14.3999C14.5325 21.1813 14.6399 21.2887 14.6399 21.4213V23.4597C14.6399 23.6677 14.8865 23.7773 15.0408 23.6378L17.4858 21.4289C17.6622 21.2695 17.8916 21.1813 18.1294 21.1813H22.5599C23.0901 21.1813 23.5199 20.7515 23.5199 20.2213V13.92C23.5199 13.3898 23.0901 12.96 22.5599 12.96H13.4399Z" /></symbol></defs></svg><body><div class=preamble><div class=preamble__guild-icon-container><img class=preamble__guild-icon src="https://cdn.discordapp.com/icons/648663810772697089/a_dcbb31569260a2daffa627b0efab76e0.gif?size=512" alt="Guild icon" loading=lazy></div><div class=preamble__entries-container><div class=preamble__entry>Discord Mafia</div><div class=preamble__entry>temp archive 17 / co22-graveyard</div></div></div>
+<div class="chatlog">
+
+<div class=chatlog__message-group><div id=chatlog__message-container-1340704202229551104 class=chatlog__message-container data-message-id=1340704202229551104><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Sunday, February 16, 2025 10:19 a.m."><a href=#chatlog__message-container-1340704202229551104>2025-02-16 10:19 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="scarletshroud">@ScarletShroud</span> ‘s role
+<strong>Atheris Hispida</strong> - Slitherfolk viper
+<em>native to africa, you are a unique viper species.</em>
+
+<strong>Passive Ability</strong>
+<strong>does anyone know what your common name actually is?</strong>
+The first non-slitherfolk player that visits you will get confused and their action will fail. If their action has charges, the charge is returned.
+
+<strong>Night Abilities</strong>
+<strong>Spiky scales (2X)</strong>
+Go into your defensive mode. Anyone who visits you tonight with something other than a kill will be pricked and is roleblocked.
+
+<strong>The wisdom of a snake (2X)</strong>
+Target a player. You will learn the name of the first active ability that the player has.
+
+Win Condition: eliminate all threats to the slitherfolk.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1341066271302615090 class=chatlog__message-container data-message-id=1341066271302615090><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Monday, February 17, 2025 10:18 a.m."><a href=#chatlog__message-container-1341066271302615090>2025-02-17 10:18 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="flameflyer">@Giles Corey</span>‘s role
+
+<strong>The elongated, vermiform paragon of evolutionary adaptability, whose exoskeletal integument glistens with iridescent keratinized scales, navigates its environment with an undulatory kinematics that epitomizes preternatural grace, embodying a liminal existence between the terrestrial and the arboreal, known as an apodal, ectothermic marvel, often misapprehended by the uninitiated, epitomizes an amalgamation of predatory perspicacity and morphological economy, encapsulated within the taxonomic nomenclature of Serpentes</strong><ul><li>Slitherfolk Amalgamation </li></ul>
+<strong>Passive: Scaley Environments</strong><ul><li>When investigated, you will appear as the last player you picked.</li></ul>
+<strong>Day Ability</strong>
+
+<strong>Paradigm</strong><ul><li>Every day, you may choose a player. You will get a one-shot generic ability based on a random active ability from their rolecard. You will use this ability the following night.</li><li>Killing: you will get a regular attack.</li><li>Protective: you will get a protect.</li><li>Roleblock: you will get a roleblock.</li><li>Investigation: you will get an investigation of the targets alignment.</li><li>Other: you will gain a regular visit that does nothing.</li></ul>You cannot target the same player twice in a row,
+
+Win Condition: eliminate all threats to the slitherfolk.</span></div></div></div></div><div id=chatlog__message-container-1341066329133682688 class=chatlog__message-container data-message-id=1341066329133682688><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, February 17, 2025 10:18 a.m.">10:18 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="Deleted User">@Deleted User</span>’s role 
+<strong>Chinese Lantern</strong> - Slitherfolk Decoration
+<em>beautiful lanterns used during celebrations all throughout the year.</em>
+
+<strong>Passive</strong>
+<strong>Illuminate</strong>
+On nights 1,3 and 5, Illuminate the path of all who visit you. 
+They will now all be notified of exactly why their action failed instead of just that it failed for the rest of the game if their action does not go through.
+
+<strong>Night Abilities</strong>
+<strong>Illumination investigation (4X)</strong>
+Visit a player and find out whether or not their path has been illuminated by your passive.
+
+<strong>”Stealth” Lantern (1X)</strong>
+Investigate someone. You will be told what their role name and alignment are. However, your light draws attention to you. Your target will be notified that they have been investigated.
+
+Win Condition: eliminate all threats to the slitherfolk.</span></div></div></div></div><div id=chatlog__message-container-1341066399984123995 class=chatlog__message-container data-message-id=1341066399984123995><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, February 17, 2025 10:19 a.m.">10:19 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="inikyne">@inikyne</span>’s role
+<strong>Snakebite Snek</strong> - Slitherfolk Expert Fighter
+<em>Kyne is a weeb /lh</em>
+
+<strong>Passive</strong>
+<strong>Seminar lecturer</strong>
+Due to your authority, your votepower is <strong>2</strong> for the first day.
+
+<strong>Night Abilities</strong>
+<strong>Biting Snake Fist (1X)</strong>
+Strike quickly like a snake and hit your targets weak points, dealing a normal attack to your target.
+
+<strong>Listen Up!</strong>
+Make someone your student and privately train them. Their action tonight will ignore roleblocks.
+You cannot choose the same player twice in a row.
+
+Win Condition: eliminate all threats to the slitherfolk.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1341581193312862371 class=chatlog__message-container data-message-id=1341581193312862371><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Tuesday, February 18, 2025 8:24 p.m."><a href=#chatlog__message-container-1341581193312862371>2025-02-18 8:24 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="li_yuanfang">@Yuanfang</span> ‘s role
+<strong>Teng</strong> - Slitherfolk soaring snake
+<em>a mythological snake that soars in the heavens.</em>
+
+<strong>Passive</strong>
+<strong>Godlike knowledge</strong>
+You are aware that there are at least 8 non-town players of at least 2 different alignments.
+<strong>Soar Among the clouds</strong>
+On night 3, all your visitors will be told that they saw a snake soaring in the clouds.
+
+<strong>Day Ability</strong>
+<strong>The Chosen (2X)</strong>
+Pick someone to be your <strong>chosen</strong> tonight.
+They will gain the ability to multitask and will be sent this message: 
+“A snake soaring in the clouds has chosen you! You may multitask tonight.”
+You may not pick the same player twice.
+
+<strong>Night Ability</strong>
+<strong>Hide among the clouds (1X)</strong>
+Gain night immunity tonight.
+
+Win Condition: eliminate all threats to the slitherfolk.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1341787551467311195 class=chatlog__message-container data-message-id=1341787551467311195><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Wednesday, February 19, 2025 10:04 a.m."><a href=#chatlog__message-container-1341787551467311195>2025-02-19 10:04 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="decdecattack">@The Dectionary</span>’s role
+<strong>Ophiuchus</strong> - Snakehater constellation
+<em>you lurk upon the stars.</em>
+
+<strong>Passive Ability</strong>
+<strong>Eternal Brawl</strong> 
+If a role that is an actual snake visits you, you will be notified.
+
+<strong>Day Ability</strong>
+<strong>Wrath of the Stars (1X)</strong>
+Instantly execute someone who has claimed their role, bypassing all immunities, protections and abilities. You must provide photo evidence to the host that they have claimed.
+
+<strong>Night Abilities</strong>
+<strong>Intimidating Appearance (3X)</strong>
+Roleblock someone.
+
+<strong>Confusing Placement (3X)</strong>
+redirect all actions that your target were to perform onto someone else.
+
+Win Condition: eliminate all who are not from your faction.</span></div></div></div></div><div id=chatlog__message-container-1341787643935199302 class=chatlog__message-container data-message-id=1341787643935199302><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Wednesday, February 19, 2025 10:05 a.m.">10:05 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="anemoia_abyss">@Anemoia</span> ‘s role 
+<strong>Flying Lantern</strong> - Mafia Spy
+<em>as you fly up into the sky, you see all.</em>
+
+<strong>Passive Ability</strong>
+<strong>Truly a Marvel</strong>
+On nights of a multiple of 3, your visits cannot be interrupted by any means. You also have 1-shot night immunity.
+
+<strong>Day Ability</strong>
+<strong>Look at the sky! (1X)</strong>
+distract someone by making them look at you. They cannot vote today. They are notified of this.
+
+<strong>Night Abilities</strong>
+<strong>Bird’s-eye view</strong>
+Visit someone and learn if they have performed a negative action on one of your allies tonight.
+
+<strong>Blinding Light (2X)</strong>
+Roleblock someone.
+
+Win Condition: reach parity with the slitherfolk.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1342168014002454621 class=chatlog__message-container data-message-id=1342168014002454621><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Thursday, February 20, 2025 11:16 a.m."><a href=#chatlog__message-container-1342168014002454621>2025-02-20 11:16 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="just_zade">@Zade</span> 
+Zade:
+
+<strong>Your snake friend</strong><ul><li>Slitherfolk Friend</li></ul>
+<strong>Passive: Power of Friendship</strong>
+Anyone who is friends with you cannot attack you at night. 
+
+<strong>Day Ability</strong>
+<strong>Friendship!</strong><ul><li>Every day you are alive,you may choose to become friends with another player. </li><li>By doing so, you will be able to send up to 5 messages to each other per phase. </li><li>The messages cannot contain more than 500 characters. </li></ul>
+<strong>Night Ability</strong>
+<strong>Friendly slithering (4X)</strong> - Every night, you may pick one of your friends to slither around with. You will be told all of the feedback that they get that night.
+You cannot pick the same friend twice in a row.
+
+Win Condition: Eliminate all threats to the slitherfolk.</span></div></div></div></div><div id=chatlog__message-container-1342168071774670879 class=chatlog__message-container data-message-id=1342168071774670879><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, February 20, 2025 11:16 a.m.">11:16 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="ilepup">@Grace, I assume</span> 
+<strong>A very festive qipao</strong> - Slitherfolk Traditional Dancer
+<em>Dressed in the most festive dress, the snake clan is enamored by your charm.</em>
+
+<strong>Day Action</strong>
+<strong>Lantern Dance (x1)</strong> - You may choose someone to day to dance with during the day. You will learn the role of the person you danced with at the start of the night. Afterwards, gaining a private chat with them, and becoming lovers. However, if you dance with someone who is evil, you die of grief the following night bypassing night immunity. 
+
+<strong>Night Action</strong>
+<strong>Encore (x2)</strong> - During the night you may continue your dance with your lover, which will grant them the highest priory in the action sequence. As well as, granting night immunity to them.
+
+Win Condition: eliminate all threats to the slitherfolk.</span></div></div></div></div><div id=chatlog__message-container-1342168129614254231 class=chatlog__message-container data-message-id=1342168129614254231><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Thursday, February 20, 2025 11:16 a.m.">11:16 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="honeydew5828">@•Yumi•</span> 
+<strong>Red Packet</strong><ul><li>Slitherfolk moneymaker</li></ul><em>everyone looks for you come the holidays.</em>
+
+<strong>Passive Abilities</strong>
+<strong>Wielder of wealth</strong><ul><li>You start off with 6/6 <strong>coins</strong> in your hand.</li><li>each start of day, 1 coin is regenerated and sent to your hand.</li></ul>
+<strong>Day Ability</strong>
+<strong>Prepare the packets</strong>
+Each day you may do a coin flip with the host.
+<ul><li>if you win the flip, you may use up 2 coins and stuff them into your pocket. </li><li>if you lose the flip, you may use 1 coin and stuff it into your pocket. 
+
+<strong>Night Ability</strong></li></ul><strong>The more, the better!</strong>
+You may spend some coins in your pocket to use night abilities. The more coins in your pocket used, the more powerful the abilities. 
+<ul><li>using up 1 coin will allow you to send a single private message of up to 300 characters to your target. </li><li>using up 2 coins protects your target. </li><li>using up 3 coins tells you who your target visited tonight.</li><li>using up 4 coins tells you the alignment of your target.</li><li>using up 5 coins deals a normal attack to your target. </li><li>using up 6 coins allows you to inherit the passive ability of your target. If the ability is circumstantial or only works with their role, the 6 coins are returned. </li><li>using up 7 coins deals a piercing attack and piercing roleblock to your target.</li><li>using up 2763 coins instantly modkills your target, strips them of all abilities and signup bans them for 100 days. 
+
+Win Condition: eliminate all threats to the slitherfolk.</li></ul></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1342728328326414366 class=chatlog__message-container data-message-id=1342728328326414366><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Saturday, February 22, 2025 12:23 a.m."><a href=#chatlog__message-container-1342728328326414366>2025-02-22 12:23 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>Ziel:
+<strong>J&#246;rmungandr</strong><ul><li>Snakehater titan</li></ul><em>a massive serpent said to encircle the world.</em>
+
+<strong>Passives</strong>
+<strong>Wrap the World</strong><ul><li>your presence is announced at the start of the game with: </li></ul><em>there seems to be a massive serpent encircling the earth itself. Watch out for its deceptive abilities.</em>
+<strong>Titanic Size</strong><ul><li>due to your titanic size, you need to be attacked twice in order to die. </li><li>You will not be notified the first time you are attacked. </li><li>If the attack is piercing, you only need to be attacked once.</li><li>You only need to be lynched once.</li></ul>
+<strong>Night Abilities</strong>
+<strong>Shift the Tides (2X)</strong>
+Attack target player. They will be notified that <strong>J&#246;rmungandr</strong> attacked them, but they will not be informed of who you are.
+
+<strong>Wrap Around (3X)</strong>
+Defensively wrap around one of your teammates, their action cannot be interrupted by any means tonight.
+
+Win Condition: Eliminate all who are not from your faction.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1342911682418315326 class=chatlog__message-container data-message-id=1342911682418315326><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Saturday, February 22, 2025 12:31 p.m."><a href=#chatlog__message-container-1342911682418315326>2025-02-22 12:31 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="jar_of_dirt_">@jar_of_dirt_</span>
+<strong>Mechagodzilla: Snake Form</strong><ul><li>Neutral Mechsnake </li></ul><em>you are devoted to eliminating your sworn rival, once and for all.</em>
+
+<strong>Passives</strong>
+<strong>Hardcoded Rivalry</strong><ul><li>you know of a <strong>rival</strong> of yours that is in the game. Your rival also wants to eliminate you. You do not know any other information. </li></ul><strong>Creation of the Humans</strong><ul><li>You cannot die by any means other than at the hands of your <strong>rival</strong> or by lynch.</li></ul>
+<strong>Night Abilities</strong>
+<strong>To end it all</strong><ul><li>twice per game, you may make a guess as to which player is your <strong>rival</strong>. Guessing correctly deals a piercing attack to them. However, guessing incorrectly will roleblock you the following night. </li></ul>
+<strong>Proton Scream (3X)</strong>
+Launch your proton scream at someone. 
+<ul><li>On the first use, this deals them a normal attack and tells you whether they are your rival or not.</li><li>on the second use, this ability will Roleblock the target and tell you if the target is your rival.</li><li>on the third use, this will only tell you if the target is your rival.
+
+Win condition: eliminate your <strong>rival</strong> at all costs.</li></ul></span></div></div></div></div><div id=chatlog__message-container-1342911753067171851 class=chatlog__message-container data-message-id=1342911753067171851><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Saturday, February 22, 2025 12:31 p.m.">12:31 p.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title=".jennifer21">@Jen</span> 
+<strong>Snakezilla</strong> - Neutral Godzilla 
+<em>you are devoted to eliminating your sworn rival, once and for all.</em>
+
+<strong>Passives</strong>
+<strong>Hardcoded Rivalry</strong> - you know of a <strong>rival</strong> of yours that is in the game. Your rival also wants to eliminate you. You do not know any other information. 
+<strong>King of the snakes</strong> - You cannot die by any means other than at the hands of your <strong>rival</strong> or by lynch.
+
+<strong>Night Abilities</strong>
+<strong>To end it all</strong> - twice per game, you may make a guess as to which player is your <strong>rival</strong>. Guessing correctly deals a piercing attack to them. However, guessing incorrectly will roleblock you the following night. 
+
+<strong>Atomic Breath (3X)</strong> 
+Launch your atomic breath at someone. This roleblocks them and tells you whether or not they are your rival. 
+
+Win condition: eliminate your <strong>rival</strong> at all costs.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1343269895256936480 class=chatlog__message-container data-message-id=1343269895256936480><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/187583737444302848/fcf7ee3c96f352fba47785549fb7bcc6.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(128,0,64) title=53r0 data-user-id=187583737444302848>53R0 (Zero)</span> <span class=chatlog__timestamp title="Sunday, February 23, 2025 12:14 p.m."><a href=#chatlog__message-container-1343269895256936480>2025-02-23 12:14 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="greenparrot">@⏰⏰⏰⏰⏰⏰ (green parrot)</span> was:
+
+<strong>little dragon’s prosperity ceesrsalad</strong> - Snakehater fast food
+just an innocent fast food place… or are you?
+
+<strong>Passive Ability</strong>
+<strong>Seemingly Harmless</strong>
+You will show up as town to investigations.
+
+<strong>Day Ability</strong>
+<strong>Wishing “Prosperity” among you!</strong>
+Make someone think they have been blessed with prosperity, when they actually aren’t. Essentially, send a fake message to them.
+They will get the following message:
+“you have been blessed with a prosperous life!”
+
+<strong>Night Abilities</strong>
+<strong>Eat your salad!!!</strong>
+Force someone to eat your prosperity ceesrsalad. Because they despise the taste of vegetables, they will not be able to visit your teammates tonight.
+
+<strong>Little Dragon’s Might (1X) (usable night 2+)</strong>
+Pick someone. They are piercingly roleblocked, have all defense and protection removed from them tonight, and their passive abilities are disabled for the night. This action cannot fail by any means and bypasses everything.
+
+Win Condition: eliminate all who are not from your faction.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1343627890306187305 class=chatlog__message-container data-message-id=1343627890306187305><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/746843927755358209/2e8bec47b8238a0253b67c38012464ef.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(172,172,172) title=staururio data-user-id=746843927755358209>star</span> <span class=chatlog__timestamp title="Monday, February 24, 2025 11:57 a.m."><a href=#chatlog__message-container-1343627890306187305>2025-02-24 11:57 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="time9">@Coals ‘bbg’ (Time)</span>
+<strong>Fu Lu Shou</strong> - Slitherfolk god trio
+<em>you represent luck, longevity and prosperity.</em>
+
+<strong>Passive Ability</strong>
+<strong>Presence of the deities</strong>
+The first two people who visit you are now blessed by the gods. They will gain a one-shot immunity to redirection.
+
+<strong>Night Abilities</strong>
+<strong>Fu (2X)</strong>
+Bless someone with luck. If their action requires RNG, the best RNG will always happen tonight.
+If their action does not require rng, their action will resolve 2 steps earlier in the action order.
+
+<strong>Lu (2X)</strong> 
+Bless someone with longevity and give them a one-shot defense tonight.
+You cannot target the same player twice in a row.
+
+<strong>Shou (2X)</strong>
+Bless someone with prosperity. You can send a message of up to 200 characters to them tonight. They cannot reply.
+You cannot target the same player twice in a row.
+
+Win Condition: eliminate all threats to the slitherfolk.</span></div></div></div></div><div id=chatlog__message-container-1343627917162184794 class=chatlog__message-container data-message-id=1343627917162184794><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, February 24, 2025 11:57 a.m.">11:57 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>-</span></div></div></div></div><div id=chatlog__message-container-1343627921662935121 class=chatlog__message-container data-message-id=1343627921662935121><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, February 24, 2025 11:57 a.m.">11:57 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>-</span></div></div></div></div><div id=chatlog__message-container-1343627925370572801 class=chatlog__message-container data-message-id=1343627925370572801><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, February 24, 2025 11:57 a.m.">11:57 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>-</span></div></div></div></div><div id=chatlog__message-container-1343627986108289116 class=chatlog__message-container data-message-id=1343627986108289116><div class=chatlog__message><div class=chatlog__message-aside><div class=chatlog__short-timestamp title="Monday, February 24, 2025 11:57 a.m.">11:57 a.m.</div></div><div class=chatlog__message-primary><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="jaysoclxtch">@Jay</span>
+<strong>Dragon Dancer</strong><ul><li>Slitherfolk Performer</li></ul>
+<strong>Passives</strong>
+<strong>Watch the Show!</strong><ul><li>Your presence is announced at the start of the game with:</li></ul><em>there seems to be a dragon dance performance going on! Maybe you should go watch it?</em>
+
+<strong>Day Ability</strong>
+<strong>Extravagant performance (1X)</strong>
+This can only be used if you have 3 or more “fans”. Call on your fans to support your cause. This privately increases your vote power by 1 for 2 days.
+<ul><li>this action locks instantly.
+
+<strong>Night Abilities</strong></li></ul><strong>Dragon Dance</strong>
+Each night, perform a dragon dance in front of someone. 
+<ul><li>They will be given the option to either accept or reject the choice to “watch a dragon dance” the next start of day. If they accept, they become your fan.</li><li>They do not know that you are a member of the slitherfolk. </li><li>If they accept, they will be invited to a private server with you and all your other fans that you may talk in.</li><li>there may only be a maximum of 6 other alive players besides you in the server.
+
+<strong>Night Performance (2X)</strong></li></ul>You must perform in front of your fans. 
+<ul><li>You can write a poem, send a YouTube video, draw a picture… etc. </li><li>It will be sent in a special channel inside your private server.</li><li>during your performance <strong>you cannot talk in the server</strong>.</li><li>if you ask for your fans to vote “yes” anywhere, including the server, any other private chats, or game chat, you will be vanillised and turned into a citizen.</li><li>the fans will be privately asked if they enjoyed your performance. </li><li>if more than 1/3 of your fans enjoyed your performance, gain defense tonight. </li><li>if less than 1/3 of your fans enjoyed your performance, one of your fans will be removed from the server at random.
+
+Win Condition: eliminate all threats to the slitherfolk.</li></ul></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1343737959102283787 class=chatlog__message-container data-message-id=1343737959102283787><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Monday, February 24, 2025 7:14 p.m."><a href=#chatlog__message-container-1343737959102283787>2025-02-24 7:14 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title=".celestia_ludenberg.">@Dead Pou (Celestia)</span> you are <strong>Red Couplets</strong>, a member of the <strong>slitherfolk.</strong>
+<strong>Red Couplets</strong> - Slitherfolk Prosperity Bringer
+<em>Messages that wish for good things are written on you.</em>
+
+<strong>Passives</strong>
+<strong>Radiating Positivity</strong>- You have a 1-shot defense. 
+
+<strong>Night Ability</strong>
+<strong>Writing the messages</strong> - each night, you may choose to give a red couplet with one of the following messages written on them to your target.
+-<strong>身體健康 (Good Health) (2X)</strong> - Protect your target for the night.
+-<strong>招財進寶 (Wealth and Treasures Fill your Home) (1X)</strong> - if the target has an ability that has charges, regenerate one charge of that ability. If they have more than one ability with charges, regenerate a charge of a random one. You cannot use this on yourself.
+-<strong>心想事成 (Dreams Come True) (1X)</strong> - allows your target to wish for something at the start of the next day. If what they wished for is too unreasonable, the wish will be cancelled. The charge will be wasted. They will be notified of the terms. You cannot use this on yourself.
+The following message is what your target will be sent:
+<em>You have been given a red couplet with the words “心想事成” on it. You may now make a wish. The wish may be granted by the host. However, if your wish is too unreasonable, the wish will be cancelled and you may not wish again.</em>
+-<strong>新年快樂 (Happy New Year) (2X)</strong> - send an inspirational message of your choice to the person you visit. This does nothing else to the person. Additionally, post a public announcement of up to 200 characters in the info chat at start of day.
+
+Win Condition: Eliminate all threats to the slitherfolk.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1344339857148874803 class=chatlog__message-container data-message-id=1344339857148874803><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Wednesday, February 26, 2025 11:06 a.m."><a href=#chatlog__message-container-1344339857148874803>2025-02-26 11:06 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="toast2.014">@toastarame</span> 
+<strong>Monkey</strong> - Slitherfolk Comedian
+Being a nuisance is weirdly a good thing when it comes down to it...
+
+<strong>Passive</strong>
+ <strong>Fooling around</strong> - One random visitor of yours will gain the feedback. &quot;You were oddly amused of a performance.&quot; This does nothing otherwise.
+
+<strong>Night Action</strong>
+<strong>Banana Toss (x3)</strong> - Target a player, if they target someone they will be role blocked.
+
+<strong>Monkey Dance (x2)</strong> - Target two players, swap all the visitors of the targets. You cannot select yourself.
+
+Win Condition: eliminate all threats to the slitherfolk.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1345067987312447528 class=chatlog__message-container data-message-id=1345067987312447528><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Friday, February 28, 2025 11:19 a.m."><a href=#chatlog__message-container-1345067987312447528>2025-02-28 11:19 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="duncandont">@Duncan the Villager</span> 
+<strong>Firecracker Cat</strong><ul><li>Slitherfolk Lucky Cat</li></ul><em>Even though you hate snakes, you can&#39;t help but have a soft side for those slithery folks.</em>
+
+<strong>Passive</strong>
+<strong>Firecraker</strong> 
+When you&#39;re visited by more than 1 person, you will roleblock one person visiting you with malicious intent (Killing, Roleblocking, harmful effects ect.).  You will be told if this occurs. 
+
+
+<strong>Night Action</strong>
+<strong>Fortune Reading</strong><ul><li>Pick three targets at night, you will be given a fortune based off the alignments of the three picked. Two randomly chosen town are red herrings and will show up as non-town.</li></ul><ul><li>If the targets are all the same alignment you will receive a &quot;BEST FORTUNE&quot;</li><li>If the targets are all the same alignment but one you will receive a &quot;OKAY FORTUNE&quot;</li><li>If the targets are all different alignments you will receive a &quot;WORST FORTUNE&quot;</li></ul>
+Win Condition: eliminate all threats to the slitherfolk.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1345088902725374044 class=chatlog__message-container data-message-id=1345088902725374044><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Friday, February 28, 2025 12:43 p.m."><a href=#chatlog__message-container-1345088902725374044>2025-02-28 12:43 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="howism">@how</span> 
+<strong>Year of the Cat</strong><ul><li>Snakehater Vengeful</li></ul><em>You don’t exist because the cat lost the zodiac race, due to the rat betraying him. You are now hateful of everything.</em>
+
+<strong>Passive Ability</strong>
+<strong>Land on your feet</strong>
+If your actions fail, you will be notified of the exact reason why it failed instead of just that it failed. (For example: target was immune, target was protected…)
+<strong>YOU.</strong>
+You are aware of a <strong>rat-like</strong> role that is in the game. If this role dies, unlock the ability <strong>The job is done</strong>.
+
+<strong>Night Abilities</strong>
+<strong>Frenzy of the Cat (1X)</strong>
+Piercingly attack someone. 
+<ul><li>While this setup is no kill credit, the kill message will show up with “upon further investigation, you found a lot of scratch marks and bite marks on the body. This must have been done by a cat.”</li><li>the charge will not be returned if the action failed in any way.
+
+<strong>Kitten Antics (3X)</strong></li></ul>Playfully run in front of a player.
+They will show up as a member of the snakehaters to investigations tonight.
+
+<strong>Slack around (1X)</strong>
+Gain defense tonight. 
+
+<strong>The job is done (0X)</strong>
+In order to unlock this ability, see the passive ability <strong>YOU.</strong> you may enhance <strong>Frenzy of the Cat</strong> such that the target flips cleaned.
+
+Win Condition: eliminate all who are not from your faction.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1345440878931476523 class=chatlog__message-container data-message-id=1345440878931476523><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Saturday, March 1, 2025 12:01 p.m."><a href=#chatlog__message-container-1345440878931476523>2025-03-01 12:01 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="eqsylootz">@EqsyLootz</span> 
+<strong>Basilisk</strong> - Slitherfolk Misunderstood
+<em>everyone fears you, not knowing you are a snake too.</em>
+
+<strong>Passives</strong>
+<strong>Intimidate</strong>
+You will show up as evil to any investigations.
+<strong>Noxious influence</strong>
+You will learn who is poisoned each night. (Poison is not announced publicly in this setup.)
+
+<strong>Day Ability</strong>
+<strong>Deadly Gaze (1X)</strong>
+Instantly kill someone. This action is submitted in vote chat. This ignores night immunity as it is done during the day.
+
+<strong>Night Ability</strong>
+<strong>Horrifying Slithering</strong>
+Guard someone’s house. You will scare away the first negative action in the action order.
+You cannot target the same player twice in a row.
+
+Win Condition: eliminate all threats to the slitherfolk.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1346138927299428418 class=chatlog__message-container data-message-id=1346138927299428418><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Monday, March 3, 2025 10:15 a.m."><a href=#chatlog__message-container-1346138927299428418>2025-03-03 10:15 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="ck._.__">@CK</span> 
+<strong>Sea Krait</strong> - Slitherfolk ocean dweller
+
+<strong>Passives</strong>
+<strong>Lurking in the seas</strong>
+During the day, you will be lurking in the sea. You cannot be killed during the day.
+<strong>Warning bands</strong>
+Your colors warn everyone in the sea that you are venomous. Anyone who visits you during the day will learn that you have the ability to poison people.
+
+<strong>Night Abilities</strong> 
+<strong>Venomous Critter (2X)</strong>
+Bite someone and inflict them with poison. They will die the following night unless healed.  
+
+<strong>I know the antidote (3X)</strong>
+You may cure someone of poison.
+
+Win Condition: eliminate all threats to the slitherfolk.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1346870653491347506 class=chatlog__message-container data-message-id=1346870653491347506><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Wednesday, March 5, 2025 10:43 a.m."><a href=#chatlog__message-container-1346870653491347506>2025-03-05 10:43 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="_mementomorii.">@Lune is the best (Kaz)</span> 
+<strong>Child of the Rat</strong> - Slitherfolk hunted
+<em>tread carefully, for there is someone watching you at every step.</em>
+
+<strong>Passive Ability</strong>
+<strong>the Cat and the Mouse</strong>
+You are aware of a role that is related to a <strong>cat</strong>.
+If you die, that role benefits from it. Be careful.
+<strong>Sense the predator</strong>
+if the previously mentioned cat-related role visits you, you will be notified.
+
+<strong>Night Abilities</strong>
+<strong>Fast Scurrying (2X)</strong> 
+Scurry back to your den. All visits on you will fail and they will be notified that you were missing.
+
+<strong>Whisker sense (4X)</strong>
+investigate two people. 
+you will be told whether or not at least one of them has a killing ability.
+
+Win Condition: eliminate all threats to the slitherfolk.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1346873641543012362 class=chatlog__message-container data-message-id=1346873641543012362><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Wednesday, March 5, 2025 10:54 a.m."><a href=#chatlog__message-container-1346873641543012362>2025-03-05 10:54 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="icarus0120">@Bunny</span> 
+<strong>Common European Adder</strong><ul><li>Mafia Striker</li></ul><em>You bite people lol</em>
+
+<strong>Passive</strong> 
+<strong>Natural Antigens</strong><ul><li>You cannot be poisoned.</li><li>if someone attempted to poison you, gain a charge of <strong>Dangerous Bite</strong>.</li></ul>
+<strong>Night Abilities</strong>
+<strong>Dangerous Bite (2X)</strong><ul><li>Visit two people. </li><li>Inflict the first with poison. They will die the following night unless healed.</li><li>However, you will only be seen visiting the second person. </li><li>if you have poisoned a player who can win with you, you will be given the option to revert the poison. Reverting the poison returns the charge. </li></ul>
+<strong>Lurk (2X)</strong> - you will appear as town to all investigative abilities tonight. 
+
+<strong>Mimicry (1X)</strong> - copy the ability of one player that has died from your poison and use it as your own. 
+
+Win condition: reach parity with the slitherfolk.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1347247116367560724 class=chatlog__message-container data-message-id=1347247116367560724><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Thursday, March 6, 2025 11:39 a.m."><a href=#chatlog__message-container-1347247116367560724>2025-03-06 11:39 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="that_amnesiac">@Amnesiac, the Kleptomaniac</span> You are <strong>Keeshee</strong>, a member of the <strong>Slitherfolk</strong>.
+<strong>Keeshee</strong><ul><li>Slitherfolk YouTube Star</li></ul><em>silly purple Snek silly purple snek silly purple Snek</em>
+
+<strong>Passive Ability</strong>
+<strong>Just a silly little Snek</strong>
+You cannot be redirected.
+
+<strong>Night Abilities</strong>
+<strong>BORGOR</strong>
+Feed someone a burger. 
+<ul><li>If they are slitherfolk, they will gain redirection immunity if used on odd nights and roleblock immunity if used on even nights, only active for the night you used this.</li><li>If they are not slitherfolk, your passive ability will deactivate tonight. (This applies if your ORIGINAL target was not slitherfolk, should you be redirected that night.)</li><li>you are not notified of which effect happened.
+
+<strong>Harbinger of chaos (2X)</strong></li><li>Visit 2 players.</li><li>all harmful visits on the first player will be redirected to the second player.
+
+Win Condition: eliminate all threats to the slitherfolk.</li></ul></span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1347972130192494663 class=chatlog__message-container data-message-id=1347972130192494663><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Saturday, March 8, 2025 11:39 a.m."><a href=#chatlog__message-container-1347972130192494663>2025-03-08 11:39 a.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="lumastargazer">@Froggy In An Eevee Disguise</span> 
+Froggy: 
+
+<strong>Solid Snake</strong> - Mafia Assassin
+
+<strong>Passive</strong>
+<strong>Bomb Defuse</strong> - If a sticky bomb was to explode on an mafia member, you will instead block the action and regain the charge of sticky bomb.
+
+<strong>Night Actions</strong> 
+<strong>Sticky Bomb (x1)</strong> - Attach an bomb onto someone, it will explode the following night attacking the one holding the bomb piercing abilities. If they visit anyone the following night it will transfer to them. If they visit multiple people, it will default to the first person visited. 
+
+<strong>Tagger Bomb (x3)</strong> - Attach a tagger bomb onto someone, you will passively learn who they visit every night.
+
+Win condition: reach parity with the slitherfolk.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1348831161685901373 class=chatlog__message-container data-message-id=1348831161685901373><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/187583737444302848/fcf7ee3c96f352fba47785549fb7bcc6.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(128,0,64) title=53r0 data-user-id=187583737444302848>53R0 (Zero)</span> <span class=chatlog__timestamp title="Monday, March 10, 2025 9:33 p.m."><a href=#chatlog__message-container-1348831161685901373>2025-03-10 9:33 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve><span class="chatlog__markdown-mention" title="char._.coal">@timmy’s bbg (coal)</span> 
+
+<strong>Tang Yuan</strong> - Slitherfolk traditional dish
+A symbol of unity and togetherness.
+
+<strong>Passive Ability</strong>
+<strong>Together!</strong>
+At the start of the game, you will be given three names whom you have unionised together with your power. At least one of those names is non-slitherfolk.
+
+<strong>Day Ability</strong>
+<strong>Bringing Unity</strong>
+Each day, you may choose one person to add to your “group”.
+During start of night, they will be notified of this.
+this group is NOT a server. Each night, every member of the group is notified who else is in it.
+
+They may send up to 5 messages of up to 500 characters every phase to EVERY member of the group.
+
+At each end of night, you will be notified whether or not someone in your group performed a negative action on another member in your group.
+
+<strong>Night Ability</strong>
+<strong>Actually delicious Food (3X)</strong>
+You may visit a player, alluring them because you are a delicious food. This gives you a chance to see what they’re doing.
+You will be notified whether the target performed a positive action, a negative action or no action at all.
+
+Win Condition: eliminate all threats to the slitherfolk.</span></div></div></div></div></div>
+<div class=chatlog__message-group><div id=chatlog__message-container-1349052147244994600 class=chatlog__message-container data-message-id=1349052147244994600><div class=chatlog__message><div class=chatlog__message-aside><img class=chatlog__avatar src="https://cdn.discordapp.com/avatars/668439548971188237/abd56bb0c89b22fa18ffb6bce8730ece.png?size=512" alt=Avatar loading=lazy></div><div class=chatlog__message-primary><div class=chatlog__header><span class=chatlog__author style=color:rgb(238,199,0) title=queenofcheetahs data-user-id=668439548971188237>No Longer Australian:c(cheetah)</span> <span class=chatlog__timestamp title="Tuesday, March 11, 2025 12:11 p.m."><a href=#chatlog__message-container-1349052147244994600>2025-03-11 12:11 p.m.</a></span></div><div class="chatlog__content chatlog__markdown"><span class=chatlog__markdown-preserve>magzar: 
+<strong>Psilocyger</strong><ul><li>mafia abomination</li></ul><em>A hybrid who strikes fear into all who see it.</em>
+
+<strong>Passives</strong>
+<strong>Camouflage</strong>
+You blend in with the trees of the jungle. The first person who visits you will have their visit fail and informed that you were missing.
+<strong>Spread your Spores</strong>
+Any people who visit you will be marked with a <strong>spore</strong>. They will also spread this to anyone they visit, but the limit of this every night is 1 person (the first person) who they visited. They are not notified of this.
+<ul><li>you will passively learn the names of all who are marked with a spore each end of night.</li><li>if a healing ability is used on any player marked with a spore, it allows the target to know that they are marked.</li></ul>“You noticed a strange mushroom stuck to you as you turn to do your action. Best be cautious, it looks contagious…”
+
+<strong>Day Ability</strong>
+<strong>Lord of the Spores (1x)</strong>
+Attack someone who is marked with a spore.
+
+<strong>Night Abilities</strong>
+<strong>Booming roar (3X)</strong>
+Your loud roar lets everyone know that you are the king around here.
+This roar roleblocks one of your visitors, chosen at random.
+
+<strong>Spore Frenzy (2X)</strong>
+When every single living player in the game besides your faction is marked with a spore, gain the ability to <strong>absorb</strong> one player of your choosing each night. Please note that the spores have to be on every living player <strong>by the start of the night</strong>.
+<ul><li>this action locks instantly and must be submitted at least 6 hours before the end of the night. If the host does not respond to a ping ping the cohost.</li><li>You will gain one of their abilities and use it tonight.</li><li>If part of their abilities only work with their role, you will gain the ability that you can use.</li><li>If all of their abilities only work with their role, your action fails and the charge is returned.</li><li>if your action failed, you may not use any ability again that night.</li><li>the target will be notified:</li></ul>someone has copied your [Ability]! (You can still use your ability)”
+
+Win Condition: reach parity with the slitherfolk.</span></div></div></div></div></div>
+
+</div>
+<div class=postamble><div class=postamble__entry>Exported 31 message(s)</div><div class=postamble__entry>Timezone: UTC-5</div></div>
